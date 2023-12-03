@@ -1,0 +1,59 @@
+@font-face{
+	font-family: Lora-VariableFont;
+	src: url(:/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf) format("truetype");
+}
+
+*{
+	color: #fff;
+	font-family: Lora-VariableFont;
+	font-size: 20px;
+	border: 9;
+	background:none;
+}
+
+#centralwidget {
+	background-color: rgb(33,43,51);
+}
+#left_menu_widget, #basic_info, #dotplot #local_align, #global_align {
+	background-color: rgba(61,80,95,80);
+}
+
+#header_frame,#frame_3,#frame_5 {
+	background-color:#151515;
+}
+
+#frame_10 QPushButton:hover{
+	background-color: rgba(120,157,186,80);
+}
+
+#frame_4 QPushButton {
+	padding: 10px;
+	border-radius: 6px;
+	background-color: rgba(33,43,51,80);
+}
+
+#frame_4 QPushButton:hover{
+	background-color: rgba(120,157,186,80);
+}
+
+
+#frame_8 tab{
+	background-color: #151515;
+}
+
+#header_nav QPushButton{
+	background-color: rgb(61,80,95);
+	border-radius: 15px;
+	border: 3px solid rgb(120,157,186);
+}
+
+#header_nav QPushButton:hover {
+	background-color: rgb(120,157,186);
+}
+
+QTabBar {
+	color: #151515;
+}
+QTabBar::close-button {
+	margin-left: 3px;
+}

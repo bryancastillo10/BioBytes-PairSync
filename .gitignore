@@ -1,0 +1,7 @@
+/biovenv
+/pycache
+/seq_algorithm/__pycache__
+/gene_toolkit/__pycache__
+/ui/__pycache__
+/ui/tabs/__pycache__
+/tabs_functions/__pycache__
