@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (
     QFrame,
     QSizeGrip,
 )
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QPoint
 
 from ui.main_window import Ui_MainWindow
 from ui import resources_rc
@@ -28,21 +28,22 @@ class MyWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.stylesheet_file("static/style/style.qss")
-        # self.setWindowFlag(Qt.FramelessWindowHint)
-        # self.setWindowTitle("no title")
         self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
         ## ==================================####
         ##  Customized min, max, and close button
         ## =================================####
+
+        self.max_btn = self.findChild(QPushButton, "max_btn")
+        self.max_btn.clicked.connect(lambda: self.toggle_max())
+
         self.min_btn = self.findChild(QPushButton, "min_btn")
         self.min_btn.clicked.connect(lambda: self.showMinimized())
 
-        self.max_btn = self.findChild(QPushButton, "max_btn")
-        self.max_btn.clicked.connect(lambda: self.showMaximized())
-
         self.close_btn = self.findChild(QPushButton, "close_btn")
         self.close_btn.clicked.connect(lambda: self.close())
-        ## ==================================####
+
         ##  Obtain the objects or pages(to launch in main_window)
         ## =================================####
         self.basic_info_btn = self.ui.btn_1
@@ -160,11 +161,20 @@ class MyWindow(QMainWindow):
     ## ==================================####
     ##  Min, Max Windows Function
     ## =================================####
-    def toggleMaximize(self):
-        if not self.is_maximized:
-            self.showMaximized()
-        else:
+    def toggle_max(self):
+        if self.isFullScreen():
             self.showNormal()
+        else:
+            self.showFullScreen()
+
+    def mousePressEvent(self, event):
+        self.oldPosition = event.globalPos()
+        pass
+
+    def mouseMoveEvent(self, event):
+        delta = QPoint(event.globalPos() - self.oldPosition)
+        self.move(self.x() + delta.x(), self.y() + delta.y())
+        self.oldPosition = event.globalPos()
 
 
 if __name__ == "__main__":

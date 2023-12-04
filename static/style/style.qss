@@ -8,7 +8,6 @@
 	font-family: Lora-VariableFont;
 	font-size: 20px;
 	border: 9;
-	background:none;
 }
 
 #centralwidget {
@@ -28,7 +27,7 @@
 
 #frame_4 QPushButton {
 	padding: 10px;
-	border-radius: 6px;
+	border-radius: 10px;
 	background-color: rgba(33,43,51,80);
 }
 
@@ -43,13 +42,13 @@
 
 #header_nav QPushButton{
 	background-color: rgb(61,80,95);
-	border-radius: 15px;
 	border: 3px solid rgb(120,157,186);
 }
 
 #header_nav QPushButton:hover {
 	background-color: rgb(120,157,186);
 }
+
 
 QTabBar {
 	color: #151515;
