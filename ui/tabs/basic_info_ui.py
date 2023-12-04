@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'gui/pages/basic_info.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\basic_info.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -12,140 +12,74 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(1001, 659)
-        self.description = QtWidgets.QWidget(Form)
-        self.description.setGeometry(QtCore.QRect(30, 30, 441, 51))
-        self.description.setObjectName("description")
-        self.header = QtWidgets.QLabel(self.description)
-        self.header.setGeometry(QtCore.QRect(11, 11, 419, 29))
-        font = QtGui.QFont()
-        font.setFamily("Noto Sans TC")
-        font.setPointSize(12)
-        self.header.setFont(font)
-        self.header.setObjectName("header")
-        self.textBrowser = QtWidgets.QTextBrowser(Form)
-        self.textBrowser.setGeometry(QtCore.QRect(40, 90, 901, 101))
-        self.textBrowser.setObjectName("textBrowser")
-        self.frame_3 = QtWidgets.QFrame(Form)
-        self.frame_3.setGeometry(QtCore.QRect(40, 190, 931, 481))
-        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_3.setObjectName("frame_3")
-        self.frame = QtWidgets.QFrame(self.frame_3)
-        self.frame.setGeometry(QtCore.QRect(30, 20, 411, 421))
-        font = QtGui.QFont()
-        font.setFamily("Noto Sans TC")
-        font.setPointSize(10)
-        self.frame.setFont(font)
+    def setupUi(self, basic_info_tab):
+        basic_info_tab.setObjectName("basic_info_tab")
+        basic_info_tab.resize(1001, 659)
+        basic_info_tab.setStyleSheet(
+            "*{\n"
+            "    background-color: #151515;\n"
+            "    color: #fff;\n"
+            "    font-family: Lora\n"
+            "}\n"
+            "\n"
+            "#head {\n"
+            "    font-size: 10px\n"
+            "}"
+        )
+        self.verticalLayout = QtWidgets.QVBoxLayout(basic_info_tab)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.head = QtWidgets.QFrame(basic_info_tab)
+        self.head.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.head.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.head.setObjectName("head")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.head)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.frame = QtWidgets.QFrame(self.head)
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.gridLayout = QtWidgets.QGridLayout(self.frame)
-        self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout.setSpacing(0)
-        self.gridLayout.setObjectName("gridLayout")
-        self.label_1 = QtWidgets.QLabel(self.frame)
-        font = QtGui.QFont()
-        font.setFamily("Noto Sans TC")
-        font.setPointSize(10)
-        self.label_1.setFont(font)
-        self.label_1.setObjectName("label_1")
-        self.gridLayout.addWidget(self.label_1, 0, 0, 1, 1)
-        self.type = QtWidgets.QComboBox(self.frame)
-        self.type.setObjectName("type")
-        self.type.addItem("")
-        self.type.addItem("")
-        self.type.addItem("")
-        self.gridLayout.addWidget(self.type, 0, 1, 1, 1)
-        self.label_2 = QtWidgets.QLabel(self.frame)
-        font = QtGui.QFont()
-        font.setFamily("Noto Sans TC")
-        font.setPointSize(10)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
-        self.name = QtWidgets.QLineEdit(self.frame)
-        self.name.setObjectName("name")
-        self.gridLayout.addWidget(self.name, 1, 1, 1, 1)
-        self.input = QtWidgets.QLineEdit(self.frame)
-        self.input.setMinimumSize(QtCore.QSize(0, 150))
-        self.input.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.input.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
-        self.input.setObjectName("input")
-        self.gridLayout.addWidget(self.input, 2, 0, 1, 2)
-        self.load = QtWidgets.QPushButton(self.frame)
-        self.load.setObjectName("load")
-        self.gridLayout.addWidget(self.load, 3, 0, 1, 1)
-        self.start = QtWidgets.QPushButton(self.frame)
-        self.start.setObjectName("start")
-        self.gridLayout.addWidget(self.start, 3, 1, 1, 1)
-        self.frame_2 = QtWidgets.QFrame(self.frame_3)
-        self.frame_2.setGeometry(QtCore.QRect(460, 20, 441, 431))
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.label = QtWidgets.QLabel(self.frame)
+        self.label.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop)
+        self.label.setObjectName("label")
+        self.verticalLayout_3.addWidget(self.label)
+        self.verticalLayout_2.addWidget(self.frame)
+        self.frame_2 = QtWidgets.QFrame(self.head)
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_2)
-        self.gridLayout_2.setContentsMargins(0, 0, 0, 5)
-        self.gridLayout_2.setHorizontalSpacing(0)
-        self.gridLayout_2.setVerticalSpacing(10)
-        self.gridLayout_2.setObjectName("gridLayout_2")
-        self.label_3 = QtWidgets.QLabel(self.frame_2)
-        font = QtGui.QFont()
-        font.setFamily("Noto Sans TC")
-        font.setPointSize(12)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.gridLayout_2.addWidget(self.label_3, 0, 0, 1, 1)
-        self.output = QtWidgets.QPlainTextEdit(self.frame_2)
-        self.output.setMinimumSize(QtCore.QSize(0, 150))
-        font = QtGui.QFont()
-        font.setFamily("Noto Sans TC")
-        font.setPointSize(10)
-        self.output.setFont(font)
-        self.output.setObjectName("output")
-        self.gridLayout_2.addWidget(self.output, 1, 0, 1, 2)
-        self.clear = QtWidgets.QPushButton(self.frame_2)
-        self.clear.setObjectName("clear")
-        self.gridLayout_2.addWidget(self.clear, 2, 0, 1, 1)
-        self.save = QtWidgets.QPushButton(self.frame_2)
-        self.save.setObjectName("save")
-        self.gridLayout_2.addWidget(self.save, 2, 1, 1, 1)
-        self.frame_3.raise_()
-        self.description.raise_()
-        self.textBrowser.raise_()
+        self.textBrowser = QtWidgets.QTextBrowser(self.frame_2)
+        self.textBrowser.setGeometry(QtCore.QRect(30, 50, 791, 91))
+        self.textBrowser.setObjectName("textBrowser")
+        self.verticalLayout_2.addWidget(self.frame_2)
+        self.verticalLayout.addWidget(self.head)
+        self.main = QtWidgets.QFrame(basic_info_tab)
+        self.main.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.main.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.main.setObjectName("main")
+        self.verticalLayout.addWidget(self.main)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(basic_info_tab)
+        QtCore.QMetaObject.connectSlotsByName(basic_info_tab)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, basic_info_tab):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.header.setText(_translate("Form", "Retrieving Basic Information About Your Data"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'MS Shell Dlg 2\'; font-size:11pt;\">This section let\'s you gather some information about your sequence. For DNA, you can retrieve the nucleotide frequency, GC content, reverse complement, transcription, and translation. Meanwhile, protein sequence can gather data such as open reading frame.</span></p></body></html>"))
-        self.label_1.setText(_translate("Form", "Biomolecule Type"))
-        self.type.setItemText(0, _translate("Form", "DNA"))
-        self.type.setItemText(1, _translate("Form", "RNA"))
-        self.type.setItemText(2, _translate("Form", "Protein"))
-        self.label_2.setText(_translate("Form", "Sample Label"))
-        self.input.setPlaceholderText(_translate("Form", "Paste your text sequence or URL "))
-        self.load.setText(_translate("Form", "Upload .txt File"))
-        self.start.setText(_translate("Form", "Start"))
-        self.label_3.setText(_translate("Form", "Output:"))
-        self.clear.setText(_translate("Form", "Clear"))
-        self.save.setText(_translate("Form", "Save"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
-    sys.exit(app.exec_())
+        basic_info_tab.setWindowTitle(_translate("basic_info_tab", "Form"))
+        self.label.setText(
+            _translate(
+                "basic_info_tab", "Retrieving Basic Information About Your Sequence"
+            )
+        )
+        self.textBrowser.setHtml(
+            _translate(
+                "basic_info_tab",
+                '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
+                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
+                "p, li { white-space: pre-wrap; }\n"
+                "</style></head><body style=\" font-family:'Lora'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+                '<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';">This section let\'s you gather some information about your sequence. For DNA, you can retrieve the nucleotide frequency, GC content, reverse complement, transcription, and translation. Meanwhile, protein sequence can gather data such as open reading frame.</span></p></body></html>',
+            )
+        )

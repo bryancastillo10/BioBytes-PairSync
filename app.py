@@ -24,12 +24,24 @@ from tabs_functions.appglobal_align import GlobalAlign
 class MyWindow(QMainWindow):
     def __init__(self):
         super(MyWindow, self).__init__()
+
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.stylesheet_file("static/style/style.qss")
         # self.setWindowFlag(Qt.FramelessWindowHint)
         # self.setWindowTitle("no title")
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        ## ==================================####
+        ##  Customized min, max, and close button
+        ## =================================####
+        self.min_btn = self.findChild(QPushButton, "min_btn")
+        self.min_btn.clicked.connect(lambda: self.showMinimized())
 
+        self.max_btn = self.findChild(QPushButton, "max_btn")
+        self.max_btn.clicked.connect(lambda: self.showMaximized())
+
+        self.close_btn = self.findChild(QPushButton, "close_btn")
+        self.close_btn.clicked.connect(lambda: self.close())
         ## ==================================####
         ##  Obtain the objects or pages(to launch in main_window)
         ## =================================####
@@ -63,6 +75,9 @@ class MyWindow(QMainWindow):
         self.local_align_btn.clicked.connect(self.show_selected_window)
         self.global_align_btn.clicked.connect(self.show_selected_window)
 
+    ## ==================================####
+    ##  Tab Functions
+    ## =================================####
     def show_home_window(self):
         """Function for showing home window
         :return:
@@ -141,6 +156,15 @@ class MyWindow(QMainWindow):
         with open(style_path, "r") as f:
             style = f.read()
             self.setStyleSheet(style)
+
+    ## ==================================####
+    ##  Min, Max Windows Function
+    ## =================================####
+    def toggleMaximize(self):
+        if not self.is_maximized:
+            self.showMaximized()
+        else:
+            self.showNormal()
 
 
 if __name__ == "__main__":

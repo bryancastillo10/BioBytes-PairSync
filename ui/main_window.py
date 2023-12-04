@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/main_window.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\main_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1297, 700)
+        MainWindow.resize(1313, 700)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         font = QtGui.QFont()
         font.setFamily("Lora-VariableFont")
@@ -203,7 +203,7 @@ class Ui_MainWindow(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.frame_2)
-        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_3.setContentsMargins(3, 0, 0, 0)
         self.gridLayout_3.setSpacing(0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.header_frame = QtWidgets.QFrame(self.frame_2)
@@ -277,30 +277,30 @@ class Ui_MainWindow(object):
         self.min_btn.setIcon(icon5)
         self.min_btn.setObjectName("min_btn")
         self.horizontalLayout_4.addWidget(self.min_btn)
-        self.close_btn = QtWidgets.QPushButton(self.header_nav)
-        self.close_btn.setMinimumSize(QtCore.QSize(30, 30))
-        self.close_btn.setMaximumSize(QtCore.QSize(30, 30))
-        self.close_btn.setText("")
+        self.max_btn = QtWidgets.QPushButton(self.header_nav)
+        self.max_btn.setMinimumSize(QtCore.QSize(30, 30))
+        self.max_btn.setMaximumSize(QtCore.QSize(30, 30))
+        self.max_btn.setText("")
         icon6 = QtGui.QIcon()
         icon6.addPixmap(
             QtGui.QPixmap(":/icons/icons/maximize-2.svg"),
             QtGui.QIcon.Normal,
             QtGui.QIcon.Off,
         )
-        self.close_btn.setIcon(icon6)
-        self.close_btn.setObjectName("close_btn")
-        self.horizontalLayout_4.addWidget(self.close_btn)
-        self.max_btn = QtWidgets.QPushButton(self.header_nav)
-        self.max_btn.setMinimumSize(QtCore.QSize(30, 30))
-        self.max_btn.setMaximumSize(QtCore.QSize(30, 30))
-        self.max_btn.setText("")
+        self.max_btn.setIcon(icon6)
+        self.max_btn.setObjectName("max_btn")
+        self.horizontalLayout_4.addWidget(self.max_btn)
+        self.close_btn = QtWidgets.QPushButton(self.header_nav)
+        self.close_btn.setMinimumSize(QtCore.QSize(30, 30))
+        self.close_btn.setMaximumSize(QtCore.QSize(30, 30))
+        self.close_btn.setText("")
         icon7 = QtGui.QIcon()
         icon7.addPixmap(
             QtGui.QPixmap(":/icons/icons/x.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
         )
-        self.max_btn.setIcon(icon7)
-        self.max_btn.setObjectName("max_btn")
-        self.horizontalLayout_4.addWidget(self.max_btn)
+        self.close_btn.setIcon(icon7)
+        self.close_btn.setObjectName("close_btn")
+        self.horizontalLayout_4.addWidget(self.close_btn)
         self.horizontalLayout_2.addWidget(self.header_nav, 0, QtCore.Qt.AlignRight)
         self.gridLayout_3.addWidget(self.header_frame, 0, 0, 1, 1)
         self.frame_8 = QtWidgets.QFrame(self.frame_2)
@@ -315,6 +315,8 @@ class Ui_MainWindow(object):
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.frame_8)
+        self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_8.setSpacing(0)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.tabWidget = QtWidgets.QTabWidget(self.frame_8)
         self.tabWidget.setStyleSheet("")
