@@ -17,11 +17,11 @@
 	background-color: rgba(61,80,95,80);
 }
 
-#header_frame,#frame_3,#frame_5 {
+#header_frame,#frame_3 {
 	background-color:#151515;
 }
 
-#frame_10 QPushButton:hover{
+#frame_5, #frame_10 QPushButton:hover{
 	background-color: rgba(120,157,186,80);
 }
 
@@ -55,4 +55,8 @@ QTabBar {
 }
 QTabBar::close-button {
 	margin-left: 3px;
+}
+
+#label_8{
+	font-size:10px;
 }
