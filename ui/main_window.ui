@@ -824,8 +824,6 @@
  </widget>
  <resources>
   <include location="../static/resources_rc.qrc"/>
-  <include location="../static/resources_rc.qrc"/>
-  <include location="../static/resources_rc.qrc"/>
  </resources>
  <connections>
   <connection>

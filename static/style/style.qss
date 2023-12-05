@@ -42,6 +42,17 @@
 	border-radius:15px;
 }
 
+/** Tab Bar **/
+#tab_frame QTabBar::tab {
+	background-color:rgb(61,80,95);  /* dark blue-gray  */
+	color: #fff;
+}
+
+#tab_frame QTabBar::tab::close-button {
+
+
+}
+
 /** Min Max Close Button (Nav Buttons) **/
 #min_max_close QPushButton{
 	background-color: rgb(61,80,95);  /* dark blue-gray  */

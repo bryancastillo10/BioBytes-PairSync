@@ -161,6 +161,9 @@ class MyWindow(QMainWindow):
                 continue
         return (False,)
 
+    ## ==================================####
+    ##  QSS File Reading /Stylesheet
+    ## =================================####
     def stylesheet_file(self, style_path):
         style_path = "static/style/style.qss"
         with open(style_path, "r") as f:
