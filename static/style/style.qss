@@ -1,63 +1,56 @@
-@font-face{
-	font-family: Lora-VariableFont;
-	src: url(:/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf) format("truetype");
-}
-
 *{
-	color: #fff;
-	font-family: Lora-VariableFont;
+	font-family: "Lora-VariableFont";
 	font-size: 20px;
-	border: 9;
 }
 
 #centralwidget {
-	background-color: rgb(33,43,51);
-}
-#left_menu_widget, #basic_info, #dotplot #local_align, #global_align {
-	background-color:  rgb(61,80,95);
+	background-color: rgba(7,191,160,0.7); /* teal green  */
+	border-radius: 15px;
 }
 
-#header_frame,#frame_3 {
-	background-color:rgb(120,157,186);
-}
-
-#frame_5, #frame_10 QPushButton:hover{
-	background-color: rgba(120,157,186,80);
-}
-
-#frame_4 QPushButton, #frame_5 QPushButton {
-	padding: 10px;
-	border-radius: 10px;
-	background-color: rgba(33,43,51,80);
-}
-
-#frame_4 QPushButton:hover{
-	background-color: rgba(120,157,186,80);
+/** Upper Left Label and About Us Label **/
+#gen_tools, #about {
+	background-color:  rgba(120,157,186,0.8); /* light blue  */
+	border-radius: 15px;
 }
 
 
-#frame_8 tab{
-	background-color: #627370;
+/** Side Menu Buttons**/
+#menu_btns QPushButton {
+	background-color: rgb(138,143,146); /* gray  */
+	border: 3px solid rgb(5,92,142);
+	border-radius:15px;
+	padding: 5px;
+	color: #fff;
 }
 
-#header_nav QPushButton{
-	background-color: rgb(61,80,95);
-	border: 3px solid rgb(120,157,186);
+#menu_btns QPushButton::hover{
+	background-color: rgba(5,92,142,0.5); /* dark-blue */
+	color: #000;
+	border-radius: 18px;
+	
 }
 
-#header_nav QPushButton:hover {
-	background-color: rgb(120,157,186);
+/** Toggle Sidebar **/
+#toggle_menu QPushButton{
+	background-color: rgb(138,143,146); /* gray  */
+	border-radius:15px;
 }
 
-
-QTabBar {
-	color: #627370;
-}
-QTabBar::close-button {
-	margin-left: 3px;
+#toggle_menu QPushButton::hover{
+	background-color: rgba(5,92,142,0.5); /* dark-blue */
+	border-radius:15px;
 }
 
-#label_8{
-	font-size:10px;
+/** Min Max Close Button (Nav Buttons) **/
+#min_max_close QPushButton{
+	background-color: rgb(61,80,95);  /* dark blue-gray  */
+	border-radius: 15px;
+	border: 3px solid rgb(120,157,186); /* light blue*/
 }
 
+#min_max_close QPushButton::hover{
+	background-color: rgba(240,228,66,0.8);  /* yellow  */
+	border-radius: 15px;
+	border: 3px solid rgb(120,157,186); /* light blue*/
+}

@@ -19,19 +19,7 @@ class Ui_Form(object):
         font.setFamily("Noto Sans")
         font.setPointSize(12)
         Form.setFont(font)
-        Form.setStyleSheet(
-            "*{\n"
-            "    background-color: #627370;\n"
-            "    color: #fff;\n"
-            "}\n"
-            "\n"
-            "#head {\n"
-            "    font-size: 15px\n"
-            "}\n"
-            "\n"
-            "\n"
-            ""
-        )
+        Form.setStyleSheet("")
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
@@ -77,26 +65,7 @@ class Ui_Form(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
         self.frame_3.setSizePolicy(sizePolicy)
-        self.frame_3.setStyleSheet(
-            "#frame_3 QPushButton {\n"
-            "    background-color: #0A4261;\n"
-            "    color: #fff;\n"
-            "    font-weight: bold;\n"
-            "}\n"
-            "\n"
-            "#frame_3 QPushButton::hover {    \n"
-            "    background-color:#56B4E9;\n"
-            "    color: #000;\n"
-            "    font-weight: bold;\n"
-            "}\n"
-            "\n"
-            "QTextEdit, QLineEdit, QTextBrowser {\n"
-            "    border: 2px solid #fff;\n"
-            "    border-radius: 5px;\n"
-            "    padding: 4px;\n"
-            "}\n"
-            ""
-        )
+        self.frame_3.setStyleSheet("")
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -209,19 +178,7 @@ class Ui_Form(object):
         self.verticalLayout_4.addWidget(self.frame_8)
         self.horizontalLayout.addWidget(self.frame_4)
         self.frame_5 = QtWidgets.QFrame(self.frame_3)
-        self.frame_5.setStyleSheet(
-            "#frame_5 QPushButton {\n"
-            "    background-color: #0A4261;\n"
-            "    color: #fff;\n"
-            "    font-weight: bold;\n"
-            "}\n"
-            "\n"
-            "#frame_5 QPushButton::hover {\n"
-            "    background-color:#56B4E9;\n"
-            "    color: #000;\n"
-            "    font-weight: bold;\n"
-            "}"
-        )
+        self.frame_5.setStyleSheet("")
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -309,8 +266,8 @@ class Ui_Form(object):
                 '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
                 '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
                 "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'PMingLiU'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12pt;"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>',
+                "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\'; font-size:12pt;"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>',
             )
         )
         self.label_2.setText(_translate("Form", "Biomolecule Type"))

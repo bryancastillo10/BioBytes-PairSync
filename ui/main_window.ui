@@ -54,7 +54,7 @@
         <number>0</number>
        </property>
        <item row="0" column="0">
-        <widget class="QFrame" name="frame_3">
+        <widget class="QFrame" name="gen_tools">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -130,7 +130,7 @@
         </widget>
        </item>
        <item row="1" column="0" alignment="Qt::AlignHCenter|Qt::AlignTop">
-        <widget class="QFrame" name="frame_4">
+        <widget class="QFrame" name="menu_btns">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -212,7 +212,7 @@
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QFrame" name="frame_5">
+        <widget class="QFrame" name="about">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -295,7 +295,7 @@
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QFrame" name="frame_6">
+        <widget class="QFrame" name="more_info">
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -492,7 +492,7 @@
            <number>0</number>
           </property>
           <item alignment="Qt::AlignLeft">
-           <widget class="QFrame" name="frame_10">
+           <widget class="QFrame" name="toggle_menu">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -538,7 +538,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QFrame" name="frame_11">
+           <widget class="QFrame" name="title">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -557,7 +557,7 @@
            </widget>
           </item>
           <item alignment="Qt::AlignRight|Qt::AlignTop">
-           <widget class="QFrame" name="header_nav">
+           <widget class="QFrame" name="min_max_close">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -656,7 +656,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QFrame" name="frame_8">
+        <widget class="QFrame" name="tab_frame">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
            <horstretch>0</horstretch>
@@ -723,7 +723,7 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QFrame" name="frame_13">
+           <widget class="QFrame" name="copyright">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -762,7 +762,7 @@
            </widget>
           </item>
           <item alignment="Qt::AlignRight|Qt::AlignBottom">
-           <widget class="QFrame" name="frame_14">
+           <widget class="QFrame" name="grip_frame">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -787,6 +787,18 @@
              </property>
              <item>
               <widget class="QFrame" name="size_grip">
+               <property name="minimumSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -804,12 +816,11 @@
       </layout>
       <zorder>footer_frame</zorder>
       <zorder>header_frame</zorder>
-      <zorder>frame_8</zorder>
+      <zorder>tab_frame</zorder>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <resources>
   <include location="../static/resources_rc.qrc"/>

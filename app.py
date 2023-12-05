@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import (
     QSizeGrip,
 )
 from PyQt5.QtCore import Qt, QPoint
+from PyQt5.QtGui import QFontDatabase
 
 from ui.main_window import Ui_MainWindow
 from ui import resources_rc
@@ -23,14 +24,22 @@ from tabs_functions.appglobal_align import GlobalAlign
 
 class MyWindow(QMainWindow):
     def __init__(self):
+        ####===== Initialization Constructor ====###
         super(MyWindow, self).__init__()
-
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        ## ==================================####
+        ##  Style and Customizations of Main Window
+        ## =================================####
         self.stylesheet_file("static/style/style.qss")
+        QFontDatabase.addApplicationFont(
+            ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
+        )
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowMaximizeButtonHint)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
 
+        # QSizeGrip(self.ui.size_grip)
         ## ==================================####
         ##  Customized min, max, and close button
         ## =================================####
