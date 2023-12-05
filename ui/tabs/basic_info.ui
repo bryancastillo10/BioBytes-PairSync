@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>887</width>
-    <height>733</height>
+    <width>1132</width>
+    <height>667</height>
    </rect>
   </property>
   <property name="font">
@@ -113,7 +113,7 @@
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>150</height>
+          <height>180</height>
          </size>
         </property>
         <property name="autoFillBackground">
@@ -126,8 +126,8 @@
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'PMingLiU'; font-size:12pt;&quot;&gt;&lt;br /&gt;    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It's a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'PMingLiU';&quot;&gt;&lt;br /&gt;    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It's a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
@@ -200,6 +200,18 @@ p, li { white-space: pre-wrap; }
             <enum>QFrame::Raised</enum>
            </property>
            <layout class="QGridLayout" name="gridLayout_3">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item row="0" column="0">
              <widget class="QLabel" name="label_2">
               <property name="text">
@@ -305,6 +317,21 @@ p, li { white-space: pre-wrap; }
             <enum>QFrame::Raised</enum>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QFrame" name="frame_13">
               <property name="frameShape">

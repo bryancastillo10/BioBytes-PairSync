@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(887, 733)
+        Form.resize(1132, 667)
         font = QtGui.QFont()
         font.setFamily("Noto Sans")
         font.setPointSize(12)
@@ -51,7 +51,7 @@ class Ui_Form(object):
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName("verticalLayout_3")
         self.textEdit = QtWidgets.QTextEdit(self.frame_2)
-        self.textEdit.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.textEdit.setMaximumSize(QtCore.QSize(16777215, 180))
         self.textEdit.setAutoFillBackground(False)
         self.textEdit.setReadOnly(True)
         self.textEdit.setObjectName("textEdit")
@@ -86,6 +86,7 @@ class Ui_Form(object):
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.frame_6)
+        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.label_2 = QtWidgets.QLabel(self.frame_6)
         self.label_2.setObjectName("label_2")
@@ -135,6 +136,8 @@ class Ui_Form(object):
         self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_8.setObjectName("frame_8")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_8)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.frame_13 = QtWidgets.QFrame(self.frame_8)
         self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -266,8 +269,8 @@ class Ui_Form(object):
                 '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
                 '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
                 "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\'; font-size:12pt;"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>',
+                "</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>',
             )
         )
         self.label_2.setText(_translate("Form", "Biomolecule Type"))
