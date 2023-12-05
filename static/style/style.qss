@@ -25,7 +25,7 @@
 	background-color: rgba(120,157,186,80);
 }
 
-#frame_4 QPushButton {
+#frame_4 QPushButton, #frame_5 QPushButton {
 	padding: 10px;
 	border-radius: 10px;
 	background-color: rgba(33,43,51,80);

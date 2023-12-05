@@ -12,74 +12,278 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_Form(object):
-    def setupUi(self, basic_info_tab):
-        basic_info_tab.setObjectName("basic_info_tab")
-        basic_info_tab.resize(1001, 659)
-        basic_info_tab.setStyleSheet(
-            "*{\n"
-            "    background-color: #151515;\n"
-            "    color: #fff;\n"
-            "    font-family: Lora\n"
-            "}\n"
-            "\n"
-            "#head {\n"
-            "    font-size: 10px\n"
-            "}"
-        )
-        self.verticalLayout = QtWidgets.QVBoxLayout(basic_info_tab)
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(887, 733)
+        font = QtGui.QFont()
+        font.setFamily("Noto Sans")
+        font.setPointSize(12)
+        Form.setFont(font)
+        Form.setStyleSheet("*{\n"
+"    background-color: #151515;\n"
+"    color: #fff;\n"
+"}\n"
+"\n"
+"#head {\n"
+"    font-size: 15px\n"
+"}\n"
+"\n"
+"\n"
+"")
+        self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.head = QtWidgets.QFrame(basic_info_tab)
-        self.head.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.head.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.head.setObjectName("head")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.head)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.frame = QtWidgets.QFrame(self.head)
+        self.frame = QtWidgets.QFrame(Form)
+        self.frame.setStyleSheet("")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.label = QtWidgets.QLabel(self.frame)
-        self.label.setAlignment(QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop)
+        font = QtGui.QFont()
+        font.setFamily("Noto Sans")
+        font.setPointSize(14)
+        self.label.setFont(font)
         self.label.setObjectName("label")
-        self.verticalLayout_3.addWidget(self.label)
-        self.verticalLayout_2.addWidget(self.frame)
-        self.frame_2 = QtWidgets.QFrame(self.head)
+        self.verticalLayout_2.addWidget(self.label, 0, QtCore.Qt.AlignHCenter)
+        self.verticalLayout.addWidget(self.frame, 0, QtCore.Qt.AlignTop)
+        self.frame_2 = QtWidgets.QFrame(Form)
+        self.frame_2.setStyleSheet("")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.textBrowser = QtWidgets.QTextBrowser(self.frame_2)
-        self.textBrowser.setGeometry(QtCore.QRect(30, 50, 791, 91))
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_2)
+        self.verticalLayout_3.setContentsMargins(5, 0, 5, 0)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.textEdit = QtWidgets.QTextEdit(self.frame_2)
+        self.textEdit.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.textEdit.setAutoFillBackground(False)
+        self.textEdit.setReadOnly(True)
+        self.textEdit.setObjectName("textEdit")
+        self.verticalLayout_3.addWidget(self.textEdit, 0, QtCore.Qt.AlignTop)
+        self.verticalLayout.addWidget(self.frame_2)
+        self.frame_3 = QtWidgets.QFrame(Form)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
+        self.frame_3.setSizePolicy(sizePolicy)
+        self.frame_3.setStyleSheet("#frame_3 QPushButton {\n"
+"    background-color: #0A4261;\n"
+"    color: #fff;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"#frame_3 QPushButton::hover {    \n"
+"    background-color:#56B4E9;\n"
+"    color: #000;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"QTextEdit, QLineEdit, QTextBrowser {\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 5px;\n"
+"    padding: 4px;\n"
+"}\n"
+"")
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.frame_4 = QtWidgets.QFrame(self.frame_3)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.frame_4)
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.frame_6 = QtWidgets.QFrame(self.frame_4)
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.frame_6)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.label_2 = QtWidgets.QLabel(self.frame_6)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout_3.addWidget(self.label_2, 0, 0, 1, 1)
+        self.comboBox = QtWidgets.QComboBox(self.frame_6)
+        self.comboBox.setStyleSheet("")
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.gridLayout_3.addWidget(self.comboBox, 0, 1, 1, 1)
+        self.label_3 = QtWidgets.QLabel(self.frame_6)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout_3.addWidget(self.label_3, 1, 0, 1, 1)
+        self.lineEdit = QtWidgets.QLineEdit(self.frame_6)
+        self.lineEdit.setText("")
+        self.lineEdit.setObjectName("lineEdit")
+        self.gridLayout_3.addWidget(self.lineEdit, 1, 1, 1, 1)
+        self.label_4 = QtWidgets.QLabel(self.frame_6)
+        font = QtGui.QFont()
+        font.setFamily("Noto Sans")
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout_3.addWidget(self.label_4, 2, 0, 1, 2, QtCore.Qt.AlignHCenter)
+        self.verticalLayout_4.addWidget(self.frame_6)
+        self.frame_7 = QtWidgets.QFrame(self.frame_4)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
+        self.frame_7.setSizePolicy(sizePolicy)
+        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_7)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.textEdit_2 = QtWidgets.QTextEdit(self.frame_7)
+        self.textEdit_2.setObjectName("textEdit_2")
+        self.gridLayout_2.addWidget(self.textEdit_2, 0, 0, 1, 1)
+        self.verticalLayout_4.addWidget(self.frame_7)
+        self.frame_8 = QtWidgets.QFrame(self.frame_4)
+        self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_8.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_8.setObjectName("frame_8")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_8)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frame_13 = QtWidgets.QFrame(self.frame_8)
+        self.frame_13.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_13.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_13.setObjectName("frame_13")
+        self.label_6 = QtWidgets.QLabel(self.frame_13)
+        self.label_6.setGeometry(QtCore.QRect(60, 10, 70, 70))
+        self.label_6.setMinimumSize(QtCore.QSize(70, 70))
+        self.label_6.setMaximumSize(QtCore.QSize(70, 70))
+        self.label_6.setText("")
+        self.label_6.setPixmap(QtGui.QPixmap(":/icons/icons/analysis64.png"))
+        self.label_6.setScaledContents(True)
+        self.label_6.setObjectName("label_6")
+        self.horizontalLayout_2.addWidget(self.frame_13)
+        self.frame_12 = QtWidgets.QFrame(self.frame_8)
+        self.frame_12.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_12.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_12.setObjectName("frame_12")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.frame_12)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.pushButton = QtWidgets.QPushButton(self.frame_12)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icons/icons/upload.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton.setIcon(icon)
+        self.pushButton.setObjectName("pushButton")
+        self.verticalLayout_6.addWidget(self.pushButton)
+        self.pushButton_2 = QtWidgets.QPushButton(self.frame_12)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/play.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_2.setIcon(icon1)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.verticalLayout_6.addWidget(self.pushButton_2)
+        self.horizontalLayout_2.addWidget(self.frame_12, 0, QtCore.Qt.AlignRight)
+        self.verticalLayout_4.addWidget(self.frame_8)
+        self.horizontalLayout.addWidget(self.frame_4)
+        self.frame_5 = QtWidgets.QFrame(self.frame_3)
+        self.frame_5.setStyleSheet("#frame_5 QPushButton {\n"
+"    background-color: #0A4261;\n"
+"    color: #fff;\n"
+"    font-weight: bold;\n"
+"}\n"
+"\n"
+"#frame_5 QPushButton::hover {\n"
+"    background-color:#56B4E9;\n"
+"    color: #000;\n"
+"    font-weight: bold;\n"
+"}")
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame_5)
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.frame_9 = QtWidgets.QFrame(self.frame_5)
+        self.frame_9.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_9.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_9.setObjectName("frame_9")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.frame_9)
+        self.verticalLayout_7.setObjectName("verticalLayout_7")
+        self.label_5 = QtWidgets.QLabel(self.frame_9)
+        font = QtGui.QFont()
+        font.setFamily("Noto Sans")
+        font.setPointSize(12)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.verticalLayout_7.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.verticalLayout_5.addWidget(self.frame_9, 0, QtCore.Qt.AlignTop)
+        self.frame_10 = QtWidgets.QFrame(self.frame_5)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_10.sizePolicy().hasHeightForWidth())
+        self.frame_10.setSizePolicy(sizePolicy)
+        self.frame_10.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_10.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_10.setObjectName("frame_10")
+        self.gridLayout = QtWidgets.QGridLayout(self.frame_10)
+        self.gridLayout.setObjectName("gridLayout")
+        self.textBrowser = QtWidgets.QTextBrowser(self.frame_10)
         self.textBrowser.setObjectName("textBrowser")
-        self.verticalLayout_2.addWidget(self.frame_2)
-        self.verticalLayout.addWidget(self.head)
-        self.main = QtWidgets.QFrame(basic_info_tab)
-        self.main.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.main.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.main.setObjectName("main")
-        self.verticalLayout.addWidget(self.main)
+        self.gridLayout.addWidget(self.textBrowser, 0, 0, 1, 1)
+        self.verticalLayout_5.addWidget(self.frame_10)
+        self.frame_11 = QtWidgets.QFrame(self.frame_5)
+        self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_11.setObjectName("frame_11")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frame_11)
+        self.horizontalLayout_3.setContentsMargins(-1, -1, 0, -1)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.pushButton_3 = QtWidgets.QPushButton(self.frame_11)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icons/icons/x-circle.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_3.setIcon(icon2)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.horizontalLayout_3.addWidget(self.pushButton_3)
+        self.pushButton_4 = QtWidgets.QPushButton(self.frame_11)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton_4.setIcon(icon3)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.horizontalLayout_3.addWidget(self.pushButton_4)
+        self.verticalLayout_5.addWidget(self.frame_11, 0, QtCore.Qt.AlignBottom)
+        self.horizontalLayout.addWidget(self.frame_5)
+        self.verticalLayout.addWidget(self.frame_3)
 
-        self.retranslateUi(basic_info_tab)
-        QtCore.QMetaObject.connectSlotsByName(basic_info_tab)
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
 
-    def retranslateUi(self, basic_info_tab):
+    def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        basic_info_tab.setWindowTitle(_translate("basic_info_tab", "Form"))
-        self.label.setText(
-            _translate(
-                "basic_info_tab", "Retrieving Basic Information About Your Sequence"
-            )
-        )
-        self.textBrowser.setHtml(
-            _translate(
-                "basic_info_tab",
-                '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'Lora'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                '<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';">This section let\'s you gather some information about your sequence. For DNA, you can retrieve the nucleotide frequency, GC content, reverse complement, transcription, and translation. Meanwhile, protein sequence can gather data such as open reading frame.</span></p></body></html>',
-            )
-        )
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.label.setText(_translate("Form", "Retrieving Basic Information About Your Sequence"))
+        self.textEdit.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>"))
+        self.label_2.setText(_translate("Form", "Biomolecule Type"))
+        self.comboBox.setItemText(0, _translate("Form", "DNA"))
+        self.comboBox.setItemText(1, _translate("Form", "RNA"))
+        self.comboBox.setItemText(2, _translate("Form", "Protein"))
+        self.label_3.setText(_translate("Form", "Label"))
+        self.label_4.setText(_translate("Form", "Input"))
+        self.textEdit_2.setPlaceholderText(_translate("Form", "Paste the Sequence or URL"))
+        self.pushButton.setText(_translate("Form", "Load .txt file"))
+        self.pushButton_2.setText(_translate("Form", "Start"))
+        self.label_5.setText(_translate("Form", "Output"))
+        self.pushButton_3.setText(_translate("Form", "Clear"))
+        self.pushButton_4.setText(_translate("Form", "Save"))
+
