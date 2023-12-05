@@ -21,7 +21,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-	background-color: #151515;
+	background-color: #627370;
     color: #fff;
 }
 

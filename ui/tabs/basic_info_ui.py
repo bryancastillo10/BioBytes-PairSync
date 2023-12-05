@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\basic_info.ui'
+# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\basic_info.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -19,17 +19,19 @@ class Ui_Form(object):
         font.setFamily("Noto Sans")
         font.setPointSize(12)
         Form.setFont(font)
-        Form.setStyleSheet("*{\n"
-"    background-color: #151515;\n"
-"    color: #fff;\n"
-"}\n"
-"\n"
-"#head {\n"
-"    font-size: 15px\n"
-"}\n"
-"\n"
-"\n"
-"")
+        Form.setStyleSheet(
+            "*{\n"
+            "    background-color: #627370;\n"
+            "    color: #fff;\n"
+            "}\n"
+            "\n"
+            "#head {\n"
+            "    font-size: 15px\n"
+            "}\n"
+            "\n"
+            "\n"
+            ""
+        )
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
@@ -68,29 +70,33 @@ class Ui_Form(object):
         self.verticalLayout_3.addWidget(self.textEdit, 0, QtCore.Qt.AlignTop)
         self.verticalLayout.addWidget(self.frame_2)
         self.frame_3 = QtWidgets.QFrame(Form)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
         self.frame_3.setSizePolicy(sizePolicy)
-        self.frame_3.setStyleSheet("#frame_3 QPushButton {\n"
-"    background-color: #0A4261;\n"
-"    color: #fff;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"#frame_3 QPushButton::hover {    \n"
-"    background-color:#56B4E9;\n"
-"    color: #000;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"QTextEdit, QLineEdit, QTextBrowser {\n"
-"    border: 2px solid #fff;\n"
-"    border-radius: 5px;\n"
-"    padding: 4px;\n"
-"}\n"
-"")
+        self.frame_3.setStyleSheet(
+            "#frame_3 QPushButton {\n"
+            "    background-color: #0A4261;\n"
+            "    color: #fff;\n"
+            "    font-weight: bold;\n"
+            "}\n"
+            "\n"
+            "#frame_3 QPushButton::hover {    \n"
+            "    background-color:#56B4E9;\n"
+            "    color: #000;\n"
+            "    font-weight: bold;\n"
+            "}\n"
+            "\n"
+            "QTextEdit, QLineEdit, QTextBrowser {\n"
+            "    border: 2px solid #fff;\n"
+            "    border-radius: 5px;\n"
+            "    padding: 4px;\n"
+            "}\n"
+            ""
+        )
         self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -138,7 +144,9 @@ class Ui_Form(object):
         self.gridLayout_3.addWidget(self.label_4, 2, 0, 1, 2, QtCore.Qt.AlignHCenter)
         self.verticalLayout_4.addWidget(self.frame_6)
         self.frame_7 = QtWidgets.QFrame(self.frame_4)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
@@ -181,13 +189,19 @@ class Ui_Form(object):
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.pushButton = QtWidgets.QPushButton(self.frame_12)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/icons/upload.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap(":/icons/icons/upload.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout_6.addWidget(self.pushButton)
         self.pushButton_2 = QtWidgets.QPushButton(self.frame_12)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/play.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(
+            QtGui.QPixmap(":/icons/icons/play.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
         self.pushButton_2.setIcon(icon1)
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_6.addWidget(self.pushButton_2)
@@ -195,17 +209,19 @@ class Ui_Form(object):
         self.verticalLayout_4.addWidget(self.frame_8)
         self.horizontalLayout.addWidget(self.frame_4)
         self.frame_5 = QtWidgets.QFrame(self.frame_3)
-        self.frame_5.setStyleSheet("#frame_5 QPushButton {\n"
-"    background-color: #0A4261;\n"
-"    color: #fff;\n"
-"    font-weight: bold;\n"
-"}\n"
-"\n"
-"#frame_5 QPushButton::hover {\n"
-"    background-color:#56B4E9;\n"
-"    color: #000;\n"
-"    font-weight: bold;\n"
-"}")
+        self.frame_5.setStyleSheet(
+            "#frame_5 QPushButton {\n"
+            "    background-color: #0A4261;\n"
+            "    color: #fff;\n"
+            "    font-weight: bold;\n"
+            "}\n"
+            "\n"
+            "#frame_5 QPushButton::hover {\n"
+            "    background-color:#56B4E9;\n"
+            "    color: #000;\n"
+            "    font-weight: bold;\n"
+            "}"
+        )
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_5.setObjectName("frame_5")
@@ -224,10 +240,14 @@ class Ui_Form(object):
         font.setPointSize(12)
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
-        self.verticalLayout_7.addWidget(self.label_5, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.verticalLayout_7.addWidget(
+            self.label_5, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop
+        )
         self.verticalLayout_5.addWidget(self.frame_9, 0, QtCore.Qt.AlignTop)
         self.frame_10 = QtWidgets.QFrame(self.frame_5)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_10.sizePolicy().hasHeightForWidth())
@@ -250,15 +270,23 @@ class Ui_Form(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.pushButton_3 = QtWidgets.QPushButton(self.frame_11)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(":/icons/icons/x-circle.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(
+            QtGui.QPixmap(":/icons/icons/x-circle.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
         self.pushButton_3.setIcon(icon2)
         self.pushButton_3.setObjectName("pushButton_3")
         self.horizontalLayout_3.addWidget(self.pushButton_3)
-        spacerItem = QtWidgets.QSpacerItem(212, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(
+            212, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
+        )
         self.horizontalLayout_3.addItem(spacerItem)
         self.pushButton_4 = QtWidgets.QPushButton(self.frame_11)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(
+            QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
         self.pushButton_4.setIcon(icon3)
         self.pushButton_4.setObjectName("pushButton_4")
         self.horizontalLayout_3.addWidget(self.pushButton_4)
@@ -272,22 +300,30 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Retrieving Basic Information About Your Sequence"))
-        self.textEdit.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>"))
+        self.label.setText(
+            _translate("Form", "Retrieving Basic Information About Your Sequence")
+        )
+        self.textEdit.setHtml(
+            _translate(
+                "Form",
+                '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
+                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
+                "p, li { white-space: pre-wrap; }\n"
+                "</style></head><body style=\" font-family:'PMingLiU'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:12pt;"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>',
+            )
+        )
         self.label_2.setText(_translate("Form", "Biomolecule Type"))
         self.comboBox.setItemText(0, _translate("Form", "DNA"))
         self.comboBox.setItemText(1, _translate("Form", "RNA"))
         self.comboBox.setItemText(2, _translate("Form", "Protein"))
         self.label_3.setText(_translate("Form", "Label"))
         self.label_4.setText(_translate("Form", "Input"))
-        self.textEdit_2.setPlaceholderText(_translate("Form", "Paste the Sequence or URL"))
+        self.textEdit_2.setPlaceholderText(
+            _translate("Form", "Paste the Sequence or URL")
+        )
         self.pushButton.setText(_translate("Form", "Load .txt file"))
         self.pushButton_2.setText(_translate("Form", "Start"))
         self.label_5.setText(_translate("Form", "Output"))
         self.pushButton_3.setText(_translate("Form", "Clear"))
         self.pushButton_4.setText(_translate("Form", "Save"))
-

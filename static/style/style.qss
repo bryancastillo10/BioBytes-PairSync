@@ -14,11 +14,11 @@
 	background-color: rgb(33,43,51);
 }
 #left_menu_widget, #basic_info, #dotplot #local_align, #global_align {
-	background-color: rgba(61,80,95,80);
+	background-color:  rgb(61,80,95);
 }
 
 #header_frame,#frame_3 {
-	background-color:#151515;
+	background-color:rgb(120,157,186);
 }
 
 #frame_5, #frame_10 QPushButton:hover{
@@ -37,7 +37,7 @@
 
 
 #frame_8 tab{
-	background-color: #151515;
+	background-color: #627370;
 }
 
 #header_nav QPushButton{
@@ -51,7 +51,7 @@
 
 
 QTabBar {
-	color: #151515;
+	color: #627370;
 }
 QTabBar::close-button {
 	margin-left: 3px;
@@ -60,3 +60,4 @@ QTabBar::close-button {
 #label_8{
 	font-size:10px;
 }
+

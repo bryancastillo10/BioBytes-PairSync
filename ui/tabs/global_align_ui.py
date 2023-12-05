@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\global_align.ui'
+# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\global_align.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -14,9 +14,20 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(982, 696)
+        Form.resize(1100, 845)
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(Form)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.frame = QtWidgets.QFrame(Form)
+        self.frame.setMaximumSize(QtCore.QSize(16777215, 16777210))
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.verticalLayout_3.addWidget(self.frame)
         self.frame_2 = QtWidgets.QFrame(Form)
-        self.frame_2.setGeometry(QtCore.QRect(0, 30, 982, 159))
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
@@ -24,12 +35,19 @@ class Ui_Form(object):
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.label = QtWidgets.QLabel(self.frame_2)
+        font = QtGui.QFont()
+        font.setFamily("Noto Sans")
+        font.setPointSize(12)
+        self.label.setFont(font)
+        self.label.setObjectName("label")
+        self.verticalLayout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.textBrowser = QtWidgets.QTextBrowser(self.frame_2)
-        self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 110))
+        self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 200))
         self.textBrowser.setObjectName("textBrowser")
-        self.verticalLayout.addWidget(self.textBrowser)
+        self.verticalLayout.addWidget(self.textBrowser, 0, QtCore.Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.frame_2)
         self.frame_3 = QtWidgets.QFrame(Form)
-        self.frame_3.setGeometry(QtCore.QRect(0, 189, 982, 507))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -159,23 +177,7 @@ class Ui_Form(object):
         self.horizontalLayout.addWidget(self.pushButton_2)
         self.verticalLayout_5.addWidget(self.frame_7)
         self.gridLayout.addWidget(self.frame_5, 0, 1, 2, 1)
-        self.frame = QtWidgets.QFrame(Form)
-        self.frame.setGeometry(QtCore.QRect(0, 0, 982, 30))
-        self.frame.setMaximumSize(QtCore.QSize(16777215, 16777210))
-        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame.setObjectName("frame")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.label = QtWidgets.QLabel(self.frame)
-        font = QtGui.QFont()
-        font.setFamily("Noto Sans")
-        font.setPointSize(12)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.verticalLayout_2.addWidget(self.label, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
+        self.verticalLayout_3.addWidget(self.frame_3)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -183,11 +185,12 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
+        self.label.setText(_translate("Form", "Global Alignment"))
         self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br />The Needleman-Wunsch algorithm stands as a seminal method in bioinformatics, specifically designed for global sequence alignment. As a dynamic programming algorithm, Needleman-Wunsch aims to identify the optimal alignment between two sequences by considering all possible alignments and assigning scores based on matches, mismatches, and gaps. It employs a dynamic programming matrix to systematically calculate alignment scores, facilitating the determination of the best global alignment. Needleman-Wunsch is particularly useful when comparing entire sequences, ensuring comprehensive analysis by aligning the full length of both sequences. Through the process of traceback, the algorithm reconstructs the optimal global alignment, providing insights into evolutionary relationships, genetic similarities, and functional domains. This algorithm\'s versatility has made it a fundamental tool in bioinformatics, contributing significantly to sequence analysis, structural biology, and understanding the intricacies of molecular evolution.</p></body></html>"))
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'PMingLiU\'; font-size:9pt;\"><br />The Needleman-Wunsch algorithm stands as a seminal method in bioinformatics, specifically designed for global sequence alignment. As a dynamic programming algorithm, Needleman-Wunsch aims to identify the optimal alignment between two sequences by considering all possible alignments and assigning scores based on matches, mismatches, and gaps. It employs a dynamic programming matrix to systematically calculate alignment scores, facilitating the determination of the best global alignment. Needleman-Wunsch is particularly useful when comparing entire sequences, ensuring comprehensive analysis by aligning the full length of both sequences. Through the process of traceback, the algorithm reconstructs the optimal global alignment, providing insights into evolutionary relationships, genetic similarities, and functional domains. This algorithm\'s versatility has made it a fundamental tool in bioinformatics, contributing significantly to sequence analysis, structural biology, and understanding the intricacies of molecular evolution.</span></p></body></html>"))
         self.label_3.setText(_translate("Form", "Sequence 2"))
         self.textEdit_2.setPlaceholderText(_translate("Form", "Enter Second Sequence"))
         self.label_2.setText(_translate("Form", "Sequence 1"))
@@ -196,4 +199,3 @@ class Ui_Form(object):
         self.label_5.setText(_translate("Form", "Percent Similarity:"))
         self.pushButton.setText(_translate("Form", "Align"))
         self.pushButton_2.setText(_translate("Form", "Save"))
-        self.label.setText(_translate("Form", "Global Alignment"))
