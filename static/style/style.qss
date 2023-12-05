@@ -48,11 +48,16 @@
 	color: #fff;
 }
 
-#tab_frame QTabBar::tab::close-button {
-
-
+#tab_frame QTabBar::close-button {
+	margin-left: 5px;
+	image: url("static/icons/x-circle.svg");
 }
 
+#tab_frame QTabBar::close-button::hover {
+	margin-left: 5px;
+	image: url("static/icons/gray-x-circle.svg");
+	background-color: rgba(240,228,66,0.8);  /* yellow  */
+}
 /** Min Max Close Button (Nav Buttons) **/
 #min_max_close QPushButton{
 	background-color: rgb(61,80,95);  /* dark blue-gray  */

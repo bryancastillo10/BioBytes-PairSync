@@ -307,7 +307,7 @@ class Ui_MainWindow(object):
         self.gridLayout_3.addWidget(self.header_frame, 0, 0, 1, 1)
         self.tab_frame = QtWidgets.QFrame(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
         )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
