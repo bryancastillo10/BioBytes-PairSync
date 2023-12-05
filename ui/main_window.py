@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\main_window.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\main_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -56,9 +56,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.addWidget(self.label)
         self.gridLayout_2.addWidget(self.frame_3, 0, 0, 1, 1)
         self.frame_4 = QtWidgets.QFrame(self.left_menu_widget)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_4.sizePolicy().hasHeightForWidth())
@@ -75,47 +73,29 @@ class Ui_MainWindow(object):
         font.setFamily("Lora-VariableFont")
         self.btn_1.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(
-            QtGui.QPixmap(":/icons/icons/dna-helix-32.ico"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
+        icon.addPixmap(QtGui.QPixmap(":/icons/icons/dna-helix-32.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_1.setIcon(icon)
         self.btn_1.setObjectName("btn_1")
         self.verticalLayout_3.addWidget(self.btn_1)
         self.btn_2 = QtWidgets.QPushButton(self.frame_4)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(
-            QtGui.QPixmap(":/icons/icons/scatter-plot-32.ico"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
+        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/scatter-plot-32.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_2.setIcon(icon1)
         self.btn_2.setObjectName("btn_2")
         self.verticalLayout_3.addWidget(self.btn_2)
         self.btn_3 = QtWidgets.QPushButton(self.frame_4)
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(
-            QtGui.QPixmap(":/icons/icons/extensions-32.ico"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
+        icon2.addPixmap(QtGui.QPixmap(":/icons/icons/extensions-32.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_3.setIcon(icon2)
         self.btn_3.setObjectName("btn_3")
         self.verticalLayout_3.addWidget(self.btn_3)
         self.btn_4 = QtWidgets.QPushButton(self.frame_4)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(
-            QtGui.QPixmap(":/icons/icons/internet-32.ico"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
+        icon3.addPixmap(QtGui.QPixmap(":/icons/icons/internet-32.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_4.setIcon(icon3)
         self.btn_4.setObjectName("btn_4")
         self.verticalLayout_3.addWidget(self.btn_4)
-        self.gridLayout_2.addWidget(
-            self.frame_4, 1, 0, 1, 1, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop
-        )
+        self.gridLayout_2.addWidget(self.frame_4, 1, 0, 1, 1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.frame_5 = QtWidgets.QFrame(self.left_menu_widget)
         self.frame_5.setMaximumSize(QtCore.QSize(16777215, 80))
         self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -133,9 +113,7 @@ class Ui_MainWindow(object):
         self.label_10.setScaledContents(True)
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
-        self.horizontalLayout_6.addWidget(
-            self.label_10, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter
-        )
+        self.horizontalLayout_6.addWidget(self.label_10, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.label_2 = QtWidgets.QLabel(self.frame_5)
         self.label_2.setMinimumSize(QtCore.QSize(0, 30))
         self.label_2.setMaximumSize(QtCore.QSize(16777215, 30))
@@ -225,16 +203,8 @@ class Ui_MainWindow(object):
         self.menu_btn.setMaximumSize(QtCore.QSize(16777215, 50))
         self.menu_btn.setText("")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(
-            QtGui.QPixmap(":/icons/icons/align-center.svg"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
-        icon4.addPixmap(
-            QtGui.QPixmap(":/icons/icons/arrow-right-circle.svg"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.On,
-        )
+        icon4.addPixmap(QtGui.QPixmap(":/icons/icons/align-center.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/icons/icons/arrow-right-circle.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.menu_btn.setIcon(icon4)
         self.menu_btn.setIconSize(QtCore.QSize(40, 40))
         self.menu_btn.setCheckable(True)
@@ -252,9 +222,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.label_7 = QtWidgets.QLabel(self.frame_11)
         self.label_7.setObjectName("label_7")
-        self.verticalLayout_6.addWidget(
-            self.label_7, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter
-        )
+        self.verticalLayout_6.addWidget(self.label_7, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.horizontalLayout_2.addWidget(self.frame_11)
         self.header_nav = QtWidgets.QFrame(self.header_frame)
         self.header_nav.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -269,11 +237,7 @@ class Ui_MainWindow(object):
         self.min_btn.setMaximumSize(QtCore.QSize(30, 30))
         self.min_btn.setText("")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(
-            QtGui.QPixmap(":/icons/icons/minus.svg"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
+        icon5.addPixmap(QtGui.QPixmap(":/icons/icons/minus.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.min_btn.setIcon(icon5)
         self.min_btn.setObjectName("min_btn")
         self.horizontalLayout_4.addWidget(self.min_btn)
@@ -282,11 +246,7 @@ class Ui_MainWindow(object):
         self.max_btn.setMaximumSize(QtCore.QSize(30, 30))
         self.max_btn.setText("")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(
-            QtGui.QPixmap(":/icons/icons/maximize-2.svg"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
+        icon6.addPixmap(QtGui.QPixmap(":/icons/icons/maximize-2.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.max_btn.setIcon(icon6)
         self.max_btn.setObjectName("max_btn")
         self.horizontalLayout_4.addWidget(self.max_btn)
@@ -295,20 +255,14 @@ class Ui_MainWindow(object):
         self.close_btn.setMaximumSize(QtCore.QSize(30, 30))
         self.close_btn.setText("")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(
-            QtGui.QPixmap(":/icons/icons/x.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
-        )
+        icon7.addPixmap(QtGui.QPixmap(":/icons/icons/x.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.close_btn.setIcon(icon7)
         self.close_btn.setObjectName("close_btn")
         self.horizontalLayout_4.addWidget(self.close_btn)
-        self.horizontalLayout_2.addWidget(
-            self.header_nav, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignTop
-        )
+        self.horizontalLayout_2.addWidget(self.header_nav, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
         self.gridLayout_3.addWidget(self.header_frame, 0, 0, 1, 1)
         self.frame_8 = QtWidgets.QFrame(self.frame_2)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_8.sizePolicy().hasHeightForWidth())
@@ -323,9 +277,6 @@ class Ui_MainWindow(object):
         self.tabWidget = QtWidgets.QTabWidget(self.frame_8)
         self.tabWidget.setTabsClosable(True)
         self.tabWidget.setObjectName("tabWidget")
-        self.tab = QtWidgets.QWidget()
-        self.tab.setObjectName("tab")
-        self.tabWidget.addTab(self.tab, "")
         self.verticalLayout_8.addWidget(self.tabWidget)
         self.gridLayout_3.addWidget(self.frame_8, 1, 0, 1, 1)
         self.footer_frame = QtWidgets.QFrame(self.frame_2)
@@ -362,21 +313,20 @@ class Ui_MainWindow(object):
         self.size_grip.setFrameShadow(QtWidgets.QFrame.Raised)
         self.size_grip.setObjectName("size_grip")
         self.verticalLayout.addWidget(self.size_grip)
-        self.horizontalLayout_5.addWidget(
-            self.frame_14, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom
-        )
-        self.gridLayout_3.addWidget(
-            self.footer_frame, 2, 0, 1, 1, QtCore.Qt.AlignBottom
-        )
+        self.horizontalLayout_5.addWidget(self.frame_14, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
+        self.gridLayout_3.addWidget(self.footer_frame, 2, 0, 1, 1, QtCore.Qt.AlignBottom)
         self.footer_frame.raise_()
         self.header_frame.raise_()
         self.frame_8.raise_()
         self.horizontalLayout.addWidget(self.frame_2)
         MainWindow.setCentralWidget(self.centralwidget)
+        self.statusBar = QtWidgets.QStatusBar(MainWindow)
+        self.statusBar.setObjectName("statusBar")
+        MainWindow.setStatusBar(self.statusBar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
-        self.menu_btn.toggled["bool"].connect(self.left_menu_widget.setHidden)  # type: ignore
+        self.tabWidget.setCurrentIndex(-1)
+        self.menu_btn.toggled['bool'].connect(self.left_menu_widget.setHidden) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -389,15 +339,9 @@ class Ui_MainWindow(object):
         self.btn_4.setText(_translate("MainWindow", "Global Alignment"))
         self.label_2.setText(_translate("MainWindow", "ABOUT "))
         self.label_5.setText(_translate("MainWindow", "Donation"))
-        self.label_3.setText(_translate("MainWindow", "Developer's Info"))
+        self.label_3.setText(_translate("MainWindow", "Developer\'s Info"))
         self.label_4.setText(_translate("MainWindow", "GitHub"))
         self.label_6.setText(_translate("MainWindow", "MENU"))
         self.label_7.setText(_translate("MainWindow", "BioBytes PairSync"))
-        self.tabWidget.setTabText(
-            self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Sample Tab")
-        )
-        self.label_8.setText(
-            _translate(
-                "MainWindow", "Copyright BioBytes PairSync v1.0.1 All Rights Reserved"
-            )
-        )
+        self.label_8.setText(_translate("MainWindow", "Copyright BioBytes PairSync v1.0.1 All Rights Reserved"))
+

@@ -28,8 +28,8 @@ class MyWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.stylesheet_file("static/style/style.qss")
-        self.setWindowFlag(Qt.FramelessWindowHint)
-        self.setAttribute(Qt.WA_TranslucentBackground)
+        self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowMaximizeButtonHint)
+        self.setAttribute(Qt.WA_TranslucentBackground, True)
 
         ## ==================================####
         ##  Customized min, max, and close button
