@@ -403,7 +403,7 @@ p, li { white-space: pre-wrap; }
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="../../static/resources_rc.qrc">:/icons/icons/analysis64.png</pixmap>
+                <pixmap resource="../../static/resources_rc.qrc">:/images/images/gene_search.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>

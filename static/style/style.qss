@@ -1,10 +1,11 @@
 *{
 	font-family: "Lora-VariableFont";
 	font-size: 20px;
+	color: #fff;
 }
 
 #centralwidget {
-	background-color: rgba(7,191,160,0.7); /* teal green  */
+	background-color: rgba(21,21,21,0.8); /* black  */
 	border-radius: 15px;
 }
 

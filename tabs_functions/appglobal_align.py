@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import QWidget
+from PyQt5.QtGui import QFontDatabase
 
 from ui.tabs.global_align_ui import Ui_Form
 

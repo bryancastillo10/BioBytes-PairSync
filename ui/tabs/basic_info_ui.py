@@ -165,7 +165,7 @@ class Ui_Form(object):
         self.label_6.setMinimumSize(QtCore.QSize(70, 70))
         self.label_6.setMaximumSize(QtCore.QSize(70, 70))
         self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap(":/icons/icons/analysis64.png"))
+        self.label_6.setPixmap(QtGui.QPixmap(":/images/images/gene_search.png"))
         self.label_6.setScaledContents(True)
         self.label_6.setObjectName("label_6")
         self.horizontalLayout_2.addWidget(self.frame_13)

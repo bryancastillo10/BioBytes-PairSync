@@ -1,5 +1,4 @@
-
-/** Header Frame: Title and Description**/
+/** Header Frame: Title and Description **/
 *{
     background-color: rgb(61,80,95);
     color: #fff;
@@ -17,17 +16,17 @@
 }
 
 /** Input and Output Frame **/
-#input_frame QTextEdit, QLineEdit {
-    border: 1px solid rgb(255,255,255);
+
+#seq1_frame QTextEdit, #seq2_frame QTextEdit {
+     border: 1px solid rgb(255,255,255);
 }
 
-#input_frame QTextEdit::focus, QLineEdit::focus, #output_frame QTextBrowser::focus {
-    border: 1px solid rgb(7,191,160);
+#seq1_frame QTextEdit::focus, #seq2_frame QTextEdit::focus {
+     border: 1px solid rgb(7,191,160);
 }
-
 
 /** App Buttons**/
-#load_start QPushButton, #clear_save QPushButton{
+#output_btns QPushButton {
     background-color: rgb(120,157,186); /* light blue */
 	border: 3px solid rgb(5,92,142);
 	border-radius:15px;
@@ -35,9 +34,8 @@
 	color: #000;
 }
 
-#load_start QPushButton::hover,#clear_save QPushButton::hover{
-	background-color: rgba(5,92,142,0.5); /* dark-blue */
+#output_btns QPushButton::hover {
+    background-color: rgba(5,92,142,0.5); /* dark-blue */
 	color: #fff;
 	border-radius: 18px;
-	
 }

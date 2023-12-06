@@ -14,7 +14,7 @@
    <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
-   <item>
+   <item alignment="Qt::AlignHCenter">
     <widget class="QFrame" name="title">
      <property name="maximumSize">
       <size>
@@ -28,10 +28,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <property name="spacing">
-       <number>0</number>
-      </property>
+     <layout class="QGridLayout" name="gridLayout_4">
       <property name="leftMargin">
        <number>0</number>
       </property>
@@ -44,7 +41,7 @@
       <property name="bottomMargin">
        <number>0</number>
       </property>
-      <item alignment="Qt::AlignHCenter">
+      <item row="0" column="1">
        <widget class="QLabel" name="label">
         <property name="font">
          <font>
@@ -54,6 +51,25 @@
         </property>
         <property name="text">
          <string>Global Alignment</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="../../static/resources_rc.qrc">:/images/images/bases2.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -358,6 +374,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../static/resources_rc.qrc"/>
+ </resources>
  <connections/>
 </ui>

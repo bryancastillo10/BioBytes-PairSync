@@ -22,18 +22,24 @@ class Ui_Form(object):
         self.title.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.title.setFrameShadow(QtWidgets.QFrame.Raised)
         self.title.setObjectName("title")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.title)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.gridLayout_4 = QtWidgets.QGridLayout(self.title)
+        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_4.setObjectName("gridLayout_4")
         self.label = QtWidgets.QLabel(self.title)
         font = QtGui.QFont()
         font.setFamily("Noto Sans")
         font.setPointSize(12)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.verticalLayout_2.addWidget(self.label, 0, QtCore.Qt.AlignHCenter)
-        self.verticalLayout_3.addWidget(self.title)
+        self.gridLayout_4.addWidget(self.label, 0, 1, 1, 1)
+        self.label_6 = QtWidgets.QLabel(self.title)
+        self.label_6.setMaximumSize(QtCore.QSize(50, 50))
+        self.label_6.setText("")
+        self.label_6.setPixmap(QtGui.QPixmap(":/images/images/bases2.png"))
+        self.label_6.setScaledContents(True)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout_4.addWidget(self.label_6, 0, 0, 1, 1)
+        self.verticalLayout_3.addWidget(self.title, 0, QtCore.Qt.AlignHCenter)
         self.des = QtWidgets.QFrame(Form)
         self.des.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.des.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -48,7 +54,9 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.textBrowser, 0, QtCore.Qt.AlignTop)
         self.verticalLayout_3.addWidget(self.des)
         self.frame_3 = QtWidgets.QFrame(Form)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
@@ -95,7 +103,9 @@ class Ui_Form(object):
         self.verticalLayout_6.addWidget(self.textEdit)
         self.gridLayout.addWidget(self.seq1_frame, 0, 0, 1, 1)
         self.align_frame = QtWidgets.QFrame(self.frame_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.align_frame.sizePolicy().hasHeightForWidth())
@@ -121,7 +131,9 @@ class Ui_Form(object):
         self.verticalLayout_4.addWidget(self.label_4, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_5.addWidget(self.frame_8)
         self.frame_9 = QtWidgets.QFrame(self.align_frame)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_9.sizePolicy().hasHeightForWidth())
@@ -132,7 +144,9 @@ class Ui_Form(object):
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.frame_9)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.frame_11 = QtWidgets.QFrame(self.frame_9)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_11.sizePolicy().hasHeightForWidth())
@@ -159,7 +173,9 @@ class Ui_Form(object):
         self.textBrowser_3 = QtWidgets.QTextBrowser(self.frame_10)
         self.textBrowser_3.setObjectName("textBrowser_3")
         self.gridLayout_3.addWidget(self.textBrowser_3, 0, 1, 1, 1)
-        self.verticalLayout_8.addWidget(self.frame_10, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
+        self.verticalLayout_8.addWidget(
+            self.frame_10, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom
+        )
         self.verticalLayout_5.addWidget(self.frame_9)
         self.start_save_btns = QtWidgets.QFrame(self.align_frame)
         self.start_save_btns.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -170,7 +186,9 @@ class Ui_Form(object):
         self.pushButton = QtWidgets.QPushButton(self.start_save_btns)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
-        spacerItem = QtWidgets.QSpacerItem(228, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        spacerItem = QtWidgets.QSpacerItem(
+            228, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
+        )
         self.horizontalLayout.addItem(spacerItem)
         self.pushButton_2 = QtWidgets.QPushButton(self.start_save_btns)
         self.pushButton_2.setObjectName("pushButton_2")
@@ -186,11 +204,16 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "Global Alignment"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br />The Needleman-Wunsch algorithm stands as a seminal method in bioinformatics, specifically designed for global sequence alignment. As a dynamic programming algorithm, Needleman-Wunsch aims to identify the optimal alignment between two sequences by considering all possible alignments and assigning scores based on matches, mismatches, and gaps. It employs a dynamic programming matrix to systematically calculate alignment scores, facilitating the determination of the best global alignment. Needleman-Wunsch is particularly useful when comparing entire sequences, ensuring comprehensive analysis by aligning the full length of both sequences. Through the process of traceback, the algorithm reconstructs the optimal global alignment, providing insights into evolutionary relationships, genetic similarities, and functional domains. This algorithm\'s versatility has made it a fundamental tool in bioinformatics, contributing significantly to sequence analysis, structural biology, and understanding the intricacies of molecular evolution.</p></body></html>"))
+        self.textBrowser.setHtml(
+            _translate(
+                "Form",
+                '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
+                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
+                "p, li { white-space: pre-wrap; }\n"
+                "</style></head><body style=\" font-family:'PMingLiU'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br />The Needleman-Wunsch algorithm stands as a seminal method in bioinformatics, specifically designed for global sequence alignment. As a dynamic programming algorithm, Needleman-Wunsch aims to identify the optimal alignment between two sequences by considering all possible alignments and assigning scores based on matches, mismatches, and gaps. It employs a dynamic programming matrix to systematically calculate alignment scores, facilitating the determination of the best global alignment. Needleman-Wunsch is particularly useful when comparing entire sequences, ensuring comprehensive analysis by aligning the full length of both sequences. Through the process of traceback, the algorithm reconstructs the optimal global alignment, providing insights into evolutionary relationships, genetic similarities, and functional domains. This algorithm\'s versatility has made it a fundamental tool in bioinformatics, contributing significantly to sequence analysis, structural biology, and understanding the intricacies of molecular evolution.</p></body></html>',
+            )
+        )
         self.label_3.setText(_translate("Form", "Sequence 2"))
         self.textEdit_2.setPlaceholderText(_translate("Form", "Enter Second Sequence"))
         self.label_2.setText(_translate("Form", "Sequence 1"))
