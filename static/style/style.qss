@@ -51,6 +51,8 @@ QTabWidget::pane{
 	background-color:rgb(61,80,95);  /* dark blue-gray  */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+	font-family: "Lora-VariableFont";
+	font-size:14px;
 	color: #fff;
 }
 
@@ -78,4 +80,9 @@ QTabWidget::pane{
 	background-color: rgba(240,228,66,0.8);  /* yellow  */
 	border-radius: 15px;
 	border: 3px solid rgb(120,157,186); /* light blue*/
+}
+
+/** Footer Section **/
+#copyright QLabel{
+	font-size:11px;
 }
