@@ -788,18 +788,18 @@
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
+             <item alignment="Qt::AlignRight|Qt::AlignBottom">
               <widget class="QFrame" name="size_grip">
                <property name="minimumSize">
                 <size>
-                 <width>20</width>
-                 <height>20</height>
+                 <width>10</width>
+                 <height>10</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>50</width>
-                 <height>50</height>
+                 <width>20</width>
+                 <height>20</height>
                 </size>
                </property>
                <property name="frameShape">
