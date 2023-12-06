@@ -29,7 +29,7 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
-   <item alignment="Qt::AlignHCenter">
+   <item>
     <widget class="QFrame" name="title">
      <property name="maximumSize">
       <size>
@@ -44,19 +44,7 @@
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item row="0" column="1">
+      <item row="0" column="0" alignment="Qt::AlignHCenter">
        <widget class="QLabel" name="label">
         <property name="font">
          <font>
@@ -69,7 +57,7 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
+      <item row="0" column="1">
        <widget class="QLabel" name="label_6">
         <property name="maximumSize">
          <size>
@@ -104,13 +92,13 @@
        <number>0</number>
       </property>
       <property name="leftMargin">
-       <number>0</number>
+       <number>5</number>
       </property>
       <property name="topMargin">
        <number>0</number>
       </property>
       <property name="rightMargin">
-       <number>0</number>
+       <number>5</number>
       </property>
       <property name="bottomMargin">
        <number>0</number>
@@ -151,7 +139,7 @@ p, li { white-space: pre-wrap; }
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <property name="leftMargin">
-       <number>0</number>
+       <number>5</number>
       </property>
       <property name="topMargin">
        <number>0</number>
@@ -174,6 +162,21 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_7">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
          <item>
           <widget class="QLabel" name="label_3">
            <property name="font">
@@ -206,6 +209,21 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_6">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QLabel" name="label_2">
            <property name="font">
@@ -244,6 +262,21 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QFrame" name="frame_8">
            <property name="font">
@@ -356,6 +389,10 @@ p, li { white-space: pre-wrap; }
               <property name="text">
                <string>Align</string>
               </property>
+              <property name="icon">
+               <iconset resource="../../static/resources_rc.qrc">
+                <normaloff>:/icons/icons/play-circle.svg</normaloff>:/icons/icons/play-circle.svg</iconset>
+              </property>
              </widget>
             </item>
             <item>
@@ -375,6 +412,10 @@ p, li { white-space: pre-wrap; }
              <widget class="QPushButton" name="pushButton_2">
               <property name="text">
                <string>Save</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../../static/resources_rc.qrc">
+                <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
               </property>
              </widget>
             </item>

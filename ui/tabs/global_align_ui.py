@@ -49,7 +49,7 @@ class Ui_Form(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.textBrowser = QtWidgets.QTextBrowser(self.des)
-        self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 110))
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout.addWidget(self.textBrowser, 0, QtCore.Qt.AlignTop)
         self.verticalLayout_3.addWidget(self.des)
@@ -73,6 +73,8 @@ class Ui_Form(object):
         self.seq2_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.seq2_frame.setObjectName("seq2_frame")
         self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.seq2_frame)
+        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_7.setSpacing(5)
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.label_3 = QtWidgets.QLabel(self.seq2_frame)
         font = QtGui.QFont()
@@ -90,6 +92,8 @@ class Ui_Form(object):
         self.seq1_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.seq1_frame.setObjectName("seq1_frame")
         self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.seq1_frame)
+        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_6.setSpacing(5)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.label_2 = QtWidgets.QLabel(self.seq1_frame)
         font = QtGui.QFont()
@@ -114,6 +118,8 @@ class Ui_Form(object):
         self.align_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.align_frame.setObjectName("align_frame")
         self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.align_frame)
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_5.setSpacing(5)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.frame_8 = QtWidgets.QFrame(self.align_frame)
         font = QtGui.QFont()
@@ -184,6 +190,13 @@ class Ui_Form(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.start_save_btns)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.pushButton = QtWidgets.QPushButton(self.start_save_btns)
+        icon = QtGui.QIcon()
+        icon.addPixmap(
+            QtGui.QPixmap(":/icons/icons/play-circle.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
+        self.pushButton.setIcon(icon)
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
         spacerItem = QtWidgets.QSpacerItem(
@@ -191,6 +204,11 @@ class Ui_Form(object):
         )
         self.horizontalLayout.addItem(spacerItem)
         self.pushButton_2 = QtWidgets.QPushButton(self.start_save_btns)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(
+            QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
+        self.pushButton_2.setIcon(icon1)
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout.addWidget(self.pushButton_2)
         self.verticalLayout_5.addWidget(self.start_save_btns)
