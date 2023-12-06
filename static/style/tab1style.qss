@@ -2,3 +2,37 @@
     background-color: rgb(61,80,95);
     color: #fff;
 }
+
+#title {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+#des QTextEdit {
+    font-size:10px;
+    border:0;
+}
+
+#input_frame QTextEdit, QLineEdit {
+    border: 1px solid rgb(255,255,255);
+}
+
+#input_frame QTextEdit::focus, QLineEdit::focus, #output_frame QTextBrowser::focus {
+    border: 1px solid rgb(7,191,160);
+}
+
+#load_start QPushButton, #clear_save QPushButton{
+    background-color: rgb(120,157,186); /* light blue */
+	border: 3px solid rgb(5,92,142);
+	border-radius:15px;
+	padding: 5px;
+	color: #000;
+}
+
+#load_start QPushButton::hover,#clear_save QPushButton::hover{
+	background-color: rgba(5,92,142,0.5); /* dark-blue */
+	color: #fff;
+	border-radius: 18px;
+	
+}

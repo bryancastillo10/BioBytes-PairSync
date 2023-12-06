@@ -39,7 +39,7 @@
     <number>0</number>
    </property>
    <item alignment="Qt::AlignTop">
-    <widget class="QFrame" name="frame">
+    <widget class="QFrame" name="title">
      <property name="styleSheet">
       <string notr="true"/>
      </property>
@@ -82,7 +82,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="des">
      <property name="styleSheet">
       <string notr="true"/>
      </property>
@@ -113,7 +113,7 @@
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>180</height>
+          <height>150</height>
          </size>
         </property>
         <property name="autoFillBackground">
@@ -135,7 +135,7 @@ p, li { white-space: pre-wrap; }
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame_3">
+    <widget class="QFrame" name="main">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
        <horstretch>0</horstretch>
@@ -168,7 +168,7 @@ p, li { white-space: pre-wrap; }
        <number>0</number>
       </property>
       <item>
-       <widget class="QFrame" name="frame_4">
+       <widget class="QFrame" name="input_frame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -212,14 +212,20 @@ p, li { white-space: pre-wrap; }
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <item row="0" column="0">
+            <property name="horizontalSpacing">
+             <number>0</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>10</number>
+            </property>
+            <item row="0" column="0" alignment="Qt::AlignLeft">
              <widget class="QLabel" name="label_2">
               <property name="text">
-               <string>Biomolecule Type</string>
+               <string>Biomolecule Type: </string>
               </property>
              </widget>
             </item>
-            <item row="0" column="1">
+            <item row="0" column="1" alignment="Qt::AlignRight">
              <widget class="QComboBox" name="comboBox">
               <property name="styleSheet">
                <string notr="true"/>
@@ -241,21 +247,47 @@ p, li { white-space: pre-wrap; }
               </item>
              </widget>
             </item>
+            <item row="0" column="2" colspan="2">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>309</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item row="1" column="0">
              <widget class="QLabel" name="label_3">
               <property name="text">
-               <string>Label</string>
+               <string>Label:</string>
               </property>
              </widget>
             </item>
-            <item row="1" column="1">
+            <item row="1" column="1" colspan="2" alignment="Qt::AlignRight">
              <widget class="QLineEdit" name="lineEdit">
               <property name="text">
                <string/>
               </property>
              </widget>
             </item>
-            <item row="2" column="0" colspan="2" alignment="Qt::AlignHCenter">
+            <item row="1" column="3">
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>198</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="2">
              <widget class="QLabel" name="label_4">
               <property name="font">
                <font>
@@ -300,6 +332,12 @@ p, li { white-space: pre-wrap; }
             </property>
             <item row="0" column="0">
              <widget class="QTextEdit" name="textEdit_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="placeholderText">
                <string>Paste the Sequence or URL</string>
               </property>
@@ -374,7 +412,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item alignment="Qt::AlignRight">
-             <widget class="QFrame" name="frame_12">
+             <widget class="QFrame" name="load_start">
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
@@ -394,7 +432,7 @@ p, li { white-space: pre-wrap; }
                <item>
                 <widget class="QPushButton" name="pushButton">
                  <property name="text">
-                  <string>Load .txt file</string>
+                  <string>Load</string>
                  </property>
                  <property name="icon">
                   <iconset resource="../../static/resources_rc.qrc">
@@ -423,7 +461,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item>
-       <widget class="QFrame" name="frame_5">
+       <widget class="QFrame" name="output_frame">
         <property name="styleSheet">
          <string notr="true"/>
         </property>
@@ -447,7 +485,7 @@ p, li { white-space: pre-wrap; }
           <number>0</number>
          </property>
          <item alignment="Qt::AlignTop">
-          <widget class="QFrame" name="frame_9">
+          <widget class="QFrame" name="out_text">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
@@ -472,7 +510,7 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
          <item>
-          <widget class="QFrame" name="frame_10">
+          <widget class="QFrame" name="out_screen">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
              <horstretch>0</horstretch>
@@ -487,13 +525,20 @@ p, li { white-space: pre-wrap; }
            </property>
            <layout class="QGridLayout" name="gridLayout">
             <item row="0" column="0">
-             <widget class="QTextBrowser" name="textBrowser"/>
+             <widget class="QTextBrowser" name="textBrowser">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
          </item>
          <item alignment="Qt::AlignBottom">
-          <widget class="QFrame" name="frame_11">
+          <widget class="QFrame" name="clear_save">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
