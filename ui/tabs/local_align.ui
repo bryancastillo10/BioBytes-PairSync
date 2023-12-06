@@ -30,7 +30,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QFrame" name="frame">
+    <widget class="QFrame" name="title">
      <property name="maximumSize">
       <size>
        <width>16777215</width>
@@ -76,7 +76,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="des">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -150,7 +150,7 @@ p, li { white-space: pre-wrap; }
        <number>0</number>
       </property>
       <item row="1" column="0">
-       <widget class="QFrame" name="frame_6">
+       <widget class="QFrame" name="seq2_frame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -182,7 +182,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QFrame" name="frame_4">
+       <widget class="QFrame" name="seq1_frame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -214,7 +214,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item row="0" column="1" rowspan="2">
-       <widget class="QFrame" name="frame_5">
+       <widget class="QFrame" name="align_framed">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -252,7 +252,7 @@ p, li { white-space: pre-wrap; }
             <item alignment="Qt::AlignHCenter">
              <widget class="QLabel" name="label_4">
               <property name="text">
-               <string>Aligned Sequence</string>
+               <string>Aligned Sequences</string>
               </property>
              </widget>
             </item>
@@ -327,7 +327,7 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
          <item>
-          <widget class="QFrame" name="frame_7">
+          <widget class="QFrame" name="start_save_btns">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>

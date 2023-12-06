@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item alignment="Qt::AlignTop">
-    <widget class="QFrame" name="frame">
+    <widget class="QFrame" name="title">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -40,7 +40,7 @@
     </widget>
    </item>
    <item alignment="Qt::AlignTop">
-    <widget class="QFrame" name="frame_2">
+    <widget class="QFrame" name="des">
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
@@ -114,7 +114,7 @@ p, li { white-space: pre-wrap; }
        <number>0</number>
       </property>
       <item row="1" column="0">
-       <widget class="QFrame" name="frame_6">
+       <widget class="QFrame" name="seq2_frame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -146,7 +146,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item row="0" column="0">
-       <widget class="QFrame" name="frame_4">
+       <widget class="QFrame" name="seq1_frame">
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
         </property>
@@ -178,7 +178,7 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item row="0" column="1" rowspan="2">
-       <widget class="QFrame" name="frame_5">
+       <widget class="QFrame" name="out_graph">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -260,7 +260,7 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
          <item>
-          <widget class="QFrame" name="frame_7">
+          <widget class="QFrame" name="output_btns">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
