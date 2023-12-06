@@ -40,7 +40,7 @@ class Ui_Form(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label, 0, QtCore.Qt.AlignHCenter)
-        self.verticalLayout.addWidget(self.title, 0, QtCore.Qt.AlignTop)
+        self.verticalLayout.addWidget(self.title)
         self.des = QtWidgets.QFrame(Form)
         self.des.setStyleSheet("")
         self.des.setFrameShape(QtWidgets.QFrame.StyledPanel)

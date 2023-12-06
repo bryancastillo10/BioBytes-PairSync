@@ -38,7 +38,7 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
-   <item alignment="Qt::AlignTop">
+   <item>
     <widget class="QFrame" name="title">
      <property name="styleSheet">
       <string notr="true"/>

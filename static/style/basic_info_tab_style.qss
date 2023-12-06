@@ -1,6 +1,6 @@
 /** Header Frame: Title and Description**/
 *{
-    background-color: rgb(61,80,95);
+    background-color: rgb(54,54,54); /* charcoal gray*/
     color: #fff;
 }
 

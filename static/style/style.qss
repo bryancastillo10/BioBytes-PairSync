@@ -5,13 +5,13 @@
 }
 
 #centralwidget {
-	background-color: rgba(21,21,21,0.8); /* black  */
+	background-color: rgba(61,80,95,0.8); /* slate blue*/
 	border-radius: 15px;
 }
 
 QToolTip {
-	background-color: rgb(120,157,186);  /* light blue */
-	color: #000;
+	background-color: rgb(54,54,54); /* charcoal gray*/
+	color: #fff;
 	border: 1px solid #000;
 	font-size:12px;
 }
@@ -56,7 +56,7 @@ QTabWidget::pane{
 }
 
 #tab_frame QTabBar::tab {
-	background-color:rgb(61,80,95);  /* dark blue-gray  */
+	background-color:rgb(54,54,54); /* charcoal gray*/
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 	font-family: "Lora-VariableFont";
@@ -66,7 +66,7 @@ QTabWidget::pane{
 
 
 #tab_frame QTabBar::close-button {
-	background-color:rgba(61,80,95,0.7);
+	background-color:rgba(54,54,54,0.7); /* charcoal gray */
 	margin-left: 5px;
 	image: url("static/icons/x-circle.svg");
 }
