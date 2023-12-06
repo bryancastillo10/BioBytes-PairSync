@@ -53,6 +53,9 @@
        <property name="bottomMargin">
         <number>0</number>
        </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <item row="0" column="0">
         <widget class="QFrame" name="gen_tools">
          <property name="minimumSize">
@@ -204,7 +207,7 @@
             </property>
             <property name="icon">
              <iconset resource="../static/resources_rc.qrc">
-              <normaloff>:/icons/icons/internet-32.ico</normaloff>:/icons/icons/internet-32.ico</iconset>
+              <normaloff>:/icons/icons/globe-3-32.ico</normaloff>:/icons/icons/globe-3-32.ico</iconset>
             </property>
            </widget>
           </item>

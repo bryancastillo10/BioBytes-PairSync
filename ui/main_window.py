@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\main_window.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\main_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -28,7 +28,8 @@ class Ui_MainWindow(object):
         self.left_menu_widget = QtWidgets.QWidget(self.centralwidget)
         self.left_menu_widget.setObjectName("left_menu_widget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.left_menu_widget)
-        self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_2.setContentsMargins(3, 3, 0, 0)
+        self.gridLayout_2.setSpacing(0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.gen_tools = QtWidgets.QFrame(self.left_menu_widget)
         self.gen_tools.setMinimumSize(QtCore.QSize(0, 0))
@@ -106,7 +107,7 @@ class Ui_MainWindow(object):
         self.btn_4 = QtWidgets.QPushButton(self.menu_btns)
         icon3 = QtGui.QIcon()
         icon3.addPixmap(
-            QtGui.QPixmap(":/icons/icons/internet-32.ico"),
+            QtGui.QPixmap(":/icons/icons/globe-3-32.ico"),
             QtGui.QIcon.Normal,
             QtGui.QIcon.Off,
         )

@@ -1,6 +1,8 @@
 <RCC>
+  <qresource prefix="fonts">
+    <file>font/Lora-VariableFont_wght.ttf</file>
+  </qresource>
   <qresource prefix="icons">
-    <file>icons/gray-x-circle.svg</file>
     <file>icons/activity.svg</file>
     <file>icons/airplay.svg</file>
     <file>icons/alert-circle.svg</file>
@@ -62,9 +64,7 @@
     <file>icons/circle.svg</file>
     <file>icons/clipboard.svg</file>
     <file>icons/clipboard-4-32.ico</file>
-    <file>icons/clipboard-4-48.ico</file>
     <file>icons/clock.svg</file>
-    <file>icons/close-window-64.ico</file>
     <file>icons/cloud.svg</file>
     <file>icons/cloud-drizzle.svg</file>
     <file>icons/cloud-lightning.svg</file>
@@ -98,7 +98,6 @@
     <file>icons/divide-circle.svg</file>
     <file>icons/divide-square.svg</file>
     <file>icons/dna-helix-32.ico</file>
-    <file>icons/dna-helix-48.ico</file>
     <file>icons/dollar-sign.svg</file>
     <file>icons/download.svg</file>
     <file>icons/download-cloud.svg</file>
@@ -132,11 +131,12 @@
     <file>icons/git-commit.svg</file>
     <file>icons/github.svg</file>
     <file>icons/github-8-32.ico</file>
-    <file>icons/github-8-48.ico</file>
     <file>icons/gitlab.svg</file>
     <file>icons/git-merge.svg</file>
     <file>icons/git-pull-request.svg</file>
     <file>icons/globe.svg</file>
+    <file>icons/globe-3-32.ico</file>
+    <file>icons/gray-x-circle.svg</file>
     <file>icons/grid.svg</file>
     <file>icons/hard-drive.svg</file>
     <file>icons/hash.svg</file>
@@ -146,12 +146,10 @@
     <file>icons/hexagon.svg</file>
     <file>icons/home.svg</file>
     <file>icons/house-32.ico</file>
-    <file>icons/house-48.ico</file>
     <file>icons/image.svg</file>
     <file>icons/inbox.svg</file>
     <file>icons/info.svg</file>
     <file>icons/instagram.svg</file>
-    <file>icons/internet-32.ico</file>
     <file>icons/italic.svg</file>
     <file>icons/key.svg</file>
     <file>icons/layers.svg</file>
@@ -167,14 +165,12 @@
     <file>icons/log-out.svg</file>
     <file>icons/mail.svg</file>
     <file>icons/manager-32.ico</file>
-    <file>icons/manager-48.ico</file>
     <file>icons/map.svg</file>
     <file>icons/map-pin.svg</file>
     <file>icons/maximize.svg</file>
     <file>icons/maximize-2.svg</file>
     <file>icons/meh.svg</file>
     <file>icons/menu.svg</file>
-    <file>icons/menu-4-32.ico</file>
     <file>icons/message-circle.svg</file>
     <file>icons/message-square.svg</file>
     <file>icons/mic.svg</file>
@@ -196,8 +192,6 @@
     <file>icons/octagon.svg</file>
     <file>icons/package.svg</file>
     <file>icons/paperclip.svg</file>
-    <file>icons/paper-clip-2-32.ico</file>
-    <file>icons/paper-clip-2-48.ico</file>
     <file>icons/pause.svg</file>
     <file>icons/pause-circle.svg</file>
     <file>icons/pen-tool.svg</file>
@@ -227,14 +221,9 @@
     <file>icons/rotate-cw.svg</file>
     <file>icons/rss.svg</file>
     <file>icons/save.svg</file>
-    <file>icons/save-32.ico</file>
-    <file>icons/save-48.ico</file>
     <file>icons/scatter-plot-32.ico</file>
-    <file>icons/scatter-plot-48.ico</file>
     <file>icons/scissors.svg</file>
     <file>icons/search.svg</file>
-    <file>icons/search-32.ico</file>
-    <file>icons/search-48.ico</file>
     <file>icons/send.svg</file>
     <file>icons/server.svg</file>
     <file>icons/settings.svg</file>
@@ -315,11 +304,12 @@
     <file>icons/zoom-out.svg</file>
   </qresource>
   <qresource prefix="images">
-    <file>images/paypal.png</file>
-    <file>images/web-development.png</file>
+    <file>images/bases1.png</file>
+    <file>images/bases2.png</file>
+    <file>images/gene_search.png</file>
     <file>images/github.png</file>
-  </qresource>
-  <qresource prefix="font">
-    <file>font/Lora-VariableFont_wght.ttf</file>
+    <file>images/paypal.png</file>
+    <file>images/scatter.png</file>
+    <file>images/web-development.png</file>
   </qresource>
 </RCC>

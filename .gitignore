@@ -3,6 +3,7 @@
 /seq_algorithm/__pycache__
 /gene_toolkit/__pycache__
 /ui/__pycache__
+/ui/main_window_ui
 /ui/tabs/__pycache__
 /tabs_functions/__pycache__
 static/resources_rc_rc.py
