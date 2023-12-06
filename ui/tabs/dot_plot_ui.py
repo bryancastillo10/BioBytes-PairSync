@@ -58,9 +58,7 @@ class Ui_Form(object):
         self.verticalLayout_3.addWidget(self.textBrowser)
         self.verticalLayout.addWidget(self.des)
         self.frame_3 = QtWidgets.QFrame(Form)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
@@ -107,9 +105,7 @@ class Ui_Form(object):
         self.verticalLayout_6.addWidget(self.textEdit)
         self.gridLayout.addWidget(self.seq1_frame, 0, 0, 1, 1)
         self.out_graph = QtWidgets.QFrame(self.frame_3)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.out_graph.sizePolicy().hasHeightForWidth())
@@ -135,9 +131,7 @@ class Ui_Form(object):
         self.verticalLayout_4.addWidget(self.label_4, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_5.addWidget(self.frame_8)
         self.frame_9 = QtWidgets.QFrame(self.out_graph)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_9.sizePolicy().hasHeightForWidth())
@@ -159,28 +153,20 @@ class Ui_Form(object):
         self.output_btns.setObjectName("output_btns")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.output_btns)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton = QtWidgets.QPushButton(self.output_btns)
+        self.plot_btn = QtWidgets.QPushButton(self.output_btns)
         icon = QtGui.QIcon()
-        icon.addPixmap(
-            QtGui.QPixmap(":/icons/icons/pie-chart.svg"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
-        self.pushButton.setIcon(icon)
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
-        spacerItem = QtWidgets.QSpacerItem(
-            228, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
-        )
+        icon.addPixmap(QtGui.QPixmap(":/icons/icons/pie-chart.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.plot_btn.setIcon(icon)
+        self.plot_btn.setObjectName("plot_btn")
+        self.horizontalLayout.addWidget(self.plot_btn)
+        spacerItem = QtWidgets.QSpacerItem(228, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
-        self.pushButton_2 = QtWidgets.QPushButton(self.output_btns)
+        self.save_btn = QtWidgets.QPushButton(self.output_btns)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(
-            QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
-        )
-        self.pushButton_2.setIcon(icon1)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.save_btn.setIcon(icon1)
+        self.save_btn.setObjectName("save_btn")
+        self.horizontalLayout.addWidget(self.save_btn)
         self.verticalLayout_5.addWidget(self.output_btns)
         self.gridLayout.addWidget(self.out_graph, 0, 1, 2, 1)
         self.verticalLayout.addWidget(self.frame_3)
@@ -192,20 +178,16 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "Dot Plot Sequence Alignment"))
-        self.textBrowser.setHtml(
-            _translate(
-                "Form",
-                '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';">   Dot plot sequencing is a valuable tool for pairwise sequence alignment in DNA and protein analysis. This method visually represents sequence similarities by placing dots on a graph, where each dot signifies a matching residue or identical subsequence. This straightforward approach aids in the identification of insertions, deletions, and substitutions, providing insights into evolutionary relationships and conserved regions. </span></p></body></html>',
-            )
-        )
+        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'PMingLiU\';\">   Dot plot sequencing is a valuable tool for pairwise sequence alignment in DNA and protein analysis. This method visually represents sequence similarities by placing dots on a graph, where each dot signifies a matching residue or identical subsequence. This straightforward approach aids in the identification of insertions, deletions, and substitutions, providing insights into evolutionary relationships and conserved regions. </span></p></body></html>"))
         self.label_3.setText(_translate("Form", "Sequence 2"))
         self.textEdit_2.setPlaceholderText(_translate("Form", "Enter Second Sequence"))
         self.label_2.setText(_translate("Form", "Sequence 1"))
         self.textEdit.setPlaceholderText(_translate("Form", "Enter First Sequence"))
         self.label_4.setText(_translate("Form", "Graphical Output"))
-        self.pushButton.setText(_translate("Form", "Plot"))
-        self.pushButton_2.setText(_translate("Form", "Save"))
+        self.plot_btn.setText(_translate("Form", "Plot"))
+        self.save_btn.setText(_translate("Form", "Save"))
+import resources_rc_rc

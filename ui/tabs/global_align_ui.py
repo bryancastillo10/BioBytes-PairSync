@@ -62,9 +62,7 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.textBrowser)
         self.verticalLayout_3.addWidget(self.des)
         self.frame_3 = QtWidgets.QFrame(Form)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
@@ -115,9 +113,7 @@ class Ui_Form(object):
         self.verticalLayout_6.addWidget(self.textEdit)
         self.gridLayout.addWidget(self.seq1_frame, 0, 0, 1, 1)
         self.align_frame = QtWidgets.QFrame(self.frame_3)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.align_frame.sizePolicy().hasHeightForWidth())
@@ -145,9 +141,7 @@ class Ui_Form(object):
         self.verticalLayout_4.addWidget(self.label_4, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_5.addWidget(self.frame_8)
         self.frame_9 = QtWidgets.QFrame(self.align_frame)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_9.sizePolicy().hasHeightForWidth())
@@ -158,9 +152,7 @@ class Ui_Form(object):
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.frame_9)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.frame_11 = QtWidgets.QFrame(self.frame_9)
-        sizePolicy = QtWidgets.QSizePolicy(
-            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
-        )
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_11.sizePolicy().hasHeightForWidth())
@@ -188,9 +180,7 @@ class Ui_Form(object):
         self.textBrowser_3.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowser_3.setObjectName("textBrowser_3")
         self.gridLayout_3.addWidget(self.textBrowser_3, 0, 1, 1, 1)
-        self.verticalLayout_8.addWidget(
-            self.frame_10, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom
-        )
+        self.verticalLayout_8.addWidget(self.frame_10, 0, QtCore.Qt.AlignRight|QtCore.Qt.AlignBottom)
         self.verticalLayout_5.addWidget(self.frame_9)
         self.start_save_btns = QtWidgets.QFrame(self.align_frame)
         self.start_save_btns.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -198,28 +188,20 @@ class Ui_Form(object):
         self.start_save_btns.setObjectName("start_save_btns")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.start_save_btns)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.pushButton = QtWidgets.QPushButton(self.start_save_btns)
+        self.align_btn = QtWidgets.QPushButton(self.start_save_btns)
         icon = QtGui.QIcon()
-        icon.addPixmap(
-            QtGui.QPixmap(":/icons/icons/play-circle.svg"),
-            QtGui.QIcon.Normal,
-            QtGui.QIcon.Off,
-        )
-        self.pushButton.setIcon(icon)
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
-        spacerItem = QtWidgets.QSpacerItem(
-            228, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
-        )
+        icon.addPixmap(QtGui.QPixmap(":/icons/icons/play-circle.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.align_btn.setIcon(icon)
+        self.align_btn.setObjectName("align_btn")
+        self.horizontalLayout.addWidget(self.align_btn)
+        spacerItem = QtWidgets.QSpacerItem(228, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout.addItem(spacerItem)
-        self.pushButton_2 = QtWidgets.QPushButton(self.start_save_btns)
+        self.save_btn = QtWidgets.QPushButton(self.start_save_btns)
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(
-            QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
-        )
-        self.pushButton_2.setIcon(icon1)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        icon1.addPixmap(QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.save_btn.setIcon(icon1)
+        self.save_btn.setObjectName("save_btn")
+        self.horizontalLayout.addWidget(self.save_btn)
         self.verticalLayout_5.addWidget(self.start_save_btns)
         self.gridLayout.addWidget(self.align_frame, 0, 1, 2, 1)
         self.verticalLayout_3.addWidget(self.frame_3)
@@ -231,21 +213,17 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.label.setText(_translate("Form", "Global Alignment"))
-        self.textBrowser.setHtml(
-            _translate(
-                "Form",
-                '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
-                '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
-                "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';">   The Needleman-Wunsch algorithm, a key tool in bioinformatics for global sequence alignment, utilizes dynamic programming to find optimal alignments by considering matches, mismatches, and gaps. It employs a matrix for systematic score calculation, ensuring comprehensive analysis of entire sequences. Its versatility makes it a fundamental tool in bioinformatics, contributing significantly to sequence analysis, structural biology, and understanding molecular evolution.</span></p></body></html>',
-            )
-        )
+        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'PMingLiU\';\">   The Needleman-Wunsch algorithm, a key tool in bioinformatics for global sequence alignment, utilizes dynamic programming to find optimal alignments by considering matches, mismatches, and gaps. It employs a matrix for systematic score calculation, ensuring comprehensive analysis of entire sequences. Its versatility makes it a fundamental tool in bioinformatics, contributing significantly to sequence analysis, structural biology, and understanding molecular evolution.</span></p></body></html>"))
         self.label_3.setText(_translate("Form", "Sequence 2"))
         self.textEdit_2.setPlaceholderText(_translate("Form", "Enter Second Sequence"))
         self.label_2.setText(_translate("Form", "Sequence 1"))
         self.textEdit.setPlaceholderText(_translate("Form", "Enter First Sequence"))
         self.label_4.setText(_translate("Form", "Aligned Sequence"))
         self.label_5.setText(_translate("Form", "Percent Similarity:"))
-        self.pushButton.setText(_translate("Form", "Align"))
-        self.pushButton_2.setText(_translate("Form", "Save"))
+        self.align_btn.setText(_translate("Form", "Align"))
+        self.save_btn.setText(_translate("Form", "Save"))
+import resources_rc_rc

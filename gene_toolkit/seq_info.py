@@ -1,9 +1,9 @@
-from bio_struct import DNA_Codons, RNA_Codons, NUCLEOTIDE_BASE
+from gene_toolkit.bio_struct import DNA_Codons, RNA_Codons, NUCLEOTIDE_BASE
 from collections import Counter
 import random
 
 
-class bio_seq:
+class BioSeq:
     """DNA sequence class. Default values: ATCG, DNA, None"""
 
     def __init__(self, seq="ATCG", seq_type="DNA", label="None"):
