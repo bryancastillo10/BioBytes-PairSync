@@ -137,16 +137,19 @@ class Ui_Form(object):
         self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_7)
         self.gridLayout_2.setContentsMargins(5, 0, 5, 0)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        self.textEdit_2 = QtWidgets.QTextEdit(self.frame_7)
+        self.seq_input = QtWidgets.QTextEdit(self.frame_7)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred
         )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.textEdit_2.sizePolicy().hasHeightForWidth())
-        self.textEdit_2.setSizePolicy(sizePolicy)
-        self.textEdit_2.setObjectName("textEdit_2")
-        self.gridLayout_2.addWidget(self.textEdit_2, 0, 0, 1, 1)
+        sizePolicy.setHeightForWidth(self.seq_input.sizePolicy().hasHeightForWidth())
+        self.seq_input.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.seq_input.setFont(font)
+        self.seq_input.setObjectName("seq_input")
+        self.gridLayout_2.addWidget(self.seq_input, 0, 0, 1, 1)
         self.verticalLayout_4.addWidget(self.frame_7)
         self.frame_8 = QtWidgets.QFrame(self.input_frame)
         self.frame_8.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -303,7 +306,7 @@ class Ui_Form(object):
         self.comboBox.setItemText(2, _translate("Form", "Protein"))
         self.label_3.setText(_translate("Form", "Label:"))
         self.label_4.setText(_translate("Form", "Input"))
-        self.textEdit_2.setPlaceholderText(
+        self.seq_input.setPlaceholderText(
             _translate("Form", "Paste the Sequence or URL")
         )
         self.load_btn.setText(_translate("Form", "Load"))
