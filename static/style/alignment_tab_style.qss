@@ -1,0 +1,47 @@
+/** Header Frame: Title and Description**/
+*{
+    background-color: rgb(61,80,95);
+    color: #fff;
+}
+
+#title {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+#des QTextEdit {
+    font-size:10px;
+    border:0;
+}
+
+/** Input Section (Raw Sequences)**/
+#seq1_frame QTextEdit, #seq2_frame QTextEdit {
+     border: 1px solid rgb(255,255,255);
+}
+
+#seq1_frame QTextEdit::focus, #seq2_frame QTextEdit::focus,
+#align_frame QTextBrowser::focus {
+     border: 1px solid rgb(7,191,160);
+}
+
+
+/** Output Section (Aligned Sequences) */
+#align_frame QTextBrowser {
+    border:1px solid rgb(255,255,255);
+}
+
+
+#start_save_btns QPushButton {
+    background-color: rgb(120,157,186); /* light blue */
+	border: 3px solid rgb(5,92,142);
+	border-radius:15px;
+	padding: 5px;
+	color: #000;
+}
+
+#start_save_btns QPushButton::hover {
+    background-color: rgba(5,92,142,0.5); /* dark-blue */
+	color: #fff;
+	border-radius: 18px;
+}

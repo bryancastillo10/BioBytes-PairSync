@@ -9,13 +9,13 @@ class LocalAlign(QWidget):
         super(LocalAlign, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.stylesheet_file("static/style/tab34style.qss")
+        self.stylesheet_file("static/style/alignment_tab_style.qss")
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
 
     def stylesheet_file(self, style_path):
-        style_path = "static/style/tab34style.qss"
+        style_path = "static/style/alignment_tab_style.qss"
         with open(style_path, "r") as f:
             style = f.read()
             self.setStyleSheet(style)

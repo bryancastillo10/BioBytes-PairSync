@@ -25,6 +25,8 @@ class Ui_Form(object):
         self.title.setFrameShadow(QtWidgets.QFrame.Raised)
         self.title.setObjectName("title")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.title)
+        self.gridLayout_4.setContentsMargins(0, 5, 10, 0)
+        self.gridLayout_4.setSpacing(0)
         self.gridLayout_4.setObjectName("gridLayout_4")
         self.label = QtWidgets.QLabel(self.title)
         font = QtGui.QFont()
@@ -51,6 +53,10 @@ class Ui_Form(object):
         self.verticalLayout.setObjectName("verticalLayout")
         self.textBrowser = QtWidgets.QTextBrowser(self.des)
         self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 110))
+        font = QtGui.QFont()
+        font.setFamily("Noto Sans")
+        font.setPointSize(12)
+        self.textBrowser.setFont(font)
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout.addWidget(self.textBrowser)
         self.verticalLayout_3.addWidget(self.des)
@@ -107,22 +113,22 @@ class Ui_Form(object):
         self.textEdit.setObjectName("textEdit")
         self.verticalLayout_6.addWidget(self.textEdit)
         self.gridLayout.addWidget(self.seq1_frame, 0, 0, 1, 1)
-        self.align_framed = QtWidgets.QFrame(self.frame_3)
+        self.align_frame = QtWidgets.QFrame(self.frame_3)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
         )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.align_framed.sizePolicy().hasHeightForWidth())
-        self.align_framed.setSizePolicy(sizePolicy)
-        self.align_framed.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.align_framed.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.align_framed.setObjectName("align_framed")
-        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.align_framed)
+        sizePolicy.setHeightForWidth(self.align_frame.sizePolicy().hasHeightForWidth())
+        self.align_frame.setSizePolicy(sizePolicy)
+        self.align_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.align_frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.align_frame.setObjectName("align_frame")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.align_frame)
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_5.setSpacing(5)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-        self.frame_8 = QtWidgets.QFrame(self.align_framed)
+        self.frame_8 = QtWidgets.QFrame(self.align_frame)
         font = QtGui.QFont()
         font.setFamily("Noto Sans")
         font.setPointSize(12)
@@ -137,7 +143,7 @@ class Ui_Form(object):
         self.label_4.setObjectName("label_4")
         self.verticalLayout_4.addWidget(self.label_4, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_5.addWidget(self.frame_8)
-        self.frame_9 = QtWidgets.QFrame(self.align_framed)
+        self.frame_9 = QtWidgets.QFrame(self.align_frame)
         sizePolicy = QtWidgets.QSizePolicy(
             QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding
         )
@@ -178,13 +184,15 @@ class Ui_Form(object):
         self.label_5.setObjectName("label_5")
         self.gridLayout_3.addWidget(self.label_5, 0, 0, 1, 1)
         self.textBrowser_3 = QtWidgets.QTextBrowser(self.frame_10)
+        self.textBrowser_3.setMaximumSize(QtCore.QSize(16777215, 30))
+        self.textBrowser_3.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowser_3.setObjectName("textBrowser_3")
         self.gridLayout_3.addWidget(self.textBrowser_3, 0, 1, 1, 1)
         self.verticalLayout_8.addWidget(
             self.frame_10, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom
         )
         self.verticalLayout_5.addWidget(self.frame_9)
-        self.start_save_btns = QtWidgets.QFrame(self.align_framed)
+        self.start_save_btns = QtWidgets.QFrame(self.align_frame)
         self.start_save_btns.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.start_save_btns.setFrameShadow(QtWidgets.QFrame.Raised)
         self.start_save_btns.setObjectName("start_save_btns")
@@ -213,7 +221,7 @@ class Ui_Form(object):
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout.addWidget(self.pushButton_2)
         self.verticalLayout_5.addWidget(self.start_save_btns)
-        self.gridLayout.addWidget(self.align_framed, 0, 1, 2, 1)
+        self.gridLayout.addWidget(self.align_frame, 0, 1, 2, 1)
         self.verticalLayout_3.addWidget(self.frame_3)
 
         self.retranslateUi(Form)
@@ -229,8 +237,8 @@ class Ui_Form(object):
                 '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
                 '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
                 "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'PMingLiU'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:10pt;">The Smith-Waterman algorithm, a dynamic programming approach, is a cornerstone in bioinformatics for local sequence alignment. Developed as an improvement over the global alignment algorithms, Smith-Waterman excels in identifying highly similar regions within biological sequences. Unlike global alignment, this algorithm focuses on finding the optimal local alignment by initiating the alignment from every position in the sequences, allowing for the identification of short, conserved regions even in the presence of substantial sequence variations. The algorithm evaluates all possible local alignments, assigning scores to sequence matches, mismatches, and gaps, and then dynamically constructs an alignment matrix. Through traceback, it identifies the optimal local alignment by selecting the path with the highest cumulative score. Smith-Waterman is instrumental in detecting similarities between sequences with divergent regions, making it invaluable in the discovery of functional domains, conserved motifs, and evolutionary relationships in biological data.</span></p></body></html>',
+                "</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';">   The Smith-Waterman algorithm, a dynamic programming technique, is fundamental in bioinformatics for local sequence alignment, outperforming global alignment methods. It excels in pinpointing highly similar regions within biological sequences, emphasizing optimal local alignment by initiating the process from every sequence position. This allows the identification of short, conserved regions even amidst substantial sequence variations. The algorithm evaluates all potential local alignments, assigning scores to sequence matches, mismatches, and gaps, constructing an alignment matrix dynamically.</span></p></body></html>',
             )
         )
         self.label_3.setText(_translate("Form", "Sequence 2"))
