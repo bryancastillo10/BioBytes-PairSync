@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QWidget, QFileDialog
 from PyQt5.QtGui import QFontDatabase
 from textwrap import dedent
 
@@ -24,7 +24,7 @@ class BasicInfo(QWidget):
         ## self.ui.load_btn.clicked.connect(self.function)
         self.ui.start_btn.clicked.connect(self.start_clicked)
         self.ui.clear_btn.clicked.connect(self.remove_output)
-        ## self.ui.save_btn.clicked.connect(self.function)
+        self.ui.save_btn.clicked.connect(self.save_output)
 
     def stylesheet_file(self, style_path):
         """Read the Stylesheet of the GUI"""
@@ -46,8 +46,8 @@ class BasicInfo(QWidget):
         try:
             if input_text.startswith("http://") or input_text.startswith("https://"):
                 try:
-                    web_retriever = WebRetrieve(url=input_text)
-                    seq = web_retriever.get_sequence()
+                    webR = WebRetrieve(url=input_text)
+                    self.seq = webR.get_sequence()
                 except ValueError as e:
                     self.ui.textBrowser.append(f"Error: {str(e)}")
                     return
@@ -80,6 +80,20 @@ class BasicInfo(QWidget):
         ========================================
                 """
             )
+
+    def save_output(self):
+        save_options = QFileDialog.Options()
+        save_options |= QFileDialog.DontUseNativeDialog
+        file_name, _ = QFileDialog.getSaveFileName(
+            self,
+            "Save File",
+            "",
+            "Text Files (*.txt);;All Files (*)",
+            options=save_options,
+        )
+        if file_name:
+            with open("out.txt", "w") as file_out:
+                file_out.write(self.all_output)
 
     def remove_output(self):
         self.ui.textBrowser.clear()
