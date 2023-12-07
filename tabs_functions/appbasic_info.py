@@ -5,6 +5,7 @@ from textwrap import dedent
 from ui.tabs.basic_info_ui import Ui_Form
 
 from gene_toolkit.seq_info import BioSeq
+from gene_toolkit.parser import WebRetrieve
 
 
 class BasicInfo(QWidget):
@@ -35,7 +36,7 @@ class BasicInfo(QWidget):
     def start_clicked(self):
         """Processing of the User Input. Returns the Output based on Class BioSeq Methods"""
         #### ====== Retrieve Values ======####
-        self.seq = self.ui.seq_input.toPlainText()
+        input_text = self.ui.seq_input.toPlainText()
         self.seq_type = self.ui.comboBox.currentText()
         self.label = self.ui.lineEdit.text()
         if not self.label:
@@ -43,18 +44,34 @@ class BasicInfo(QWidget):
 
         #### ====== Output Format and Class BioSeq Instance ======####
         try:
+            if input_text.startswith("http://") or input_text.startswith("https://"):
+                try:
+                    web_retriever = WebRetrieve(url=input_text)
+                    seq = web_retriever.get_sequence()
+                except ValueError as e:
+                    self.ui.textBrowser.append(f"Error: {str(e)}")
+                    return
+            else:
+                self.seq = input_text
+
             self.bio = BioSeq(seq=self.seq, seq_type=self.seq_type, label=self.label)
             #### ====== Methods  ======####
             seq_info = self.bio.get_seq_info()
             seq_freq = self.bio.nucleotide_frequency()
-
+            percent_gc = self.bio.gc_content()
+            seq_transcript = self.bio.transcription()
+            seq_translation = self.bio.translate_seq()
             all_output = dedent(
                 f"""
-                Sequence Information: \n {seq_info}
-                Nucleotide Frequency: \n {seq_freq} \n
-        =========================================
+                [1] Sequence Information  \n{seq_info}
+                [2] Nucleotide Frequency  \n{seq_freq}
+                [3] GC Content: {percent_gc} %  
+                [4] Transcription (DNA to mRNA)   \n{seq_transcript}
+                [5] Translation (mRNA to Protein) \n{seq_translation}
+            =========================================
             """
             )
+
             self.ui.textBrowser.append(all_output)
 
         except AssertionError as e:

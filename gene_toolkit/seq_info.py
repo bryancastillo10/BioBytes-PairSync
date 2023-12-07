@@ -1,4 +1,4 @@
-from gene_toolkit.bio_struct import DNA_Codons, RNA_Codons, NUCLEOTIDE_BASE
+from gene_toolkit.bio_struct import DNA_Codons, RNA_Codons, Nucleotide_Base
 from collections import Counter
 import random
 
@@ -19,15 +19,23 @@ class BioSeq:
     # DNA Toolkit Section
     def __validate(self):
         """Check the input sequences to verify if it is a valid DNA"""
-        return set(NUCLEOTIDE_BASE[self.seq_type]).issuperset(self.seq)
+        return set(Nucleotide_Base[self.seq_type]).issuperset(self.seq)
 
     def get_seq_info(self):
         """Returns four strings. Full sequence information"""
-        return f"[Label]: {self.label}\n [Sequence] {self.seq} \n [Biomolecule Type] {self.seq_type}\n [Sequence Length]{len(self.seq)}"
+        return f"Label: {self.label :<10}\nBiomolecule Type: {self.seq_type :<10}\nSequence Length: {len(self.seq) :<10}"
 
     def nucleotide_frequency(self):
-        """Counts the nucleotides in a given sequence. Returns a dictionary"""
-        return dict(Counter(self.seq))
+        """Counts the nucleotides in a given sequence. Returns a formatted string."""
+        freq = Counter(self.seq)
+        # Convert the dictionary to a formatted string
+        formatted_output = "\n".join(
+            [f" {base}:{count}" for base, count in freq.items()]
+        )
+        return formatted_output
+
+        # """Counts the nucleotides in a given sequence. Returns a dictionary"""
+        # return dict(Counter(self.seq))
 
     def transcription(self):
         """DNA -> RNA Transcription. Replacing Thymine with Uracil"""

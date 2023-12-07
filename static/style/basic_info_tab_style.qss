@@ -24,6 +24,9 @@
     border: 1px solid rgb(7,191,160);
 }
 
+#out_screen QTextBrowser {
+    font-size: 12px;
+}
 
 /** App Buttons**/
 #load_start QPushButton, #clear_save QPushButton{
