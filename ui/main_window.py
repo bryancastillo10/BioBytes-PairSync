@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\main_window.ui'
+# Form implementation generated from reading ui file 'ui/main_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -350,6 +350,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_7.addWidget(self.label_8, 0, QtCore.Qt.AlignBottom)
         self.horizontalLayout_5.addWidget(self.copyright)
         self.grip_frame = QtWidgets.QFrame(self.footer_frame)
+        self.grip_frame.setMaximumSize(QtCore.QSize(16777215, 10))
         self.grip_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.grip_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.grip_frame.setObjectName("grip_frame")
@@ -358,12 +359,14 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.size_grip = QtWidgets.QFrame(self.grip_frame)
-        self.size_grip.setMinimumSize(QtCore.QSize(20, 20))
-        self.size_grip.setMaximumSize(QtCore.QSize(50, 50))
+        self.size_grip.setMinimumSize(QtCore.QSize(10, 10))
+        self.size_grip.setMaximumSize(QtCore.QSize(20, 20))
         self.size_grip.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.size_grip.setFrameShadow(QtWidgets.QFrame.Raised)
         self.size_grip.setObjectName("size_grip")
-        self.verticalLayout.addWidget(self.size_grip)
+        self.verticalLayout.addWidget(
+            self.size_grip, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom
+        )
         self.horizontalLayout_5.addWidget(
             self.grip_frame, 0, QtCore.Qt.AlignRight | QtCore.Qt.AlignBottom
         )

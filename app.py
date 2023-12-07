@@ -39,7 +39,11 @@ class MyWindow(QMainWindow):
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowMaximizeButtonHint)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
 
-        # QSizeGrip(self.ui.size_grip)
+        ## ==================================####
+        ##  Resizing and Dragging Objects
+        ## =================================####
+        self.oldPos = None
+        QSizeGrip(self.ui.size_grip)
         ## ==================================####
         ##  Customized min, max, and close button
         ## =================================####
@@ -180,13 +184,17 @@ class MyWindow(QMainWindow):
             self.showFullScreen()
 
     def mousePressEvent(self, event):
-        self.oldPosition = event.globalPos()
-        pass
+        if event.button() == Qt.MouseButton.LeftButton:
+            self.oldPos = event.globalPos()
 
     def mouseMoveEvent(self, event):
-        delta = QPoint(event.globalPos() - self.oldPosition)
-        self.move(self.x() + delta.x(), self.y() + delta.y())
-        self.oldPosition = event.globalPos()
+        if self.oldPos is not None:
+            delta = event.globalPos() - self.oldPos
+            self.move(self.pos() + delta)
+            self.oldPos = event.globalPos()
+
+    def mouseReleaseEvent(self, event):
+        self.oldPos = None
 
 
 if __name__ == "__main__":

@@ -11,10 +11,8 @@ class BasicInfo(QWidget):
     def __init__(self):
         super(BasicInfo, self).__init__()
         self.ui = Ui_Form()
-        # ==== Class Calling ===#
         self.bio = BioSeq()
         self.ui.setupUi(self)
-
         self.stylesheet_file("static/style/basic_info_tab_style.qss")
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
@@ -32,26 +30,34 @@ class BasicInfo(QWidget):
             self.setStyleSheet(style)
 
     def start_clicked(self):
-        #### ====== User Input  ======####
-        type_choice = self.ui.comboBox.currentText()
-        sample_label = self.ui.lineEdit.text()
+        #### ====== Retrieve Values ======####
+        seq = self.ui.seq_input.toPlainText()
+        seq_type = self.ui.comboBox.currentText()
+        label = self.ui.lineEdit.text()
+        if not label:
+            label = " [No Sample Label Added] "
 
-        #### ====== User Input Sequence  ======####
-        DNA_string = self.ui.seq_input.toPlainText()
-        seq_freq = self.bio.nucleotide_frequency()
+        try:
+            self.bio = BioSeq(seq=seq, seq_type=seq_type, label=label)
+            #### ====== Methods  ======####
+            seq_freq = self.bio.nucleotide_frequency()
 
-        if not sample_label:
-            sample_label = " No Sample Label Added"
+            all_output = dedent(
+                f"""
+                [1] Biomolecule Type: {seq_type}\n
+                [2] Sample Label:{label}\n
+                [3] Nucleotide Frequency: {seq_freq}
+        =========================================
+            """
+            )
+            self.ui.textBrowser.append(all_output)
 
-        all_output = dedent(
-            f"""
-            [1] Biomolecule Type: {type_choice}\n
-            [2] Sample Label:{sample_label}\n
-            [3] Nucleotide: Frequency: {seq_freq}
-            =================================
-        """
-        )
-        self.ui.textBrowser.append(all_output)
+        except AssertionError as e:
+            self.ui.textBrowser.append(
+                f"""Provided data doesn't seem to be a correct {seq_type} sequence. Please try again.
+        ========================================
+                """
+            )
 
     def remove_output(self):
         self.ui.textBrowser.clear()
