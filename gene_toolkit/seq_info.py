@@ -21,18 +21,9 @@ class BioSeq:
         """Check the input sequences to verify if it is a valid DNA"""
         return set(NUCLEOTIDE_BASE[self.seq_type]).issuperset(self.seq)
 
-    def get_seq_biotype(self):
-        """Returns a sequence type"""
-        return self.seq_type
-
     def get_seq_info(self):
         """Returns four strings. Full sequence information"""
         return f"[Label]: {self.label}\n [Sequence] {self.seq} \n [Biomolecule Type] {self.seq_type}\n [Sequence Length]{len(self.seq)}"
-
-    def generate_rnd_seq(self, length=10, seq_type="DNA"):
-        """Generate a random DNA sequence, provided the length"""
-        seq = "".join([random.choice(NUCLEOTIDE_BASE[seq_type]) for x in range(length)])
-        self.__init__(seq, seq_type, "Randomly generated sequence")
 
     def nucleotide_frequency(self):
         """Counts the nucleotides in a given sequence. Returns a dictionary"""
