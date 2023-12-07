@@ -39,7 +39,11 @@ class MyWindow(QMainWindow):
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowMaximizeButtonHint)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
 
-        # QSizeGrip(self.ui.size_grip)
+        ## ==================================####
+        ##  Resizing and Dragging Initial Objects
+        ## =================================####
+        self.oldPos = None
+        QSizeGrip(self.ui.size_grip)
         ## ==================================####
         ##  Customized min, max, and close button
         ## =================================####
@@ -53,6 +57,7 @@ class MyWindow(QMainWindow):
         self.close_btn = self.findChild(QPushButton, "close_btn")
         self.close_btn.clicked.connect(lambda: self.close())
 
+        ## =================================####
         ##  Obtain the objects or pages(to launch in main_window)
         ## =================================####
         self.basic_info_btn = self.ui.btn_1
