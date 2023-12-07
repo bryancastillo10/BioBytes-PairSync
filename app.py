@@ -39,11 +39,7 @@ class MyWindow(QMainWindow):
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowMaximizeButtonHint)
         self.setAttribute(Qt.WA_TranslucentBackground, True)
 
-        ## ==================================####
-        ##  Resizing and Dragging Objects
-        ## =================================####
-        self.oldPos = None
-        QSizeGrip(self.ui.size_grip)
+        # QSizeGrip(self.ui.size_grip)
         ## ==================================####
         ##  Customized min, max, and close button
         ## =================================####
