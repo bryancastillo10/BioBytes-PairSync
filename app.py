@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import (
     QSizeGrip,
 )
 from PyQt5.QtCore import Qt, QPoint
-from PyQt5.QtGui import QFontDatabase
+from PyQt5.QtGui import QFontDatabase, QIcon
 
 from ui.main_window import Ui_MainWindow
 from ui import resources_rc
@@ -200,7 +200,7 @@ class MyWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-
+    app.setWindowIcon(QIcon("static/icons/app_icon_dna_32.png"))
     window = MyWindow()
     window.show()
 

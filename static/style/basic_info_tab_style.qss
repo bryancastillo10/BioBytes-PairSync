@@ -29,7 +29,7 @@
 }
 
 /** App Buttons**/
-#load_start QPushButton, #clear_save QPushButton{
+#load_start QPushButton, #clear_save QPushButton, QFileDialog QPushButton{
     background-color: rgb(120,157,186); /* light blue */
 	border: 3px solid rgb(5,92,142);
 	border-radius:15px;
@@ -37,9 +37,26 @@
 	color: #000;
 }
 
-#load_start QPushButton::hover,#clear_save QPushButton::hover{
+#load_start QPushButton::hover,#clear_save QPushButton::hover, QFileDialog QPushButton::hover{
 	background-color: rgba(5,92,142,0.5); /* dark-blue */
 	color: #fff;
 	border-radius: 18px;
 	
+}
+/**  Additional Window for Saving and Writing Window**/
+QFileDialog {
+    icon: url(static/icons/app_icon_dna_32.png); /* Replace with the actual path to your icon */
+}
+
+QFileDialog QHeaderView::section {
+    background-color: rgba(5,92,142,0.5); /* dark-blue */
+    color: black; /* Set font color */
+}
+
+QFileDialog QListView {
+    background-color: rgba(120,157,186,0.5);
+}
+
+QFileDialog QListView::item::selected {
+    background-color: rgb(7,191,160);
 }

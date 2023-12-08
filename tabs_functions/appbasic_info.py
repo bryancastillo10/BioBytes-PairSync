@@ -82,9 +82,13 @@ class BasicInfo(QWidget):
             )
 
     def save_output(self):
+        """Saving the Output Text as .txt file"""
         save_options = QFileDialog.Options()
         save_options |= QFileDialog.DontUseNativeDialog
-        file_name, _ = QFileDialog.getSaveFileName(
+        file_dialog = QFileDialog(self, options=save_options)
+        file_dialog.setNameFilter("Text Files (*.txt);;All Files (*)")
+        file_dialog.setStyleSheet(self.styleSheet())
+        file_name, _ = file_dialog.getSaveFileName(
             self,
             "Save File",
             "",
@@ -96,4 +100,5 @@ class BasicInfo(QWidget):
                 file_out.write(self.all_output)
 
     def remove_output(self):
+        """Clear Button for the Output Section"""
         self.ui.textBrowser.clear()
