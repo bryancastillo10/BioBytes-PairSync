@@ -35,22 +35,26 @@
 	border-radius:15px;
 	padding: 5px;
 	color: #000;
+    font-size:12px;
 }
 
 #load_start QPushButton::hover,#clear_save QPushButton::hover, QFileDialog QPushButton::hover{
 	background-color: rgba(5,92,142,0.5); /* dark-blue */
 	color: #fff;
 	border-radius: 18px;
+    font-size:12px;
 	
 }
 /**  Additional Window for Saving and Writing Window**/
-QFileDialog {
-    icon: url(static/icons/app_icon_dna_32.png); /* Replace with the actual path to your icon */
+QFileDialog QTreeView {
+    background: rgb(54,54,54); /* charcoal gray*/
+    font-size:12px;
 }
 
+
 QFileDialog QHeaderView::section {
-    background-color: rgba(5,92,142,0.5); /* dark-blue */
-    color: black; /* Set font color */
+    background-color: rgb(120,157,186); /* light blue */
+    color: #000;
 }
 
 QFileDialog QListView {

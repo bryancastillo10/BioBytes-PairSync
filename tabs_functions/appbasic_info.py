@@ -45,12 +45,8 @@ class BasicInfo(QWidget):
         #### ====== Output Format and Class BioSeq Instance ======####
         try:
             if input_text.startswith("http://") or input_text.startswith("https://"):
-                try:
-                    webR = WebRetrieve(url=input_text)
-                    self.seq = webR.get_sequence()
-                except ValueError as e:
-                    self.ui.textBrowser.append(f"Error: {str(e)}")
-                    return
+                webR = WebRetrieve(url=input_text)
+                self.seq = webR.get_sequence()
             else:
                 self.seq = input_text
 
