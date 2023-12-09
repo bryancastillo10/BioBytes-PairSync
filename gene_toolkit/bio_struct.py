@@ -1,4 +1,30 @@
-Nucleotide_Base = {"DNA": ["A", "T", "C", "G"], "RNA": ["A", "U", "C", "G"]}
+Nucleotide_Base = {
+    "DNA": ["A", "T", "C", "G"],
+    "RNA": ["A", "U", "C", "G"],
+    "Protein": [
+        "A",
+        "R",
+        "N",
+        "D",
+        "C",
+        "E",
+        "Q",
+        "G",
+        "H",
+        "I",
+        "L",
+        "K",
+        "M",
+        "F",
+        "P",
+        "S",
+        "T",
+        "W",
+        "Y",
+        "V",
+        "*",
+    ],
+}
 
 DNA_Codons = {
     # 'M' - START, '*' - STOP
