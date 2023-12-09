@@ -12,9 +12,8 @@ class BioSeq:
         self.label = label
         self.seq_type = seq_type
         self.is_valid = self.__validate()
-        assert (
-            self.is_valid
-        ), f"Provided data doesn't seem to be a correct {self.seq_type} sequence."
+        if not self.is_valid:
+            raise ValueError()
 
     # DNA Toolkit Section
     def __validate(self):

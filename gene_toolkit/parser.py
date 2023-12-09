@@ -35,23 +35,24 @@ class WebRetrieve:
                 return str(seq_record.seq)
             else:
                 self.show_warning("")
-        except Exception as e:
+        except Exception:
             self.pop_error(
                 "Invalid URL. Please provide a valid NCBI Nucleotide Sequence URL"
             )
-            return None
+            pass
 
     def pop_error(self, message):
         pop_box = QMessageBox()
         pop_box.setIcon(QMessageBox.Warning)
         pop_box.setWindowTitle("Invalid Input Warning")
         pop_box.setText(message)
-        pop_box.exec_()
         ####===== Set Style ======####
         pop_box.setStyleSheet(
             """
             QMessageBox{
                 background-color: rgb(54,54,54); /* charcoal gray*/ 
+            }
+            QMessageBox QLabel{
                 color: #fff;
             }
             QMessageBox QPushButton {
@@ -65,8 +66,9 @@ class WebRetrieve:
             QMessageBox QPushButton::hover{
                 	background-color: rgba(5,92,142,0.5); /* dark-blue */
 	                color: #fff;
-	                border-radius: 18px;
+	                border-radius: 15px;
                     font-size:12px;
             }
         """
         )
+        pop_box.exec_()

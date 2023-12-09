@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget, QFileDialog
+from PyQt5.QtWidgets import QWidget, QFileDialog, QMessageBox
 from PyQt5.QtGui import QFontDatabase
 from textwrap import dedent
 
@@ -44,38 +44,65 @@ class BasicInfo(QWidget):
 
         #### ====== Output Format and Class BioSeq Instance ======####
         try:
-            if input_text.startswith("http://") or input_text.startswith("https://"):
+            if not input_text:
+                raise ValueError()
+            elif input_text.startswith("http://") or input_text.startswith("https://"):
                 webR = WebRetrieve(url=input_text)
                 self.seq = webR.get_sequence()
             else:
                 self.seq = input_text
-
-            self.bio = BioSeq(seq=self.seq, seq_type=self.seq_type, label=self.label)
-            #### ====== Methods  ======####
-            seq_info = self.bio.get_seq_info()
-            seq_freq = self.bio.nucleotide_frequency()
-            percent_gc = self.bio.gc_content()
-            seq_transcript = self.bio.transcription()
-            seq_translation = self.bio.translate_seq()
-            all_output = dedent(
-                f"""
-                [1] Sequence Information  \n{seq_info}
-                [2] Nucleotide Frequency  \n{seq_freq}
-                [3] GC Content: {percent_gc} %  
-                [4] Transcription (DNA to mRNA)   \n{seq_transcript}
-                [5] Translation (mRNA to Protein) \n{seq_translation}
-            =========================================
-            """
-            )
-
-            self.ui.textBrowser.append(all_output)
-
-        except AssertionError as e:
-            self.ui.textBrowser.append(
-                f"""Provided data doesn't seem to be a correct {self.seq_type} sequence. Please try again.
-        ========================================
+                self.bio = BioSeq(
+                    seq=self.seq, seq_type=self.seq_type, label=self.label
+                )
+                #### ====== Methods  ======####
+                seq_info = self.bio.get_seq_info()
+                seq_freq = self.bio.nucleotide_frequency()
+                percent_gc = self.bio.gc_content()
+                seq_transcript = self.bio.transcription()
+                seq_translation = self.bio.translate_seq()
+                all_output = dedent(
+                    f"""
+                    [1] Sequence Information  \n{seq_info}
+                    [2] Nucleotide Frequency  \n{seq_freq}
+                    [3] GC Content: {percent_gc} %  
+                    [4] Transcription (DNA to mRNA)   \n{seq_transcript}
+                    [5] Translation (mRNA to Protein) \n{seq_translation}
+                =========================================
                 """
+                )
+                self.ui.textBrowser.append(all_output)
+        except ValueError:
+            pop_warning = QMessageBox()
+            pop_warning.setIcon(QMessageBox.Warning)
+            pop_warning.setWindowTitle("Input Error")
+            pop_warning.setText(
+                "Wrong Input Field. Please fill up with appropriate sequence."
             )
+            pop_warning.setStyleSheet(
+                """
+            QMessageBox{
+                background-color: rgb(54,54,54); /* charcoal gray*/ 
+            }
+            QMessageBox QLabel{
+                color: #fff;
+            }
+            QMessageBox QPushButton {
+                    background-color: rgb(120,157,186); /* light blue */
+	                border: 3px solid rgb(5,92,142);
+	                border-radius:15px;
+	                padding: 5px;
+	            color: #000;
+                font-size:12px;
+            }
+            QMessageBox QPushButton::hover{
+                	background-color: rgba(5,92,142,0.5); /* dark-blue */
+	                color: #fff;
+	                border-radius: 15px;
+                    font-size:12px;
+            }
+        """
+            )
+        pop_warning.exec_()
 
     def save_output(self):
         """Saving the Output Text as .txt file"""
