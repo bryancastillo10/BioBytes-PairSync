@@ -1,10 +1,18 @@
-from gene_toolkit.bio_struct import DNA_Codons, RNA_Codons, Biomolecules
+from gene_toolkit.bio_struct import (
+    Biomolecules,
+    DNA_Codons,
+    RNA_Codons,
+    AminoAcid_Masses,
+)
 from collections import Counter
+from Bio.Seq import Seq
+from Bio.SeqUtils.IsoelectricPoint import IsoelectricPoint as IEP
+
 import random
 
 
 class BioSeq:
-    """DNA sequence class. Default values: ATCG, DNA, None"""
+    """DNA, RNA, and Protein sequence class. Default values: ATCG, DNA, None"""
 
     def __init__(self, seq="ATCG", seq_type="DNA", label="None"):
         """Sequence initialization, validation"""
@@ -51,7 +59,7 @@ class BioSeq:
             mapping = str.maketrans("ATCG", "TAGC")
         else:
             mapping = str.maketrans("AUCG", "UAGC")
-        return self.seq.translate(mapping)[::-1]
+        return self.seq.translate(mapping)[::]
 
     def gc_content(self):
         """GC Content in a DNA/RNA sequence"""
@@ -82,21 +90,16 @@ class BioSeq:
                 for pos in range(init_pos, len(self.seq) - 2, 3)
             ]
 
-    def codon_usage(self, aminoacid):
-        tmplist = []
-        if self.seq_type == "DNA":
-            for i in range(0, len(self.seq) - 2, 3):
-                if DNA_Codons[self.seq[i : i + 3]] == aminoacid:
-                    tmplist.append(self.seq[i : i + 3])
-        elif self.seq_type == "RNA":
-            for i in range(0, len(self.seq) - 2, 3):
-                if RNA_Codons[self.seq[i : i + 3]] == aminoacid:
-                    tmplist.append(self.seq[i : i + 3])
-        freqDict = dict(Counter(tmplist))
-        totalWeight = sum(freqDict.values())
-        for seq in freqDict:
-            freqDict[seq] = round(freqDict[seq] / totalWeight, 2)
-        return freqDict
+    # Protein Toolkit Section
+    def amino_mw(self):
+        """Calculates the molecular weight of the protein sequence"""
+        return round(sum(AminoAcid_Masses[aa] for aa in self.seq))
+
+    def calc_iso_point(self):
+        """Calculates the isoelectric point of the protein sequence"""
+        prot_seq = Seq(self.seq)
+        pI = round(IEP(prot_seq).pi(), 2)
+        return pI
 
     def gen_reading_frames(self):
         """Generate the six reading frames of a DNA sequence, including the reverse complement"""

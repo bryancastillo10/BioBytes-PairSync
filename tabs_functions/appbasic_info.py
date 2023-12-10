@@ -34,13 +34,13 @@ class BasicInfo(QWidget):
             self.setStyleSheet(style)
 
     def start_clicked(self):
-        """Processing of the User Input. Returns the Output based on Class BioSeq Methods"""
+        """Retrieving the input values upon clicking the start button"""
         #### ====== Retrieve Values ======####
         input_text = self.ui.seq_input.toPlainText()
         seq_type = self.ui.comboBox.currentText()
         label = self.ui.lineEdit.text() or " [No Sample Label Added] "
 
-        #### ====== Output Format and Class BioSeq Instance ======####
+        #### ====== Handling error for the Input ======####
         try:
             if not input_text:
                 raise ValueError()
@@ -52,33 +52,68 @@ class BasicInfo(QWidget):
                 self.proceed_bioseq(input_text, seq_type, label)
         except ValueError:
             self.pop_warning(
-                "Wrong Input Field. Please fill up with an appropriate sequence."
+                "Wrong Input Field. Please fill up with an appropriate sequence. Make sure to select the correct biomolecule type."
             )
 
     def proceed_bioseq(self, seq, seq_type, label):
+        """Implements the methods on class BioSeq"""
         self.bio = BioSeq(seq=seq, seq_type=seq_type, label=label)
         #### ====== Methods  ======####
-        seq_info = self.bio.get_seq_info()
-        seq_freq = self.bio.nucleotide_frequency()
-        percent_gc = self.bio.gc_content()
-        seq_transcript = self.bio.transcription()
-        seq_translation = self.bio.translate_seq()
-        self.display_output(
-            seq_info, seq_freq, percent_gc, seq_transcript, seq_translation
-        )
+        if self.bio.seq_type == "DNA" or self.bio.seq_type == "RNA":
+            seq_info = self.bio.get_seq_info()
+            seq_freq = self.bio.nucleotide_frequency()
+            percent_gc = self.bio.gc_content()
+            reverse_comp = self.bio.reverse_complement()
+            seq_transcript = self.bio.transcription()
+            seq_translation = self.bio.translate_seq()
+            self.dna_rna_output(
+                seq_info,
+                seq_freq,
+                percent_gc,
+                reverse_comp,
+                seq_transcript,
+                seq_translation,
+            )
+        elif self.bio.seq_type == "Protein":
+            seq_info = self.bio.get_seq_info()
+            seq_freq = self.bio.nucleotide_frequency()
+            seq_mw = self.bio.amino_mw()
+            seq_iep = self.bio.calc_iso_point()
+            self.protein_ouptut(seq_info, seq_freq, seq_mw, seq_iep)
 
-    def display_output(
-        self, seq_info, seq_freq, percent_gc, seq_transcript, seq_translation
+    def dna_rna_output(
+        self,
+        seq_info,
+        seq_freq,
+        percent_gc,
+        reverse_comp,
+        seq_transcript,
+        seq_translation,
     ):
+        """Output Format for DNA/RNA Input Sequence"""
         all_output = dedent(
             f"""
                     [1] Sequence Information  \n{seq_info}
                     [2] Nucleotide Frequency  \n{seq_freq}
                     [3] GC Content: {percent_gc} %  
-                    [4] Transcription (DNA to mRNA)   \n{seq_transcript}
-                    [5] Translation (mRNA to Protein) \n{seq_translation}
+                    [4] Reverse Complement  3'->5'   \n{reverse_comp}
+                    [5] Transcription (DNA to mRNA)   \n{seq_transcript}
+                    [6] Translation (mRNA to Protein) \n{seq_translation}
                 =========================================
                 """
+        )
+        self.ui.textBrowser.append(all_output)
+
+    def protein_ouptut(self, seq_info, seq_freq, seq_mw, seq_iep):
+        """Output Format for Protein Sequence"""
+        all_output = dedent(
+            f"""
+            [1] Sequence Information  \n{seq_info}
+            [2] Amino Acid Frequency     \n{seq_freq}
+            [3] Amino Acid MW: {seq_mw} Da
+            [4] Isoelectric Point: {seq_iep}
+            [5] Open Reading Frame      \n
+            """
         )
         self.ui.textBrowser.append(all_output)
 
@@ -105,6 +140,7 @@ class BasicInfo(QWidget):
         self.ui.textBrowser.clear()
 
     def pop_warning(self, message):
+        """Warning Message if the Input is Wrong"""
         pop_warning = QMessageBox()
         pop_warning.setIcon(QMessageBox.Warning)
         pop_warning.setWindowTitle("Input Error")
