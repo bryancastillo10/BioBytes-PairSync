@@ -1,4 +1,4 @@
-from gene_toolkit.bio_struct import DNA_Codons, RNA_Codons, Nucleotide_Base
+from gene_toolkit.bio_struct import DNA_Codons, RNA_Codons, Biomolecules
 from collections import Counter
 import random
 
@@ -18,7 +18,7 @@ class BioSeq:
     # DNA Toolkit Section
     def __validate(self):
         """Check the input sequences to verify if it is a valid DNA"""
-        return set(Nucleotide_Base[self.seq_type]).issuperset(self.seq)
+        return set(Biomolecules[self.seq_type]).issuperset(self.seq)
 
     def get_seq_info(self):
         """Returns four strings. Full sequence information"""

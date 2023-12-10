@@ -1,4 +1,4 @@
-Nucleotide_Base = {
+Biomolecules = {
     "DNA": ["A", "T", "C", "G"],
     "RNA": ["A", "U", "C", "G"],
     "Protein": [
