@@ -90,24 +90,13 @@ class BioSeq:
                 for pos in range(init_pos, len(self.seq) - 2, 3)
             ]
 
-    # Protein Toolkit Section
-    def amino_mw(self):
-        """Calculates the molecular weight of the protein sequence"""
-        return round(sum(AminoAcid_Masses[aa] for aa in self.seq))
-
-    def calc_iso_point(self):
-        """Calculates the isoelectric point of the protein sequence"""
-        prot_seq = Seq(self.seq)
-        pI = round(IEP(prot_seq).pi(), 2)
-        return pI
-
     def gen_reading_frames(self):
         """Generate the six reading frames of a DNA sequence, including the reverse complement"""
         frames = []
         frames.append(self.translate_seq(0))
         frames.append(self.translate_seq(1))
         frames.append(self.translate_seq(2))
-        tmp_seq = bio_seq(self.reverse_complement(), self.seq_type)
+        tmp_seq = BioSeq(self.reverse_complement(), self.seq_type)
         frames.append(tmp_seq.translate_seq(0))
         frames.append(tmp_seq.translate_seq(1))
         frames.append(tmp_seq.translate_seq(2))
@@ -119,7 +108,7 @@ class BioSeq:
         current_prot = []
         proteins = []
         for aa in aa_seq:
-            if aa == "_":  # Stop Codon
+            if aa == "*":  # Stop Codon
                 for p in current_prot:
                     proteins.append(p)
                 current_prot = []
@@ -149,3 +138,14 @@ class BioSeq:
         if ordered:
             return sorted(res, key=len, reverse=True)
         return res
+
+    # Protein Toolkit Section
+    def amino_mw(self):
+        """Calculates the molecular weight of the protein sequence"""
+        return round(sum(AminoAcid_Masses[aa] for aa in self.seq))
+
+    def calc_iso_point(self):
+        """Calculates the isoelectric point of the protein sequence"""
+        prot_seq = Seq(self.seq)
+        pI = round(IEP(prot_seq).pi(), 2)
+        return pI

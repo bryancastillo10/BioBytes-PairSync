@@ -96,7 +96,7 @@ class BasicInfo(QWidget):
                     [1] Sequence Information  \n{seq_info}
                     [2] Nucleotide Frequency  \n{seq_freq}
                     [3] GC Content: {percent_gc} %  
-                    [4] Reverse Complement  3'->5'   \n{reverse_comp}
+                    [4] Reverse Complement  3'-> 5'   \n{reverse_comp}
                     [5] Transcription (DNA to mRNA)   \n{seq_transcript}
                     [6] Translation (mRNA to Protein) \n{seq_translation}
                 =========================================
@@ -112,7 +112,6 @@ class BasicInfo(QWidget):
             [2] Amino Acid Frequency     \n{seq_freq}
             [3] Amino Acid MW: {seq_mw} Da
             [4] Isoelectric Point: {seq_iep}
-            [5] Open Reading Frame      \n
             """
         )
         self.ui.textBrowser.append(all_output)
