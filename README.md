@@ -1,4 +1,4 @@
-### BioBytes PairSync: A Bioinformatic Tool for Basic Information Retrieval and Pairwise Sequence Alignment
+### BioBytes PairSync: A Bioinformatics Tool for Basic Information Retrieval and Pairwise Sequence Alignment
 
 ![Static Badge](https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=%23F0E442&labelColor=%230072B2&color=%2356B4E9)
 ![Static Badge](https://img.shields.io/badge/PyQt-%2341CD52?style=for-the-badge&logo=Qt&logoColor=%235EFB75&labelColor=%23000000&color=%23009E73)
