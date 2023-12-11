@@ -79,7 +79,9 @@ class BasicInfo(QWidget):
             seq_freq = self.bio.nucleotide_frequency()
             seq_mw = self.bio.amino_mw()
             seq_iep = self.bio.calc_iso_point()
-            self.protein_ouptut(seq_info, seq_freq, seq_mw, seq_iep)
+            rf = [frames for frames in self.bio.proteins_from_rf(list(seq))]
+            orf_list = "\n".join([f" Region{i+1}: {rf}" for i, rf in enumerate(rf)])
+            self.protein_ouptut(seq_info, seq_freq, seq_mw, seq_iep, orf_list)
 
     def dna_rna_output(
         self,
@@ -104,7 +106,7 @@ class BasicInfo(QWidget):
         )
         self.ui.textBrowser.append(all_output)
 
-    def protein_ouptut(self, seq_info, seq_freq, seq_mw, seq_iep):
+    def protein_ouptut(self, seq_info, seq_freq, seq_mw, seq_iep, orf_list):
         """Output Format for Protein Sequence"""
         all_output = dedent(
             f"""
@@ -112,7 +114,8 @@ class BasicInfo(QWidget):
             [2] Amino Acid Frequency     \n{seq_freq}
             [3] Amino Acid MW: {seq_mw} Da
             [4] Isoelectric Point: {seq_iep}
-            """
+            [5] Open Reading Frames:       \n {orf_list}
+        """
         )
         self.ui.textBrowser.append(all_output)
 
@@ -166,6 +169,6 @@ class BasicInfo(QWidget):
 	        border-radius: 15px;
             font-size:12px;
             }
-          """
+        """
         )
         pop_warning.exec_()
