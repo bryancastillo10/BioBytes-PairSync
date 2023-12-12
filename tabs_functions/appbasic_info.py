@@ -21,7 +21,7 @@ class BasicInfo(QWidget):
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
         #### ====== Signal Buttons  ======####
-        ## self.ui.load_btn.clicked.connect(self.function)
+        self.ui.load_btn.clicked.connect(self.load_file)
         self.ui.start_btn.clicked.connect(self.start_clicked)
         self.ui.clear_btn.clicked.connect(self.remove_output)
         self.ui.save_btn.clicked.connect(self.save_output)
@@ -140,6 +140,51 @@ class BasicInfo(QWidget):
     def remove_output(self):
         """Clear Button for the Output Section"""
         self.ui.textBrowser.clear()
+
+    def load_file(self):
+        """Load sequence from a file"""
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        file_dialog = QFileDialog(self, options=options)
+        file_dialog.setNameFilter(
+            "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)"
+        )
+        file_dialog.setStyleSheet(self.styleSheet())
+        file_name, _ = file_dialog.getOpenFileName(
+            self,
+            "Load File",
+            "",
+            "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)",
+            options=options,
+        )
+        if file_name:
+            try:
+                with open(file_name, "r") as file_in:
+                    content = file_in.read()
+
+                # Extract label and sequence from FASTA content
+                label, sequence = self.extract_fasta_content(content)
+
+                # Set the label and sequence in the UI
+                self.ui.lineEdit.setText(label)
+                self.ui.seq_input.setPlainText(sequence)
+
+            except Exception as e:
+                self.pop_warning(f"Error loading file: {str(e)}")
+
+    def extract_fasta_content(self, content):
+        """Extract label and sequence from FASTA content"""
+        lines = content.split("\n")
+        label = ""
+        sequence = ""
+        for line in lines:
+            if line.startswith(">"):
+                # Assume the label is the part after '>'
+                label = line[1:].strip()
+            else:
+                # Accumulate sequence lines
+                sequence += line.strip()
+        return label, sequence
 
     def pop_warning(self, message):
         """Warning Message if the Input is Wrong"""

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\basic_info.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\basic_info.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -53,6 +53,8 @@ class Ui_Form(object):
         self.textEdit = QtWidgets.QTextEdit(self.des)
         self.textEdit.setMaximumSize(QtCore.QSize(16777215, 150))
         self.textEdit.setAutoFillBackground(False)
+        self.textEdit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.textEdit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textEdit.setReadOnly(True)
         self.textEdit.setObjectName("textEdit")
         self.verticalLayout_3.addWidget(self.textEdit, 0, QtCore.Qt.AlignTop)
