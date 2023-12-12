@@ -16,6 +16,10 @@ class DotPlot(QWidget):
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
         #### ====== Signal Buttons  ======####
+        # self.ui.load_seq1.clicked.connect(self.load_file1)
+        # self.ui.load_seq2.clicked.connect(self.load_file2)
+        # self.ui.save_btn.clicked.connect(self.function)
+        # self.ui.plot_btn.clicked.connect(self.function)
 
     def stylesheet_file(self, style_path):
         style_path = "static/style/dot_plot_tab_style.qss"

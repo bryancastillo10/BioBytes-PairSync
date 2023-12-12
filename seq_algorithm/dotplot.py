@@ -69,25 +69,33 @@ class DotMatrix:
             self.M[rows + 1][0] = self.seqA[rows : rows + 1]
         for cols in range(0, len(self.seqB)):
             self.M[0][cols + 1] = self.seqB[cols : cols + 1]
-        self.matrix_dim()
+        match, mismatch, M = self.matrix_dim()
 
         cmap = matplotlib.colors.ListedColormap(["dodgerblue", "white"])
         bounds = [0, 0.5, 1]
         norm = matplotlib.colors.BoundaryNorm(bounds, cmap.N)
 
         fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
-        D_red = np.delete(self.M, 0, axis=1)
-        D_red = np.delete(self.M, 0, axis=0)
-        D_red_log = D_red == "*"
-        ax.imshow(D_red_log, cmap=cmap, norm=norm)
+        M_blu = np.delete(self.M, 0, axis=1)
+        M_blu = np.delete(self.M, 0, axis=0)
+        M_blu_log = M_blu == "*"
+        ax.imshow(M_blu_log, cmap=cmap, norm=norm)
+
+        ax.set_xticks([])
+        ax.set_yticks([])
+        ax.set_ylabel("Sequence 1")
+        ax.set_xlabel("Sequence 2")
+
+        subcaption = (
+            f"Number of aligned bases: {match}\nNumber of unaligned bases: {mismatch}"
+        )
+        fig.text(0.5, 0.02, subcaption, fontsize=10, ha="center")
 
 
 # Example Usage
-# sequence1 = "GAGATTACAGATTACAT"
-# sequence2 = "TACCATTGGATTACAGT"
-# # print(f"Number of aligned bases: {match}")
-# # print(f"Number of unaligned bases: {mismatch} \n")
+sequence1 = "ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGAT"
+sequence2 = "ATCGATAGATCGATCGATAGATCGATCGATCGATCGATCGATCGATCGAT"
 
-# dm = DotMatrix(M=None, seqA=sequence1, seqB=sequence2, seq_type="DNA")
-# dm.fill_plot(figsize=(8, 8), dpi=80)
-# plt.show()
+dm = DotMatrix(M=None, seqA=sequence1, seqB=sequence2, seq_type="DNA")
+dm.fill_plot(figsize=(8, 8), dpi=80)
+plt.show()
