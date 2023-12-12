@@ -3,7 +3,6 @@ from PyQt5.QtGui import QFontDatabase
 from textwrap import dedent
 
 from ui.tabs.basic_info_ui import Ui_Form
-
 from gene_toolkit.seq_info import BioSeq
 from gene_toolkit.parser import WebRetrieve
 

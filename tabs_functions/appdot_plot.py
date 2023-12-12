@@ -3,6 +3,8 @@ from PyQt5.QtGui import QFontDatabase
 
 from ui.tabs.dot_plot_ui import Ui_Form
 
+from seq_algorithm.dotplot import DotMatrix
+
 
 class DotPlot(QWidget):
     def __init__(self):
@@ -13,6 +15,7 @@ class DotPlot(QWidget):
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
+        #### ====== Signal Buttons  ======####
 
     def stylesheet_file(self, style_path):
         style_path = "static/style/dot_plot_tab_style.qss"
