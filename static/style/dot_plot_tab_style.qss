@@ -10,9 +10,6 @@
     font-family: "Arial";
 }
 
-#des {
-     background-color: rgb(54,54,54); /* charcoal gray*/
-}
 #des QTextEdit {
     font-size:10px;
     border:0;
@@ -22,10 +19,12 @@
 
 #seq1_frame QTextEdit, #seq2_frame QTextEdit, #seq1_frame QLineEdit, #seq_2 QLineEdit {
      border: 1px solid rgb(255,255,255);
+     font-size:12px;
 }
 
 #seq1_frame QTextEdit::focus, #seq2_frame QTextEdit::focus, #seq1_frame QLineEdit::focus, #seq2_frame QLineEdit::focus {
      border: 1px solid rgb(7,191,160);
+     font-size:12px;
 }
 
 /** App Buttons**/
@@ -33,6 +32,7 @@
     background-color: rgb(120,157,186); /* light blue */
 	border: 3px solid rgb(5,92,142);
 	border-radius:15px;
+    font-size:12px;
 	padding: 5px;
 	color: #000;
 }
@@ -41,4 +41,5 @@
     background-color: rgba(5,92,142,0.5); /* dark-blue */
 	color: #fff;
 	border-radius: 18px;
+    font-size:12px;
 }

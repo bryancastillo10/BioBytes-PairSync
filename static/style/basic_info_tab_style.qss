@@ -18,6 +18,7 @@
 /** Input and Output Frame **/
 #input_frame QTextEdit, QLineEdit {
     border: 1px solid rgb(255,255,255);
+    font-size:12px;
 }
 
 #input_frame QTextEdit::focus, QLineEdit::focus, #output_frame QTextBrowser::focus {
