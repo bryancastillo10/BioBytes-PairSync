@@ -25,7 +25,7 @@ class BioSeq:
 
     # DNA Toolkit Section
     def __validate(self):
-        """Check the input sequences to verify if it is a valid DNA"""
+        """Check the input sequences to verify if it is a valid DNA or Protein"""
         return set(Biomolecules[self.seq_type]).issuperset(self.seq)
 
     def get_seq_info(self):

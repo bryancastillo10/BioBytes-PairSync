@@ -3,51 +3,43 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 
-# Biomolecules Dictionary for Validation
-Biomolecules = {
-    "DNA": ["A", "T", "C", "G"],
-    "RNA": ["A", "U", "C", "G"],
-    "Protein": [
-        "A",
-        "R",
-        "N",
-        "D",
-        "C",
-        "E",
-        "Q",
-        "G",
-        "H",
-        "I",
-        "L",
-        "K",
-        "M",
-        "F",
-        "P",
-        "S",
-        "T",
-        "W",
-        "Y",
-        "V",
-        "*",
-    ],
-}
-
-
 class DotMatrix:
-    def __init__(self, M, seqA, seqB, seq_type="DNA"):
+    def __init__(self, M, seqA, seqB):
         self.M = M
-        self.seq_type = seq_type
         self.seqA = seqA
         self.seqB = seqB
         self.is_valid = self.__validate()
         if not self.is_valid:
-            raise ValueError()
+            raise ValueError("Invalid Sequence for DotMatrix")
 
     def __validate(self):
-        if set(Biomolecules[self.seq_type]).issuperset(self.seqA) and set(
-            Biomolecules[self.seq_type]
-        ).issuperset(self.seqB):
-            return True
+        def sequence_type(seq):
+            dna_alphabet = "ATCG"
+            rna_alphabet = "AUCG"
+            prot_alphabet = "ATCGRNDEQHILKMFPSWYV"
+
+            seq_upper = seq.upper()
+            for char in seq_upper:
+                if char == "U":
+                    return "RNA"
+                if char in prot_alphabet and char not in dna_alphabet:
+                    return "Protein"
+            return "DNA"
+
+        def pairseq_valid(seqA, seqB):
+            seq1 = sequence_type(seqA)
+            seq2 = sequence_type(seqB)
+            if seq1 == seq2:
+                return True
+            else:
+                raise ValueError(
+                    "Either one of the two sequences has an invalid sequence format"
+                )
+
+        try:
+            return pairseq_valid(self.seqA, self.seqB)
+        except ValueError as e:
+            return False
 
     def matrix_dim(self):
         match = 0
@@ -77,7 +69,7 @@ class DotMatrix:
 
         fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
         M_blu = np.delete(self.M, 0, axis=1)
-        M_blu = np.delete(self.M, 0, axis=0)
+        M_blu = np.delete(M_blu, 0, axis=0)
         M_blu_log = M_blu == "*"
         ax.imshow(M_blu_log, cmap=cmap, norm=norm)
 
@@ -94,8 +86,4 @@ class DotMatrix:
 
 # Example Usage
 sequence1 = "ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGAT"
-sequence2 = "ATCGATAGATCGATCGATAGATCGATCGATCGATCGATCGATCGATCGAT"
-
-dm = DotMatrix(M=None, seqA=sequence1, seqB=sequence2, seq_type="DNA")
-dm.fill_plot(figsize=(8, 8), dpi=80)
-plt.show()
+sequence2 = "XRDTGGCAGATAGGTCGATCGATAGATCGATCGACCGTATCAGTCGATCGATCGAT"
