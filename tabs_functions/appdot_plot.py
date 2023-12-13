@@ -46,21 +46,25 @@ class DotPlot(QWidget):
     def plot_clicked(self):
         """Retrieving the input values upon clicking the Plot button"""
         #### ====== Retrieve Values ======####
-        label_1 = self.ui.label_seq1.text() or " No Sample Label Added to Sequence 1 "
+        label_1 = (
+            self.ui.label_seq1.text() or " No Sample Label Added [First Sequence] "
+        )
         input_seq1 = self.ui.textEdit.toPlainText()
-        label_2 = self.ui.label_seq2.text() or " No Sample Label Added to Sequence 2 "
+        label_2 = (
+            self.ui.label_seq2.text() or " No Sample Label Added [Second Sequence] "
+        )
         input_seq2 = self.ui.textEdit_2.toPlainText()
 
-        self.perform_plot(input_seq1, input_seq2)
+        self.perform_plot(input_seq1, input_seq2, label_1, label_2)
 
-    def perform_plot(self, input_seq1, input_seq2):
+    def perform_plot(self, input_seq1, input_seq2, label_1, label_2):
         """Implements the methods on class DotMatrix"""
         try:
             self.dm = DotMatrix(
                 M=np.empty((1, 1), dtype=str), seqA=input_seq1, seqB=input_seq2
             )
             if self.dm.is_valid:
-                fig = self.dm.fill_plot()
+                fig = self.dm.fill_plot(label_1=label_1, label_2=label_2)
                 self.embed_plot(fig)
             else:
                 raise ValueError()

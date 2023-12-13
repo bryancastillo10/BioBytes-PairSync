@@ -58,7 +58,7 @@ class DotMatrix:
         mismatch = self.M.shape[0] - match - 1
         return match, mismatch, self.M
 
-    def fill_plot(self):
+    def fill_plot(self, label_1, label_2):
         self.M = np.full((len(self.seqA) + 1, len(self.seqB) + 1), "", dtype=str)
         for rows in range(0, len(self.seqA)):
             self.M[rows + 1][0] = self.seqA[rows : rows + 1]
@@ -70,7 +70,9 @@ class DotMatrix:
         bounds = [0, 0.5, 1]
         norm = matplotlib.colors.BoundaryNorm(bounds, cmap.N)
 
-        fig, ax = plt.subplots(figsize=(8, 8), dpi=100)
+        fig, ax = plt.subplots(figsize=(10, 10), dpi=100)
+        label_section = f"\n{label_1}\n{label_2}"
+        fig.text(0.5, 0.90, label_section, fontsize=10, ha="center")
         M_blu = np.delete(self.M, 0, axis=1)
         M_blu = np.delete(M_blu, 0, axis=0)
         M_blu_log = M_blu == "*"
