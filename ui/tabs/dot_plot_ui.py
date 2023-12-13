@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\dot_plot.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\dot_plot.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -135,7 +135,7 @@ class Ui_Form(object):
         self.seq2_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.seq2_frame.setObjectName("seq2_frame")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.seq2_frame)
-        self.gridLayout_5.setContentsMargins(5, 0, 5, 0)
+        self.gridLayout_5.setContentsMargins(5, 20, 5, 0)
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.label_3 = QtWidgets.QLabel(self.seq2_frame)
         font = QtGui.QFont()
@@ -181,6 +181,9 @@ class Ui_Form(object):
         self.verticalLayout_4.setContentsMargins(-1, 5, -1, 5)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.label_4 = QtWidgets.QLabel(self.frame_8)
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
         self.verticalLayout_4.addWidget(self.label_4, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout.addWidget(self.frame_8)
@@ -200,6 +203,16 @@ class Ui_Form(object):
         self.gridLayout_2.setHorizontalSpacing(0)
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.graphicsView = QtWidgets.QGraphicsView(self.frame_9)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding
+        )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.graphicsView.sizePolicy().hasHeightForWidth())
+        self.graphicsView.setSizePolicy(sizePolicy)
+        self.graphicsView.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.graphicsView.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.graphicsView.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.graphicsView.setObjectName("graphicsView")
         self.gridLayout_2.addWidget(self.graphicsView, 0, 0, 1, 1)
         self.verticalLayout.addWidget(self.frame_9)

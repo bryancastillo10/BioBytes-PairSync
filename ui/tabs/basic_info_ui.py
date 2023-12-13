@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\basic_info.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\basic_info.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -88,42 +88,39 @@ class Ui_Form(object):
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.frame_6)
-        self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_3.setHorizontalSpacing(0)
-        self.gridLayout_3.setVerticalSpacing(10)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.label_2 = QtWidgets.QLabel(self.frame_6)
         self.label_2.setObjectName("label_2")
-        self.gridLayout_3.addWidget(self.label_2, 0, 0, 1, 1, QtCore.Qt.AlignLeft)
+        self.gridLayout_3.addWidget(self.label_2, 0, 0, 1, 2)
         self.comboBox = QtWidgets.QComboBox(self.frame_6)
         self.comboBox.setStyleSheet("")
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
-        self.gridLayout_3.addWidget(self.comboBox, 0, 1, 1, 1, QtCore.Qt.AlignRight)
+        self.gridLayout_3.addWidget(self.comboBox, 0, 2, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(
             309, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
         )
-        self.gridLayout_3.addItem(spacerItem, 0, 2, 1, 2)
+        self.gridLayout_3.addItem(spacerItem, 0, 3, 1, 2)
         self.label_3 = QtWidgets.QLabel(self.frame_6)
         self.label_3.setObjectName("label_3")
         self.gridLayout_3.addWidget(self.label_3, 1, 0, 1, 1)
         self.lineEdit = QtWidgets.QLineEdit(self.frame_6)
         self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
-        self.gridLayout_3.addWidget(self.lineEdit, 1, 1, 1, 2, QtCore.Qt.AlignRight)
+        self.gridLayout_3.addWidget(self.lineEdit, 1, 1, 1, 3)
         spacerItem1 = QtWidgets.QSpacerItem(
             198, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
         )
-        self.gridLayout_3.addItem(spacerItem1, 1, 3, 1, 1)
+        self.gridLayout_3.addItem(spacerItem1, 1, 4, 1, 1)
         self.label_4 = QtWidgets.QLabel(self.frame_6)
         font = QtGui.QFont()
         font.setFamily("Noto Sans")
         font.setPointSize(12)
         self.label_4.setFont(font)
         self.label_4.setObjectName("label_4")
-        self.gridLayout_3.addWidget(self.label_4, 2, 2, 1, 1)
+        self.gridLayout_3.addWidget(self.label_4, 2, 3, 1, 1)
         self.verticalLayout_4.addWidget(self.frame_6)
         self.frame_7 = QtWidgets.QFrame(self.input_frame)
         sizePolicy = QtWidgets.QSizePolicy(

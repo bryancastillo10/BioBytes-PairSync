@@ -83,7 +83,9 @@ class DotMatrix:
         )
         fig.text(0.5, 0.02, subcaption, fontsize=10, ha="center")
 
+        return fig
+
 
 # Example Usage
 sequence1 = "ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGAT"
-sequence2 = "XRDTGGCAGATAGGTCGATCGATAGATCGATCGACCGTATCAGTCGATCGATCGAT"
+sequence2 = "GGCAGATAGGTCGATCGATAGATCGATCGACCGTATCAGTCGATCGATCGAT"

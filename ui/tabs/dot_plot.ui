@@ -287,7 +287,7 @@ p, li { white-space: pre-wrap; }
              <number>5</number>
             </property>
             <property name="topMargin">
-             <number>0</number>
+             <number>20</number>
             </property>
             <property name="rightMargin">
              <number>5</number>
@@ -373,6 +373,11 @@ p, li { white-space: pre-wrap; }
             </property>
             <item alignment="Qt::AlignHCenter">
              <widget class="QLabel" name="label_4">
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>Graphical Output</string>
               </property>
@@ -412,7 +417,23 @@ p, li { white-space: pre-wrap; }
              <number>0</number>
             </property>
             <item row="0" column="0">
-             <widget class="QGraphicsView" name="graphicsView"/>
+             <widget class="QGraphicsView" name="graphicsView">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
