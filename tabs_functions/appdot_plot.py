@@ -59,7 +59,6 @@ class DotPlot(QWidget):
                 fig = self.dm.fill_plot(figsize=(8, 8), dpi=80)
 
                 #### ====== Plot to QImage ======####
-                self.ui.graphicsView.scene().clear()
                 canvas = FigureCanvas(fig)
                 renderer = canvas.get_renderer()
                 pixel_buffer = renderer.tostring_rgb()
