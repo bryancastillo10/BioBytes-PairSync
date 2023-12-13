@@ -1,3 +1,6 @@
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from matplotlib.figure import Figure
+
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
@@ -55,7 +58,7 @@ class DotMatrix:
         mismatch = self.M.shape[0] - match - 1
         return match, mismatch, self.M
 
-    def fill_plot(self, figsize=(10, 10), dpi=70):
+    def fill_plot(self):
         self.M = np.full((len(self.seqA) + 1, len(self.seqB) + 1), "", dtype=str)
         for rows in range(0, len(self.seqA)):
             self.M[rows + 1][0] = self.seqA[rows : rows + 1]
@@ -67,7 +70,7 @@ class DotMatrix:
         bounds = [0, 0.5, 1]
         norm = matplotlib.colors.BoundaryNorm(bounds, cmap.N)
 
-        fig, ax = plt.subplots(figsize=figsize, dpi=dpi)
+        fig, ax = plt.subplots(figsize=(8, 8), dpi=100)
         M_blu = np.delete(self.M, 0, axis=1)
         M_blu = np.delete(M_blu, 0, axis=0)
         M_blu_log = M_blu == "*"

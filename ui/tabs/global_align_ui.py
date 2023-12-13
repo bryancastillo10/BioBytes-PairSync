@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\global_align.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\global_align.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -53,11 +53,20 @@ class Ui_Form(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.textBrowser = QtWidgets.QTextBrowser(self.des)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred
+        )
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textBrowser.sizePolicy().hasHeightForWidth())
+        self.textBrowser.setSizePolicy(sizePolicy)
         self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 130))
         font = QtGui.QFont()
         font.setFamily("Noto Sans")
         font.setPointSize(12)
         self.textBrowser.setFont(font)
+        self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout.addWidget(self.textBrowser)
         self.verticalLayout_3.addWidget(self.des)

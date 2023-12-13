@@ -1,19 +1,22 @@
-import numpy as np
 from PyQt5.QtWidgets import (
     QWidget,
-    QVBoxLayout,
-    QGraphicsScene,
-    QGraphicsView,
-    QGraphicsPixmapItem,
     QMessageBox,
+    QGraphicsPixmapItem,
+    QGraphicsView,
+    QGraphicsScene,
 )
+
 from PyQt5.QtGui import QFontDatabase, QImage, QPixmap
 from PyQt5.QtCore import Qt
+from io import BytesIO
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.figure import Figure
+
 
 from ui.tabs.dot_plot_ui import Ui_Form
 from seq_algorithm.dotplot import DotMatrix
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 class DotPlot(QWidget):
@@ -23,6 +26,7 @@ class DotPlot(QWidget):
         super(DotPlot, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
+        self.ui.graphicsView.setResizeAnchor(QGraphicsView.AnchorViewCenter)
         self.stylesheet_file("static/style/dot_plot_tab_style.qss")
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
@@ -56,24 +60,26 @@ class DotPlot(QWidget):
                 M=np.empty((1, 1), dtype=str), seqA=input_seq1, seqB=input_seq2
             )
             if self.dm.is_valid:
-                fig = self.dm.fill_plot(figsize=(8, 8), dpi=80)
-
-                #### ====== Plot to QImage ======####
-                canvas = FigureCanvas(fig)
-                renderer = canvas.get_renderer()
-                pixel_buffer = renderer.tostring_rgb()
-                img = QImage(
-                    pixel_buffer,
-                    canvas.get_width_height()[0],
-                    canvas.get_width_height()[1],
-                    QImage.Format_RGB32,
-                )
-                pixmap_item = QGraphicsPixmapItem(QPixmap(img))
-                self.ui.graphicsView.scene().addItem(pixmap_item)
+                fig = self.dm.fill_plot()
+                self.embed_plot(fig)
             else:
                 raise ValueError()
         except ValueError as e:
             self.pop_warning(f"DotMatrix Error: {e}")
+
+    def embed_plot(self, fig):
+        """Embed the MatplotLib plot into the QGraphicsView"""
+        buff = BytesIO()
+        fig.savefig(buff, format="png")
+        buff.seek(0)
+        img = QImage.fromData(buff.read())
+        if not self.ui.graphicsView.scene():
+            self.ui.graphicsView.setScene(QGraphicsScene())
+
+        pixmap_item = QGraphicsPixmapItem(QPixmap(img))
+        self.ui.graphicsView.scene().clear()
+        self.ui.graphicsView.setSceneRect(0, 0, img.width(), img.height())
+        self.ui.graphicsView.scene().addItem(pixmap_item)
 
     def pop_warning(self, message):
         """Warning Message if the Input is Wrong"""

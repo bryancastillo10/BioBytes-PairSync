@@ -32,7 +32,7 @@
    <item>
     <widget class="QFrame" name="title">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
@@ -132,6 +132,12 @@
       </property>
       <item>
        <widget class="QTextBrowser" name="textBrowser">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -350,6 +356,18 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_4">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Graphical Output</string>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QFrame" name="frame_8">
            <property name="font">
@@ -371,18 +389,6 @@ p, li { white-space: pre-wrap; }
             <property name="bottomMargin">
              <number>5</number>
             </property>
-            <item alignment="Qt::AlignHCenter">
-             <widget class="QLabel" name="label_4">
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>Graphical Output</string>
-              </property>
-             </widget>
-            </item>
            </layout>
           </widget>
          </item>
@@ -428,10 +434,10 @@ p, li { white-space: pre-wrap; }
                <enum>Qt::NoFocus</enum>
               </property>
               <property name="verticalScrollBarPolicy">
-               <enum>Qt::ScrollBarAlwaysOff</enum>
+               <enum>Qt::ScrollBarAsNeeded</enum>
               </property>
               <property name="horizontalScrollBarPolicy">
-               <enum>Qt::ScrollBarAlwaysOff</enum>
+               <enum>Qt::ScrollBarAsNeeded</enum>
               </property>
              </widget>
             </item>
