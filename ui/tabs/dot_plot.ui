@@ -141,7 +141,7 @@
         <property name="maximumSize">
          <size>
           <width>16777215</width>
-          <height>150</height>
+          <height>100</height>
          </size>
         </property>
         <property name="font">
@@ -356,6 +356,21 @@ p, li { white-space: pre-wrap; }
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
          <item alignment="Qt::AlignHCenter">
           <widget class="QLabel" name="label_4">
            <property name="font">
@@ -452,8 +467,8 @@ p, li { white-space: pre-wrap; }
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="0" column="1" rowspan="2">
              <widget class="QPushButton" name="plot_btn">
               <property name="text">
                <string>Plot</string>
@@ -464,7 +479,18 @@ p, li { white-space: pre-wrap; }
               </property>
              </widget>
             </item>
-            <item>
+            <item row="0" column="0" rowspan="2">
+             <widget class="QPushButton" name="clear_btn">
+              <property name="text">
+               <string>Clear</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../../static/resources_rc.qrc">
+                <normaloff>:/icons/icons/trash-2.svg</normaloff>:/icons/icons/trash-2.svg</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
              <spacer name="horizontalSpacer">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
@@ -477,7 +503,7 @@ p, li { white-space: pre-wrap; }
               </property>
              </spacer>
             </item>
-            <item>
+            <item row="0" column="3">
              <widget class="QPushButton" name="save_btn">
               <property name="text">
                <string>Save</string>

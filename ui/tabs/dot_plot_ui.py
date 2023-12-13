@@ -73,7 +73,7 @@ class Ui_Form(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.textBrowser.sizePolicy().hasHeightForWidth())
         self.textBrowser.setSizePolicy(sizePolicy)
-        self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 100))
         font = QtGui.QFont()
         font.setFamily("Noto Sans")
         font.setPointSize(12)
@@ -175,6 +175,8 @@ class Ui_Form(object):
         self.out_graph.setFrameShadow(QtWidgets.QFrame.Raised)
         self.out_graph.setObjectName("out_graph")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.out_graph)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label_4 = QtWidgets.QLabel(self.out_graph)
         font = QtGui.QFont()
@@ -227,8 +229,8 @@ class Ui_Form(object):
         self.output_btns.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.output_btns.setFrameShadow(QtWidgets.QFrame.Raised)
         self.output_btns.setObjectName("output_btns")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.output_btns)
-        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.gridLayout_7 = QtWidgets.QGridLayout(self.output_btns)
+        self.gridLayout_7.setObjectName("gridLayout_7")
         self.plot_btn = QtWidgets.QPushButton(self.output_btns)
         icon1 = QtGui.QIcon()
         icon1.addPixmap(
@@ -238,19 +240,29 @@ class Ui_Form(object):
         )
         self.plot_btn.setIcon(icon1)
         self.plot_btn.setObjectName("plot_btn")
-        self.horizontalLayout.addWidget(self.plot_btn)
+        self.gridLayout_7.addWidget(self.plot_btn, 0, 1, 2, 1)
+        self.clear_btn = QtWidgets.QPushButton(self.output_btns)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(
+            QtGui.QPixmap(":/icons/icons/trash-2.svg"),
+            QtGui.QIcon.Normal,
+            QtGui.QIcon.Off,
+        )
+        self.clear_btn.setIcon(icon2)
+        self.clear_btn.setObjectName("clear_btn")
+        self.gridLayout_7.addWidget(self.clear_btn, 0, 0, 2, 1)
         spacerItem = QtWidgets.QSpacerItem(
             228, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum
         )
-        self.horizontalLayout.addItem(spacerItem)
+        self.gridLayout_7.addItem(spacerItem, 0, 2, 1, 1)
         self.save_btn = QtWidgets.QPushButton(self.output_btns)
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(
             QtGui.QPixmap(":/icons/icons/save.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
         )
-        self.save_btn.setIcon(icon2)
+        self.save_btn.setIcon(icon3)
         self.save_btn.setObjectName("save_btn")
-        self.horizontalLayout.addWidget(self.save_btn)
+        self.gridLayout_7.addWidget(self.save_btn, 0, 3, 1, 1)
         self.verticalLayout.addWidget(self.output_btns)
         self.gridLayout_3.addWidget(self.out_graph, 0, 1, 1, 1)
         self.verticalLayout_2.addWidget(self.frame_3)
@@ -280,4 +292,5 @@ class Ui_Form(object):
         self.textEdit_2.setPlaceholderText(_translate("Form", "Enter Second Sequence"))
         self.label_4.setText(_translate("Form", "Graphical Output"))
         self.plot_btn.setText(_translate("Form", "Plot"))
+        self.clear_btn.setText(_translate("Form", "Clear"))
         self.save_btn.setText(_translate("Form", "Save"))
