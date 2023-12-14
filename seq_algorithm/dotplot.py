@@ -72,7 +72,7 @@ class DotMatrix:
 
         fig, ax = plt.subplots(figsize=(10, 10), dpi=100)
         label_section = f"\n{label_1}\n{label_2}"
-        fig.text(0.5, 0.90, label_section, fontsize=10, ha="center")
+        fig.text(0.5, 0.90, label_section, fontsize=15, ha="center")
         M_blu = np.delete(self.M, 0, axis=1)
         M_blu = np.delete(M_blu, 0, axis=0)
         M_blu_log = M_blu == "*"
@@ -80,13 +80,13 @@ class DotMatrix:
 
         ax.set_xticks([])
         ax.set_yticks([])
-        ax.set_ylabel("Sequence 1")
-        ax.set_xlabel("Sequence 2")
+        ax.set_ylabel("Sequence 1", fontsize=15)
+        ax.set_xlabel("Sequence 2", fontsize=15)
 
         subcaption = (
             f"Number of aligned bases: {match}\nNumber of mismatched bases: {mismatch}"
         )
-        fig.text(0.5, 0.02, subcaption, fontsize=10, ha="center")
+        fig.text(0.5, 0.02, subcaption, fontsize=15, ha="center")
 
         return fig
 

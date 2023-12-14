@@ -122,8 +122,8 @@ class DotPlot(QWidget):
                 label, sequence = self.extract_fasta_content(content)
 
                 #### ====== Connect Label and Sequence to the UI ======####
-                self.ui.lineEdit.setText(label)
-                self.ui.textEdit.setPlainText(sequence)
+                label_widget.setText(label)
+                sequence_widget.setPlainText(sequence)
 
             except Exception as e:
                 self.pop_warning(f"Error loading file: {str(e)}")
