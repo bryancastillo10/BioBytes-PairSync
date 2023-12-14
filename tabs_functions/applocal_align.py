@@ -1,7 +1,14 @@
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import (
+    QWidget,
+    QMessageBox,
+    QFileDialog,
+    QLineEdit,
+    QPlainTextEdit,
+)
 from PyQt5.QtGui import QFontDatabase
 
 from ui.tabs.local_align_ui import Ui_Form
+from seq_algorithm.local_smithwaterman import SmithWatermanAlgorithm, SWScoringSystem
 
 
 class LocalAlign(QWidget):
@@ -19,3 +26,10 @@ class LocalAlign(QWidget):
         with open(style_path, "r") as f:
             style = f.read()
             self.setStyleSheet(style)
+
+    #### ====== Signal Buttons  ======####
+    # self.ui.load_seq1.clciked.connect()
+    # self.ui.load_seq2.clciked.connect()
+    # self.ui.clear_btn.clciked.connect()
+    # self.ui.align_btn.clciked.connect()
+    # self.ui.save_btn.clciked.connect()

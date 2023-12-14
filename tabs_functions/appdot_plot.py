@@ -10,14 +10,12 @@ from PyQt5.QtWidgets import (
 
 from PyQt5.QtGui import QFontDatabase, QImage, QPixmap
 from PyQt5.QtCore import Qt
-from io import BytesIO
-import matplotlib.backends.backend_qt5agg as FigureCanvas
 
+import matplotlib.backends.backend_qt5agg as FigureCanvas
+import numpy as np
 
 from ui.tabs.dot_plot_ui import Ui_Form
 from seq_algorithm.dotplot import DotMatrix
-
-import numpy as np
 
 
 class DotPlot(QWidget):
