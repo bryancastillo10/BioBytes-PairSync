@@ -50,3 +50,15 @@
 	border-radius: 18px;
     font-size:12px;
 }
+
+/** Input and Output Frame **/
+
+#seq1_frame QTextEdit, #seq2_frame QTextEdit, #seq1_frame QLineEdit, #seq2_frame QLineEdit {
+     border: 1px solid rgb(255,255,255);
+     font-size:12px;
+}
+
+#seq1_frame QTextEdit::focus, #seq2_frame QTextEdit::focus, #seq1_frame QLineEdit::focus, #seq2_frame QLineEdit::focus {
+     border: 1px solid rgb(7,191,160);
+     font-size:12px;
+}
