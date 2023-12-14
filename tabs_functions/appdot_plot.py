@@ -91,7 +91,7 @@ class DotPlot(QWidget):
         ###===  QGraphicsView Adjustment ===###
         pixmap_item = QGraphicsPixmapItem(QPixmap(img))
         self.ui.graphicsView.scene().clear()
-        self.ui.graphicsView.setFixedSize(600, 600)
+        self.ui.graphicsView.setFixedSize(800, 600)
         self.ui.graphicsView.setSceneRect(0, 0, img.width(), img.height())
         self.ui.graphicsView.fitInView(
             self.ui.graphicsView.sceneRect(), Qt.KeepAspectRatio
@@ -101,7 +101,6 @@ class DotPlot(QWidget):
     def load_file(self, label_widget: QLineEdit, sequence_widget: QPlainTextEdit):
         """Load sequence from a file"""
         options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
         file_dialog = QFileDialog(self, options=options)
         file_dialog.setNameFilter(
             "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)"

@@ -15,7 +15,7 @@ class BasicInfo(QWidget):
         self.ui = Ui_Form()
         self.bio = BioSeq()
         self.ui.setupUi(self)
-        self.stylesheet_file("static/style/basic_info_tab_style.qss")
+        self.stylesheet_file()
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
@@ -25,7 +25,7 @@ class BasicInfo(QWidget):
         self.ui.clear_btn.clicked.connect(self.remove_output)
         self.ui.save_btn.clicked.connect(self.save_output)
 
-    def stylesheet_file(self, style_path):
+    def stylesheet_file(self):
         """Read the Stylesheet of the GUI"""
         style_path = "static/style/basic_info_tab_style.qss"
         with open(style_path, "r") as f:
@@ -145,12 +145,11 @@ class BasicInfo(QWidget):
     def load_file(self):
         """Load sequence from a file"""
         options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
         file_dialog = QFileDialog(self, options=options)
         file_dialog.setNameFilter(
             "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)"
         )
-        file_dialog.setStyleSheet(self.styleSheet())
+        file_dialog.setStyleSheet("static/style/basic_info_tab_style.qss")
         file_name, _ = file_dialog.getOpenFileName(
             self,
             "Load File",

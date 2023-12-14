@@ -46,6 +46,25 @@
     font-size:12px;
 	
 }
+/**  Additional Window for Saving and Writing Window**/
+QFileDialog QTreeView {
+    background: rgb(54,54,54); /* charcoal gray*/
+    font-size:12px;
+}
+
+
+QFileDialog QHeaderView::section {
+    background-color: rgb(120,157,186); /* light blue */
+    color: #000;
+}
+
+QFileDialog QListView {
+    background-color: rgba(120,157,186,0.5);
+}
+
+QFileDialog QListView::item::selected {
+    background-color: rgb(7,191,160);
+}
 
 /** Additional Window for Error Handling/ Warning Message **/
 QMessageBox{
