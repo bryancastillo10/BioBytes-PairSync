@@ -75,6 +75,7 @@ QTabWidget::pane{
 	margin-left: 5px;
 	image: url("static/icons/gray-x-circle.svg");
 	background-color: rgba(240,228,66,0.8);  /* yellow  */
+	border-radius: 6px;
 }
 /** Min Max Close Button (Nav Buttons) **/
 #min_max_close QPushButton{
