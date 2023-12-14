@@ -35,7 +35,7 @@
 }
 
 
-#start_save_btns QPushButton {
+#start_save_btns QPushButton, #seq1_frame QPushButton, #seq2_frame QPushButton {
     background-color: rgb(120,157,186); /* light blue */
 	border: 3px solid rgb(5,92,142);
 	border-radius:15px;
@@ -44,7 +44,7 @@
     font-size:12px;
 }
 
-#start_save_btns QPushButton::hover {
+#start_save_btns QPushButton::hover, #seq1_frame QPushButton::hover, #seq2_frame QPushButton::hover {
     background-color: rgba(5,92,142,0.5); /* dark-blue */
 	color: #fff;
 	border-radius: 18px;

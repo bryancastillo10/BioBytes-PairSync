@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>982</width>
-    <height>696</height>
+    <height>682</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -120,6 +120,12 @@
       </property>
       <item>
        <widget class="QTextBrowser" name="textBrowser">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -132,146 +138,25 @@
           <pointsize>12</pointsize>
          </font>
         </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'PMingLiU';&quot;&gt;   The Smith-Waterman algorithm, a dynamic programming technique, is fundamental in bioinformatics for local sequence alignment, outperforming global alignment methods. It excels in pinpointing highly similar regions within biological sequences, emphasizing optimal local alignment by initiating the process from every sequence position. This allows the identification of short, conserved regions even amidst substantial sequence variations. The algorithm evaluates all potential local alignments, assigning scores to sequence matches, mismatches, and gaps, constructing an alignment matrix dynamically.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Local alignment  is valuable for finding functional or structural motifs within larger sequences, ignoring unrelated regions. The algorithm used in this part is Smith-Waterman Algorithm.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
-     </layout>
-    </widget>
-   </item>
-   <item>
-    <widget class="QFrame" name="frame_3">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <property name="leftMargin">
-       <number>5</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <property name="horizontalSpacing">
-       <number>0</number>
-      </property>
-      <item row="1" column="0">
-       <widget class="QFrame" name="seq2_frame">
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_7">
-         <property name="spacing">
-          <number>5</number>
-         </property>
-         <property name="leftMargin">
-          <number>5</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>10</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="font">
-            <font>
-             <family>Noto Sans</family>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Sequence 2</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QTextEdit" name="textEdit_2">
-           <property name="placeholderText">
-            <string>Enter Second Sequence</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QFrame" name="seq1_frame">
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_6">
-         <property name="spacing">
-          <number>5</number>
-         </property>
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>0</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="font">
-            <font>
-             <family>Noto Sans</family>
-             <pointsize>11</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Sequence 1</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QTextEdit" name="textEdit">
-           <property name="placeholderText">
-            <string>Enter First Sequence</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="0" column="1" rowspan="2">
-       <widget class="QFrame" name="align_frame">
+      <item>
+       <widget class="QFrame" name="frame_3">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
@@ -282,10 +167,7 @@ p, li { white-space: pre-wrap; }
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5">
-         <property name="spacing">
-          <number>5</number>
-         </property>
+        <layout class="QGridLayout" name="gridLayout">
          <property name="leftMargin">
           <number>0</number>
          </property>
@@ -298,39 +180,184 @@ p, li { white-space: pre-wrap; }
          <property name="bottomMargin">
           <number>0</number>
          </property>
-         <item>
-          <widget class="QFrame" name="frame_8">
-           <property name="font">
-            <font>
-             <family>Noto Sans</family>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QFrame" name="seq_mainframe">
            <property name="frameShape">
             <enum>QFrame::StyledPanel</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_4">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
             <property name="topMargin">
-             <number>5</number>
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
             </property>
             <property name="bottomMargin">
-             <number>5</number>
+             <number>15</number>
             </property>
-            <item alignment="Qt::AlignHCenter">
-             <widget class="QLabel" name="label_4">
-              <property name="text">
-               <string>Aligned Sequences</string>
+            <item>
+             <widget class="QFrame" name="seq1_frame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
               </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frame">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <widget class="QLabel" name="label_2">
+                    <property name="font">
+                     <font>
+                      <family>Noto Sans</family>
+                      <pointsize>11</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Sequence 1</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit"/>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="load_seq1">
+                    <property name="text">
+                     <string>Load</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../../static/resources_rc.qrc">
+                      <normaloff>:/icons/icons/upload.svg</normaloff>:/icons/icons/upload.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="textEdit">
+                 <property name="placeholderText">
+                  <string>Enter First Sequence</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="seq2_frame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frame_2">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_2">
+                  <item>
+                   <widget class="QLabel" name="label_3">
+                    <property name="font">
+                     <font>
+                      <family>Noto Sans</family>
+                      <pointsize>11</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Sequence 2</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_2"/>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="load_seq2">
+                    <property name="text">
+                     <string>Load</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="../../static/resources_rc.qrc">
+                      <normaloff>:/icons/icons/upload.svg</normaloff>:/icons/icons/upload.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QTextEdit" name="textEdit_2">
+                 <property name="placeholderText">
+                  <string>Enter Second Sequence</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
              </widget>
             </item>
            </layout>
           </widget>
          </item>
-         <item>
-          <widget class="QFrame" name="frame_9">
+         <item row="0" column="1">
+          <widget class="QFrame" name="align_frame">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
              <horstretch>0</horstretch>
@@ -343,9 +370,55 @@ p, li { white-space: pre-wrap; }
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <layout class="QVBoxLayout" name="verticalLayout_8">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
-             <widget class="QFrame" name="frame_11">
+             <widget class="QFrame" name="frame_8">
+              <property name="font">
+               <font>
+                <family>Noto Sans</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_4">
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QLabel" name="label_4">
+                 <property name="text">
+                  <string>Aligned Sequences</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame_9">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                 <horstretch>0</horstretch>
@@ -358,45 +431,83 @@ p, li { white-space: pre-wrap; }
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QGridLayout" name="gridLayout_2">
-               <item row="0" column="0">
-                <widget class="QTextBrowser" name="textBrowser_2"/>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <widget class="QFrame" name="frame_11">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <item row="0" column="0">
+                   <widget class="QTextBrowser" name="textBrowser_2"/>
+                  </item>
+                 </layout>
+                </widget>
                </item>
               </layout>
              </widget>
             </item>
-            <item alignment="Qt::AlignRight|Qt::AlignBottom">
-             <widget class="QFrame" name="frame_10">
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>50</height>
-               </size>
-              </property>
+            <item>
+             <widget class="QFrame" name="start_save_btns">
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
               </property>
               <property name="frameShadow">
                <enum>QFrame::Raised</enum>
               </property>
-              <layout class="QGridLayout" name="gridLayout_3">
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_5">
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QPushButton" name="clear_btn">
                  <property name="text">
-                  <string>Percent Similarity:</string>
+                  <string>Clear</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../static/resources_rc.qrc">
+                   <normaloff>:/icons/icons/trash-2.svg</normaloff>:/icons/icons/trash-2.svg</iconset>
                  </property>
                 </widget>
                </item>
-               <item row="0" column="1">
-                <widget class="QTextBrowser" name="textBrowser_3">
-                 <property name="maximumSize">
+               <item>
+                <widget class="QPushButton" name="align_btn">
+                 <property name="text">
+                  <string>Align</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../static/resources_rc.qrc">
+                   <normaloff>:/icons/icons/play-circle.svg</normaloff>:/icons/icons/play-circle.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
                   <size>
-                   <width>16777215</width>
-                   <height>30</height>
+                   <width>228</width>
+                   <height>20</height>
                   </size>
                  </property>
-                 <property name="verticalScrollBarPolicy">
-                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="save_btn">
+                 <property name="text">
+                  <string>Save</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="../../static/resources_rc.qrc">
+                   <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
                  </property>
                 </widget>
                </item>
@@ -406,54 +517,9 @@ p, li { white-space: pre-wrap; }
            </layout>
           </widget>
          </item>
-         <item>
-          <widget class="QFrame" name="start_save_btns">
-           <property name="frameShape">
-            <enum>QFrame::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QPushButton" name="align_btn">
-              <property name="text">
-               <string>Align</string>
-              </property>
-              <property name="icon">
-               <iconset resource="../../static/resources_rc.qrc">
-                <normaloff>:/icons/icons/play-circle.svg</normaloff>:/icons/icons/play-circle.svg</iconset>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="horizontalSpacer">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>228</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="save_btn">
-              <property name="text">
-               <string>Save</string>
-              </property>
-              <property name="icon">
-               <iconset resource="../../static/resources_rc.qrc">
-                <normaloff>:/icons/icons/save.svg</normaloff>:/icons/icons/save.svg</iconset>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </item>
         </layout>
+        <zorder>seq_mainframe</zorder>
+        <zorder>align_frame</zorder>
        </widget>
       </item>
      </layout>
