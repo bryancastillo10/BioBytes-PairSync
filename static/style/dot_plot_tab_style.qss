@@ -43,3 +43,26 @@
 	border-radius: 18px;
     font-size:12px;
 }
+
+
+/** Additional Window for Error Handling/ Warning Message **/
+QMessageBox{
+    background-color: rgb(54,54,54); /* charcoal gray*/ 
+            }
+QMessageBox QLabel{
+    color: #fff;
+            }
+ QMessageBox QPushButton {
+    background-color: rgb(120,157,186); /* light blue */
+	border: 3px solid rgb(5,92,142);
+	border-radius:15px;
+	padding: 5px;
+	color: #000;
+    font-size:12px;
+            }
+QMessageBox QPushButton::hover{
+    background-color: rgba(5,92,142,0.5); /* dark-blue */
+	color: #fff;
+	border-radius: 15px;
+    font-size:12px;
+            }

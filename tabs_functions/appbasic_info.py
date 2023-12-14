@@ -121,10 +121,11 @@ class BasicInfo(QWidget):
     def save_output(self, all_output):
         """Saving the Output Text as .txt file"""
         save_options = QFileDialog.Options()
-        save_options |= QFileDialog.DontUseNativeDialog
-        file_dialog = QFileDialog(self, options=save_options)
+        file_dialog = QFileDialog(self)
+        file_dialog.setAcceptMode(QFileDialog.AcceptSave)
         file_dialog.setNameFilter("Text Files (*.txt);;All Files (*)")
         file_dialog.setStyleSheet(self.styleSheet())
+
         file_name, _ = file_dialog.getSaveFileName(
             self,
             "Save File",
@@ -132,6 +133,7 @@ class BasicInfo(QWidget):
             "Text Files (*.txt);;All Files (*)",
             options=save_options,
         )
+
         if file_name:
             with open(file_name, "w") as file_out:
                 file_out.write(all_output)
@@ -161,10 +163,10 @@ class BasicInfo(QWidget):
                 with open(file_name, "r") as file_in:
                     content = file_in.read()
 
-                # Extract label and sequence from FASTA content
+                #### ====== Separate the label and sequence  ======####
                 label, sequence = self.extract_fasta_content(content)
 
-                # Set the label and sequence in the UI
+                #### ====== Connect Label and Sequence to the UI ======####
                 self.ui.lineEdit.setText(label)
                 self.ui.seq_input.setPlainText(sequence)
 
@@ -178,10 +180,10 @@ class BasicInfo(QWidget):
         sequence = ""
         for line in lines:
             if line.startswith(">"):
-                # Assume the label is the part after '>'
+                #### ====== Label is after > character ======####
                 label = line[1:].strip()
             else:
-                # Accumulate sequence lines
+                #### ====== Obtain String Sequences  ======####
                 sequence += line.strip()
         return label, sequence
 
