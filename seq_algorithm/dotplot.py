@@ -84,7 +84,7 @@ class DotMatrix:
         ax.set_xlabel("Sequence 2")
 
         subcaption = (
-            f"Number of aligned bases: {match}\nNumber of unaligned bases: {mismatch}"
+            f"Number of aligned bases: {match}\nNumber of mismatched bases: {mismatch}"
         )
         fig.text(0.5, 0.02, subcaption, fontsize=10, ha="center")
 
@@ -92,5 +92,5 @@ class DotMatrix:
 
 
 # Example Usage
-sequence1 = "ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGAT"
-sequence2 = "GGCAGATAGGTCGATCGATAGATCGATCGACCGTATCAGTCGATCGATCGAT"
+# sequence1 = "ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGAT"
+# sequence2 = "GGCAGATAGGTCGATCGATAGATCGATCGACCGTATCAGTCGATCGATCGAT"

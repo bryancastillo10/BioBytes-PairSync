@@ -2,14 +2,13 @@ from PyQt5.QtWidgets import (
     QWidget,
     QMessageBox,
     QGraphicsPixmapItem,
-    QGraphicsView,
     QGraphicsScene,
 )
 
 from PyQt5.QtGui import QFontDatabase, QImage, QPixmap
 from PyQt5.QtCore import Qt
 from io import BytesIO
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+import matplotlib.backends.backend_qt5agg as FigureCanvas
 
 
 from ui.tabs.dot_plot_ui import Ui_Form
@@ -35,6 +34,7 @@ class DotPlot(QWidget):
         # self.ui.load_seq1.clicked.connect(self.load_file1)
         # self.ui.load_seq2.clicked.connect(self.load_file2)
         # self.ui.save_btn.clicked.connect(self.function)
+        self.ui.clear_btn.clicked.connect(self.remove_output)
         self.ui.plot_btn.clicked.connect(self.plot_clicked)
 
     def stylesheet_file(self, style_path):
@@ -73,17 +73,24 @@ class DotPlot(QWidget):
 
     def embed_plot(self, fig):
         """Embed the MatplotLib plot into the QGraphicsView"""
-        buff = BytesIO()
-        fig.savefig(buff, format="png")
-        buff.seek(0)
-        img = QImage.fromData(buff.read())
-        if not self.ui.graphicsView.scene():
-            self.ui.graphicsView.setScene(QGraphicsScene())
+        canvas = FigureCanvas.FigureCanvasQTAgg(fig)
+        canvas.draw()
+        width, height = canvas.get_width_height()
+        # buff = BytesIO()
+        # fig.savefig(buff, format="png")
+        # buff.seek(0)
+        # img = QImage.fromData(buff.read())
+        # if not self.ui.graphicsView.scene():
+        #     self.ui.graphicsView.setScene(QGraphicsScene())
 
-        pixmap_item = QGraphicsPixmapItem(QPixmap(img))
-        self.ui.graphicsView.scene().clear()
-        self.ui.graphicsView.setSceneRect(0, 0, img.width(), img.height())
-        self.ui.graphicsView.scene().addItem(pixmap_item)
+        # pixmap_item = QGraphicsPixmapItem(QPixmap(img))
+        # self.ui.graphicsView.scene().clear()
+        # self.ui.graphicsView.setSceneRect(0, 0, img.width(), img.height())
+        # self.ui.graphicsView.scene().addItem(pixmap_item)
+
+    def remove_output(self):
+        """Clear Button for the Output Section"""
+        self.ui.graphicsView.resetTransform()
 
     def pop_warning(self, message):
         """Warning Message if the Input is Wrong"""
