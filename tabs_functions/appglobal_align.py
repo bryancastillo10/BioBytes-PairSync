@@ -6,7 +6,7 @@ from ui.tabs.global_align_ui import Ui_Form
 
 class GlobalAlign(QWidget):
     def __init__(self):
-        super(LocalAlign, self).__init__()
+        super(GlobalAlign, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
         self.stylesheet_file(style_path="static/style/alignment_tab_style.qss")

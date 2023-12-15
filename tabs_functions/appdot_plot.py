@@ -15,7 +15,7 @@ import matplotlib.backends.backend_qt5agg as FigureCanvas
 import numpy as np
 
 from ui.tabs.dot_plot_ui import Ui_Form
-from seq_algorithm.dotplot import DotMatrix
+from seq_algorithm.dotplot import DotMatrix, ValidSequence
 
 
 class DotPlot(QWidget):
@@ -56,15 +56,13 @@ class DotPlot(QWidget):
             self.ui.label_seq2.text() or " No Sample Label Added [Second Sequence] "
         )
         input_seq2 = self.ui.textEdit_2.toPlainText()
-
-        self.perform_plot(input_seq1, input_seq2, label_1, label_2)
-
-    def perform_plot(self, input_seq1, input_seq2, label_1, label_2):
         """Implements the methods on class DotMatrix"""
+        #### ====== Handling error for the Input ======####
+        self.valid = ValidSequence(seqA=input_seq1, seqB=input_seq2)
         try:
-            if not input_seq1 or input_seq2:
+            if not input_seq1 or not input_seq2:
                 raise ValueError()
-            elif self.dm.is_valid:
+            elif self.valid.pairseq_valid():
                 self.dm = DotMatrix(
                     M=np.empty((1, 1), dtype=str), seqA=input_seq1, seqB=input_seq2
                 )
@@ -73,7 +71,9 @@ class DotPlot(QWidget):
             else:
                 raise ValueError()
         except ValueError as e:
-            self.pop_warning(f"DotMatrix Error: {e}")
+            self.pop_warning(
+                f"DotMatrix Error: Wrong Input Field. Please fill up with an appropriate sequence. "
+            )
 
     def embed_plot(self, fig):
         """Embed the MatplotLib plot into the QGraphicsView"""

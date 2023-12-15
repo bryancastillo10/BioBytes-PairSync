@@ -24,11 +24,15 @@ class LocalAlign(QWidget):
         )
 
         #### ====== Signal Buttons  ======####
-        # self.ui.load_seq1.clicked.connect()
-        # self.ui.load_seq2.clicked.connect()
+        self.ui.load_seq1.clicked.connect(
+            lambda: self.load_file(self.ui.label_seq1, self.ui.textEdit)
+        )
+        self.ui.load_seq2.clicked.connect(
+            lambda: self.load_file(self.ui.label_seq2, self.ui.textEdit_2)
+        )
         self.ui.clear_btn.clicked.connect(self.remove_output)
         self.ui.align_btn.clicked.connect(self.align_clicked)
-        # self.ui.save_btn.clicked.connect()
+        self.ui.save_btn.clicked.connect(self.save_output)
 
     def stylesheet_file(self, style_path):
         with open(style_path, "r") as f:
@@ -38,9 +42,9 @@ class LocalAlign(QWidget):
     def align_clicked(self):
         """Retrieving the input values upon clicking the Align button"""
         #### ====== Retrieve Values ======####
-        label_1 = self.ui.seq1_label.text() or "No Sample Label Added [First Sequence]"
+        label_1 = self.ui.label_seq1.text() or "No Sample Label Added"
         input_seq1 = self.ui.textEdit.toPlainText()
-        label_2 = self.ui.seq2_label.text() or "No Sample Label Added [First Sequence]"
+        label_2 = self.ui.label_seq2.text() or "No Sample Label Added"
         input_seq2 = self.ui.textEdit_2.toPlainText()
 
         #### ====== Handling error for the Input ======####
@@ -56,7 +60,7 @@ class LocalAlign(QWidget):
                 self.start_alignment(input_seq1, input_seq2, label_1, label_2)
         except ValueError:
             self.pop_warning(
-                "Wrong Input Field. Please fill up with an appropriate sequence. Make sure to select the correct biomolecule type."
+                "Wrong Input Field. Please fill up with an appropriate sequence."
             )
 
     def start_alignment(self, input_seq1, input_seq2, label_1, label_2):
@@ -65,26 +69,103 @@ class LocalAlign(QWidget):
         aligned_seq_A, aligned_seq_B = local_align.seq_alignment(input_seq1, input_seq2)
         similarity_l = local_align.calc_similarity()
         self.show_output(
-            aligned_seq_A, input_seq1, input_seq2, aligned_seq_B, similarity_l
+            label_1,
+            label_2,
+            aligned_seq_A,
+            input_seq1,
+            input_seq2,
+            aligned_seq_B,
+            similarity_l,
         )
 
     def show_output(
-        self, aligned_seq_A, input_seq1, input_seq2, aligned_seq_B, similarity_l
+        self,
+        label_1,
+        label_2,
+        aligned_seq_A,
+        input_seq1,
+        input_seq2,
+        aligned_seq_B,
+        similarity_l,
     ):
         """Output Format for Aligned Sequence"""
         aligned_output = dedent(
             f""" 
-                [1] Original Sequence A: \n{input_seq1}
-                [2] Original Sequence B: \n{input_seq2}
+                [Original Sequence 1]: {label_1} \n{input_seq1}
+                [Original Sequence 2]: {label_2} \n{input_seq2}
 
-                [3] Aligned Sequence A: \n{aligned_seq_A}
-                [4] Aligned Sequence B: \n{aligned_seq_B}
+                [Aligned Sequence 1]: {label_1} \n{aligned_seq_A}
+                [Aligned Sequence 2]: {label_2} \n{aligned_seq_B}
 
-                [5] PPercentage Similarity of the Two Sequences: {similarity_l} %
-                =========================================
+                Percentage Similarity of the Two Sequences: {similarity_l} %
+                =============================================
             """
         )
         self.ui.textBrowser_2.append(aligned_output)
+
+    def load_file(self, label_widget: QLineEdit, sequence_widget: QPlainTextEdit):
+        """Load sequence from a file"""
+        options = QFileDialog.Options()
+        file_dialog = QFileDialog(self, options=options)
+        file_dialog.setNameFilter(
+            "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)"
+        )
+        file_dialog.setStyleSheet(self.styleSheet())
+        file_name, _ = file_dialog.getOpenFileName(
+            self,
+            "Load File",
+            "",
+            "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)",
+            options=options,
+        )
+        if file_name:
+            try:
+                with open(file_name, "r") as file_in:
+                    content = file_in.read()
+
+                #### ====== Separate the label and sequence  ======####
+                label, sequence = self.extract_fasta_content(content)
+
+                #### ====== Connect Label and Sequence to the UI ======####
+                label_widget.setText(label)
+                sequence_widget.setPlainText(sequence)
+
+            except Exception as e:
+                self.pop_warning(f"Error loading file: {str(e)}")
+
+    def extract_fasta_content(self, content):
+        """Extract label and sequence from FASTA content"""
+        lines = content.split("\n")
+        label = ""
+        sequence = ""
+        for line in lines:
+            if line.startswith(">"):
+                #### ====== Label is after > character ======####
+                label = line[1:].strip()
+            else:
+                #### ====== Obtain String Sequences  ======####
+                sequence += line.strip()
+        return label, sequence
+
+    def save_output(self, aligned_output):
+        """Saving the Output Text as .txt file"""
+        save_options = QFileDialog.Options()
+        file_dialog = QFileDialog(self)
+        file_dialog.setAcceptMode(QFileDialog.AcceptSave)
+        file_dialog.setNameFilter("Text Files (*.txt);;All Files (*)")
+        file_dialog.setStyleSheet(self.styleSheet())
+
+        file_name, _ = file_dialog.getSaveFileName(
+            self,
+            "Save File",
+            "",
+            "Text Files (*.txt);;All Files (*)",
+            options=save_options,
+        )
+
+        if file_name:
+            with open(file_name, "w") as file_out:
+                file_out.write(aligned_output)
 
     def remove_output(self):
         """Clear Button for the Output Section"""

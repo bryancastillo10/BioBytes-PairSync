@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>982</width>
-    <height>682</height>
+    <width>988</width>
+    <height>698</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -241,7 +241,7 @@ p, li { white-space: pre-wrap; }
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout">
                   <item>
-                   <widget class="QLabel" name="label_2">
+                   <widget class="QLabel" name="seq1">
                     <property name="font">
                      <font>
                       <family>Noto Sans</family>
@@ -254,7 +254,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="seq1_label"/>
+                   <widget class="QLineEdit" name="label_seq1"/>
                   </item>
                   <item>
                    <widget class="QPushButton" name="load_seq1">
@@ -314,7 +314,7 @@ p, li { white-space: pre-wrap; }
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_2">
                   <item>
-                   <widget class="QLabel" name="label_3">
+                   <widget class="QLabel" name="seq2">
                     <property name="font">
                      <font>
                       <family>Noto Sans</family>
@@ -327,7 +327,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="seq2_label"/>
+                   <widget class="QLineEdit" name="label_seq2"/>
                   </item>
                   <item>
                    <widget class="QPushButton" name="load_seq2">
