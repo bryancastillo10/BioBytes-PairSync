@@ -15,7 +15,7 @@ class BasicInfo(QWidget):
         self.ui = Ui_Form()
         self.bio = BioSeq()
         self.ui.setupUi(self)
-        self.stylesheet_file()
+        self.stylesheet_file(style_path="static/style/basic_info_tab_style.qss")
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
@@ -25,9 +25,8 @@ class BasicInfo(QWidget):
         self.ui.clear_btn.clicked.connect(self.remove_output)
         self.ui.save_btn.clicked.connect(self.save_output)
 
-    def stylesheet_file(self):
+    def stylesheet_file(self, style_path):
         """Read the Stylesheet of the GUI"""
-        style_path = "static/style/basic_info_tab_style.qss"
         with open(style_path, "r") as f:
             style = f.read()
             self.setStyleSheet(style)

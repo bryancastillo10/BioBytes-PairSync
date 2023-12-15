@@ -25,7 +25,7 @@ class DotPlot(QWidget):
         super(DotPlot, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.stylesheet_file("static/style/dot_plot_tab_style.qss")
+        self.stylesheet_file(style_path="static/style/dot_plot_tab_style.qss")
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
@@ -41,7 +41,6 @@ class DotPlot(QWidget):
         self.ui.plot_btn.clicked.connect(self.plot_clicked)
 
     def stylesheet_file(self, style_path):
-        style_path = "static/style/dot_plot_tab_style.qss"
         with open(style_path, "r") as f:
             style = f.read()
             self.setStyleSheet(style)

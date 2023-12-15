@@ -16,16 +16,10 @@ class LocalAlign(QWidget):
         super(LocalAlign, self).__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        self.stylesheet_file("static/style/alignment_tab_style.qss")
+        self.stylesheet_file(style_path="static/style/alignment_tab_style.qss")
         QFontDatabase.addApplicationFont(
             ":/fonts/Lora-VariableFont/Lora-VariableFont_wght.ttf"
         )
-
-    def stylesheet_file(self, style_path):
-        style_path = "static/style/alignment_tab_style.qss"
-        with open(style_path, "r") as f:
-            style = f.read()
-            self.setStyleSheet(style)
 
     #### ====== Signal Buttons  ======####
     # self.ui.load_seq1.clciked.connect()
@@ -33,3 +27,8 @@ class LocalAlign(QWidget):
     # self.ui.clear_btn.clciked.connect()
     # self.ui.align_btn.clciked.connect()
     # self.ui.save_btn.clciked.connect()
+
+    def stylesheet_file(self, style_path):
+        with open(style_path, "r") as f:
+            style = f.read()
+            self.setStyleSheet(style)
