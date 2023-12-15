@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\pairwise_gui\ui\tabs\global_align.ui'
+# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\global_align.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #

@@ -62,10 +62,12 @@ class DotPlot(QWidget):
     def perform_plot(self, input_seq1, input_seq2, label_1, label_2):
         """Implements the methods on class DotMatrix"""
         try:
-            self.dm = DotMatrix(
-                M=np.empty((1, 1), dtype=str), seqA=input_seq1, seqB=input_seq2
-            )
-            if self.dm.is_valid:
+            if not input_seq1 or input_seq2:
+                raise ValueError()
+            elif self.dm.is_valid:
+                self.dm = DotMatrix(
+                    M=np.empty((1, 1), dtype=str), seqA=input_seq1, seqB=input_seq2
+                )
                 fig = self.dm.fill_plot(label_1=label_1, label_2=label_2)
                 self.embed_plot(fig)
             else:
