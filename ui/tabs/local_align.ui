@@ -254,7 +254,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit"/>
+                   <widget class="QLineEdit" name="seq1_label"/>
                   </item>
                   <item>
                    <widget class="QPushButton" name="load_seq1">
@@ -327,7 +327,7 @@ p, li { white-space: pre-wrap; }
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit_2"/>
+                   <widget class="QLineEdit" name="seq2_label"/>
                   </item>
                   <item>
                    <widget class="QPushButton" name="load_seq2">
@@ -518,8 +518,6 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
         </layout>
-        <zorder>seq_mainframe</zorder>
-        <zorder>align_frame</zorder>
        </widget>
       </item>
      </layout>
