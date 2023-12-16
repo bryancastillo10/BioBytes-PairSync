@@ -2,7 +2,9 @@ import numpy as np
 
 
 class NeedlemanWunschAlgorithm:
-    def __init__(self, scoring_sys) -> None:
+    def __init__(self, scoring_sys, seqA, seqB) -> None:
+        self.seqA = seqA
+        self.seqB = seqB
         self.scoring_sys = scoring_sys
         self.M = None
 

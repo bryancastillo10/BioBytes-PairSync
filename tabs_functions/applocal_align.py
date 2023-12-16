@@ -49,23 +49,27 @@ class LocalAlign(QWidget):
         input_seq2 = self.ui.textEdit_2.toPlainText()
 
         #### ====== Handling error for the Input ======####
-
+        self.valid = ValidSequence(seqA=input_seq1, seqB=input_seq2)
         try:
             if not input_seq1 or not input_seq2:
                 raise ValueError()
-            else:
+            elif self.valid.pairseq_valid():
                 scoring_system = SWScoringSystem(match=2, mismatch=-1, gap=-1)
                 self.algorithm = SmithWatermanAlgorithm(
                     scoring_system, seqA=input_seq1, seqB=input_seq2
                 )
                 self.start_alignment(input_seq1, input_seq2, label_1, label_2)
+            else:
+                raise ValueError()
+
         except ValueError:
             self.pop_warning(
                 "Wrong Input Field. Please fill up with an appropriate sequence."
             )
 
     def start_alignment(self, input_seq1, input_seq2, label_1, label_2):
-        #### ====== Handling error for the Input ======####
+        """Call the methods in the class of the sequence algorithm"""
+        #### ====== Call methods for sequence alignment ======####
         local_align = self.algorithm
         aligned_seq_A, aligned_seq_B = local_align.seq_alignment(input_seq1, input_seq2)
         similarity_l = local_align.calc_similarity()
