@@ -57,34 +57,3 @@ class DotMatrix:
         fig.text(0.5, 0.02, subcaption, fontsize=15, ha="center")
 
         return fig
-
-
-class ValidSequence:
-    def __init__(self, seqA, seqB):
-        self.seqA = seqA
-        self.seqB = seqB
-
-    def sequence_type(self, seq):
-        dna_alphabet = "ATCG"
-        rna_alphabet = "AUCG"
-        prot_alphabet = "ATCGRNDEQHILKMFPSWYV"
-
-        seq_upper = seq.upper()
-
-        if all(char in dna_alphabet for char in seq_upper):
-            return "DNA"
-        elif all(char in rna_alphabet for char in seq_upper):
-            return "RNA"
-        elif all(char in prot_alphabet for char in seq_upper):
-            return "Protein"
-        else:
-            raise ValueError("Invalid characters in the sequence.")
-
-    def pairseq_valid(self):
-        seq1_type = self.sequence_type(self.seqA)
-        seq2_type = self.sequence_type(self.seqB)
-
-        if seq1_type == seq2_type:
-            return True
-        else:
-            raise ValueError("Both sequences must have the same sequence type.")

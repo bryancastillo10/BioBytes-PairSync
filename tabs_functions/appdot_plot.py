@@ -15,7 +15,8 @@ import matplotlib.backends.backend_qt5agg as FigureCanvas
 import numpy as np
 
 from ui.tabs.dot_plot_ui import Ui_Form
-from seq_algorithm.dotplot import DotMatrix, ValidSequence
+from seq_algorithm.dotplot import DotMatrix
+from seq_algorithm.validate import ValidSequence
 
 
 class DotPlot(QWidget):

@@ -9,35 +9,6 @@ class SmithWatermanAlgorithm:
         self.score_mat = None
         self.traceback_mat = None
 
-    def __validate(self):
-        def sequence_type(seq):
-            dna_alphabet = "ATCG"
-            rna_alphabet = "AUCG"
-            prot_alphabet = "ATCGRNDEQHILKMFPSWYV"
-
-            seq_upper = seq.upper()
-            for char in seq_upper:
-                if char == "U":
-                    return "RNA"
-                if char in prot_alphabet and char not in dna_alphabet:
-                    return "Protein"
-            return "DNA"
-
-        def pairseq_valid(seqA, seqB):
-            seq1 = sequence_type(seqA)
-            seq2 = sequence_type(seqB)
-            if seq1 == seq2:
-                return True
-            else:
-                raise ValueError(
-                    "Either one of the two sequences has an invalid sequence format"
-                )
-
-        try:
-            return pairseq_valid(self.seqA, self.seqB)
-        except ValueError as e:
-            return False
-
     def seq_alignment(self, seqA, seqB):
         self.initialize_matrix(seqA, seqB)
         self.fill_matrices(seqA, seqB)

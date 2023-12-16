@@ -10,6 +10,7 @@ from textwrap import dedent
 
 from ui.tabs.local_align_ui import Ui_Form
 from seq_algorithm.local_smithwaterman import SmithWatermanAlgorithm, SWScoringSystem
+from seq_algorithm.validate import ValidSequence
 
 
 class LocalAlign(QWidget):
