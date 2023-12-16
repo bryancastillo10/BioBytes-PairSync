@@ -117,7 +117,7 @@ class BasicInfo(QWidget):
         )
         self.ui.textBrowser.append(all_output)
 
-    def save_output(self, all_output):
+    def save_output(self):
         """Saving the Output Text as .txt file"""
         save_options = QFileDialog.Options()
         file_dialog = QFileDialog(self)
@@ -125,17 +125,23 @@ class BasicInfo(QWidget):
         file_dialog.setNameFilter("Text Files (*.txt);;All Files (*)")
         file_dialog.setStyleSheet(self.styleSheet())
 
-        file_name, _ = file_dialog.getSaveFileName(
-            self,
-            "Save Output File",
-            "sequence info",
-            "Text Files (*.txt);;All Files (*)",
-            options=save_options,
-        )
-
-        if file_name:
-            with open(file_name, "w") as file_out:
-                file_out.write(all_output)
+        try:
+            all_output = self.ui.textBrowser.toPlainText()
+            if all_output:
+                file_name, _ = file_dialog.getSaveFileName(
+                    self,
+                    "Save Output File",
+                    "sequence info",
+                    "Text Files (*.txt);;All Files (*)",
+                    options=save_options,
+                )
+                if file_name:
+                    with open(file_name, "w") as file_out:
+                        file_out.write(all_output)
+            else:
+                raise Exception
+        except Exception as e:
+            self.pop_warning(f"Error saving file: {str(e)}")
 
     def remove_output(self):
         """Clear Button for the Output Section"""

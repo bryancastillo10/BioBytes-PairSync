@@ -154,7 +154,7 @@ class GlobalAlign(QWidget):
                 sequence += line.strip()
         return label, sequence
 
-    def save_output(self, aligned_output):
+    def save_output(self):
         """Saving the Output Text as .txt file"""
         save_options = QFileDialog.Options()
         file_dialog = QFileDialog(self)
@@ -162,17 +162,23 @@ class GlobalAlign(QWidget):
         file_dialog.setNameFilter("Text Files (*.txt);;All Files (*)")
         file_dialog.setStyleSheet(self.styleSheet())
 
-        file_name, _ = file_dialog.getSaveFileName(
-            self,
-            "Save Output File",
-            "aligned sequences[global]",
-            "Text Files (*.txt);;All Files (*)",
-            options=save_options,
-        )
-
-        if file_name:
-            with open(file_name, "w") as file_out:
-                file_out.write(aligned_output)
+        try:
+            aligned_output = self.ui.textBrowser_2.toPlainText()
+            if aligned_output:
+                file_name, _ = file_dialog.getSaveFileName(
+                    self,
+                    "Save Output File",
+                    "global aligned seq",
+                    "Text Files (*.txt);;All Files (*)",
+                    options=save_options,
+                )
+                if file_name:
+                    with open(file_name, "w") as file_out:
+                        file_out.write(aligned_output)
+            else:
+                raise Exception
+        except Exception as e:
+            self.pop_warning(f"Error saving file: {str(e)}")
 
     def remove_output(self):
         """Clear Button for the Output Section"""
