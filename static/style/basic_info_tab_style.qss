@@ -66,6 +66,25 @@ QFileDialog QListView::item::selected {
     background-color: rgb(7,191,160);
 }
 
+/** Combobox Widget **/
+QComboBox {
+    border: 1px solid #707070;
+    padding: 3px;
+    background-color: rgb(54,54,54);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+}
+QComboBox::indicator {
+    background-color:transparent;
+    width: 0px;
+    height: 0px;
+}
+
 /** Additional Window for Error Handling/ Warning Message **/
 QMessageBox{
     background-color: rgb(54,54,54); /* charcoal gray*/ 
