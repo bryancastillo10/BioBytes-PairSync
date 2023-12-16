@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1032</width>
-    <height>720</height>
+    <width>988</width>
+    <height>701</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -84,7 +84,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="../../static/resources_rc.qrc">:/images/images/bases1.png</pixmap>
+         <pixmap resource="../../static/resources_rc.qrc">:/images/images/bases.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>

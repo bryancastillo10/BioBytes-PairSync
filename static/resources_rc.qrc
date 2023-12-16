@@ -304,9 +304,9 @@
     <file>icons/zoom-out.svg</file>
   </qresource>
   <qresource prefix="images">
-    <file>images/bases1.png</file>
-    <file>images/bases2.png</file>
+    <file>images/bases.png</file>
     <file>images/gene_search.png</file>
+    <file>images/gene_info.png</file>
     <file>images/github.png</file>
     <file>images/paypal.png</file>
     <file>images/scatter.png</file>

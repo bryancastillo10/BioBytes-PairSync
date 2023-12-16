@@ -396,7 +396,7 @@ p, li { white-space: pre-wrap; }
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap resource="../../static/resources_rc.qrc">:/images/images/gene_search.png</pixmap>
+                <pixmap resource="../../static/resources_rc.qrc">:/images/images/gene_info.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
