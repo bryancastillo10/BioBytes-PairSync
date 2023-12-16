@@ -127,8 +127,8 @@ class BasicInfo(QWidget):
 
         file_name, _ = file_dialog.getSaveFileName(
             self,
-            "Save File",
-            "",
+            "Save Output File",
+            "sequence info",
             "Text Files (*.txt);;All Files (*)",
             options=save_options,
         )
@@ -142,7 +142,7 @@ class BasicInfo(QWidget):
         self.ui.textBrowser.clear()
 
     def load_file(self):
-        """Load sequence from a file"""
+        """Load Sequence from a file"""
         options = QFileDialog.Options()
         file_dialog = QFileDialog(self, options=options)
         file_dialog.setNameFilter(
@@ -151,7 +151,7 @@ class BasicInfo(QWidget):
         file_dialog.setStyleSheet("static/style/basic_info_tab_style.qss")
         file_name, _ = file_dialog.getOpenFileName(
             self,
-            "Load File",
+            "Load FASTA or .txt File",
             "",
             "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)",
             options=options,

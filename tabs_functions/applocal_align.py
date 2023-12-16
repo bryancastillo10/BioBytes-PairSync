@@ -109,7 +109,7 @@ class LocalAlign(QWidget):
         self.ui.textBrowser_2.append(aligned_output)
 
     def load_file(self, label_widget: QLineEdit, sequence_widget: QPlainTextEdit):
-        """Load sequence from a file"""
+        """Load Sequence from a file"""
         options = QFileDialog.Options()
         file_dialog = QFileDialog(self, options=options)
         file_dialog.setNameFilter(
@@ -118,7 +118,7 @@ class LocalAlign(QWidget):
         file_dialog.setStyleSheet(self.styleSheet())
         file_name, _ = file_dialog.getOpenFileName(
             self,
-            "Load File",
+            "Load FASTA or .txt File",
             "",
             "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)",
             options=options,
@@ -162,8 +162,8 @@ class LocalAlign(QWidget):
 
         file_name, _ = file_dialog.getSaveFileName(
             self,
-            "Save File",
-            "",
+            "Save Output File",
+            "aligned sequences[local]",
             "Text Files (*.txt);;All Files (*)",
             options=save_options,
         )

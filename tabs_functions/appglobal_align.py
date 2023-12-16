@@ -120,7 +120,7 @@ class GlobalAlign(QWidget):
         file_dialog.setStyleSheet(self.styleSheet())
         file_name, _ = file_dialog.getOpenFileName(
             self,
-            "Load File",
+            "Load FASTA or .txt File",
             "",
             "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)",
             options=options,
@@ -165,7 +165,7 @@ class GlobalAlign(QWidget):
         file_name, _ = file_dialog.getSaveFileName(
             self,
             "Save Output File",
-            "aligned sequences",
+            "aligned sequences[global]",
             "Text Files (*.txt);;All Files (*)",
             options=save_options,
         )

@@ -99,7 +99,7 @@ class DotPlot(QWidget):
         self.ui.graphicsView.scene().addItem(pixmap_item)
 
     def load_file(self, label_widget: QLineEdit, sequence_widget: QPlainTextEdit):
-        """Load sequence from a file"""
+        """Load Sequence from a file"""
         options = QFileDialog.Options()
         file_dialog = QFileDialog(self, options=options)
         file_dialog.setNameFilter(
@@ -108,7 +108,7 @@ class DotPlot(QWidget):
         file_dialog.setStyleSheet(self.styleSheet())
         file_name, _ = file_dialog.getOpenFileName(
             self,
-            "Load File",
+            "Load FASTA or .txt File",
             "",
             "Text Files (*.txt);;FASTA Files (*.fasta);;All Files (*)",
             options=options,
