@@ -91,6 +91,38 @@ class MyWindow(QMainWindow):
         self.local_align_btn.clicked.connect(self.show_selected_window)
         self.global_align_btn.clicked.connect(self.show_selected_window)
 
+        ## ==================================####
+        ##  Developer's Info Label Signal
+        ## =================================####
+        self.ui.devlabel.mousePressEvent = self.show_dev_popup
+
+    ## ==================================####
+    ##  About Link Functions
+    ## =================================####
+    def show_dev_popup(self, event):
+        """Provides a popup mesage about the developer"""
+        msg = QMessageBox()
+        msg.setWindowTitle("About the Developer")
+        msg.setText("Hello! The developer of this GUI App is Bryan Castillo! ")
+        msg.setIcon(QMessageBox.Information)
+        msg.setStandardButtons(QMessageBox.Ok)
+        msg.setDetailedText(
+            f"""
+            This software was built to demonstrate my skills in bioinformatics and to promote data science in the field of computational biology. """
+        )
+        msg.setStyleSheet(self.popup_style())
+        msg.exec_()
+
+    def open_GitHub_repo(self):
+        """Link to the GitHub Repository of this Project"""
+        QDesktopServices.openUrl(
+            QUrl("https://github.com/bryancastillo10/pairwise_gui")
+        )
+
+    def open_paypal_donate(self):
+        """Link to the Paypal Donation"""
+        QDesktopServices.openUrl(QUrl("https://paypal.me/BryanAngeloCastillo"))
+
     ## ==================================####
     ##  Tab Functions
     ## =================================####
@@ -176,8 +208,32 @@ class MyWindow(QMainWindow):
             style = f.read()
             self.setStyleSheet(style)
 
+    def popup_style(self):
+        return """
+        QMessageBox{
+            background-color: rgb(54,54,54); /* charcoal gray*/ 
+            }
+        QMessageBox QLabel{
+            color: #fff;
+            }
+        QMessageBox QPushButton {
+            background-color: rgb(120,157,186); /* light blue */
+	        border: 3px solid rgb(5,92,142);
+	        border-radius:15px;
+	        padding: 5px;
+	        color: #000;
+            font-size:12px;
+            }
+        QMessageBox QPushButton::hover{
+            background-color: rgba(5,92,142,0.5); /* dark-blue */
+	        color: #fff;
+	        border-radius: 15px;
+            font-size:12px;
+            }
+        """
+
     ## ==================================####
-    ##  Min, Max Windows Function
+    ##  Min, Max and Close Windows Function
     ## =================================####
     def toggle_max(self):
         if self.isFullScreen():
@@ -185,9 +241,33 @@ class MyWindow(QMainWindow):
         else:
             self.showFullScreen()
 
+    def closeEvent(self, event):
+        """Confirmation if the user wants to close the main window"""
+        close_msg = QMessageBox()
+        close_msg.setWindowTitle("The APP is about to Close")
+        close_msg.setText("Are you sure you want to terminate BioBytes APP?")
+        close_msg.setIcon(QMessageBox.Question)
+        close_msg.setStandardButtons(QMessageBox.Yes | QMessageBox.Cancel)
+        close_msg.setStyleSheet(self.popup_style())
+        response = close_msg.exec_()
+
+        if response == QMessageBox.Yes:
+            event.accept()
+        elif response == QMessageBox.Cancel:
+            event.ignore()
+
+    ## ==================================####
+    ##  Default Event and Override Conditions
+    ## =================================####
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:
             self.oldPos = event.globalPos()
+
+            if self.ui.gitlabel.underMouse():
+                self.open_GitHub_repo()
+
+            elif self.ui.paypal_label.underMouse():
+                self.open_paypal_donate()
 
     def mouseMoveEvent(self, event):
         if self.oldPos is not None:
@@ -197,10 +277,6 @@ class MyWindow(QMainWindow):
 
     def mouseReleaseEvent(self, event):
         self.oldPos = None
-
-    def show_dev_popup(self, event):
-        """Provides a popup mesage about the developer"""
-        QMessageBox.information(self, "Hello World! ")
 
 
 if __name__ == "__main__":
