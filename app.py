@@ -4,12 +4,13 @@ from PyQt5.QtWidgets import (
     QWidget,
     QVBoxLayout,
     QPushButton,
+    QLabel,
     QFrame,
     QSizeGrip,
+    QMessageBox,
 )
-from PyQt5.QtCore import Qt, QPoint
-from PyQt5.QtGui import QFontDatabase, QIcon
-
+from PyQt5.QtCore import Qt, QPoint, QUrl
+from PyQt5.QtGui import QFontDatabase, QIcon, QDesktopServices
 from ui.main_window import Ui_MainWindow
 from ui import resources_rc
 
@@ -196,6 +197,10 @@ class MyWindow(QMainWindow):
 
     def mouseReleaseEvent(self, event):
         self.oldPos = None
+
+    def show_dev_popup(self, event):
+        """Provides a popup mesage about the developer"""
+        QMessageBox.information(self, "Hello World! ")
 
 
 if __name__ == "__main__":
