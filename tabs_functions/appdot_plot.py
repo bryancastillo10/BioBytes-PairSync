@@ -165,8 +165,11 @@ class DotPlot(QWidget):
         pop_warning.setIcon(QMessageBox.Warning)
         pop_warning.setWindowTitle("Input Error")
         pop_warning.setText(message)
-        pop_warning.setStyleSheet(
-            """
+        pop_warning.setStyleSheet(self.popup_style())
+        pop_warning.exec_()
+
+    def popup_style(self):
+        return """
         QMessageBox{
             background-color: rgb(54,54,54); /* charcoal gray*/ 
             }
@@ -176,7 +179,7 @@ class DotPlot(QWidget):
         QMessageBox QPushButton {
             background-color: rgb(120,157,186); /* light blue */
 	        border: 3px solid rgb(5,92,142);
-	        border-radius:15px;
+	        border-radius:12px;
 	        padding: 5px;
 	        color: #000;
             font-size:12px;
@@ -184,9 +187,7 @@ class DotPlot(QWidget):
         QMessageBox QPushButton::hover{
             background-color: rgba(5,92,142,0.5); /* dark-blue */
 	        color: #fff;
-	        border-radius: 15px;
+	        border-radius: 12px;
             font-size:12px;
             }
         """
-        )
-        pop_warning.exec_()

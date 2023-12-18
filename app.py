@@ -219,7 +219,7 @@ class MyWindow(QMainWindow):
         QMessageBox QPushButton {
             background-color: rgb(120,157,186); /* light blue */
 	        border: 3px solid rgb(5,92,142);
-	        border-radius:15px;
+	        border-radius:12px;
 	        padding: 5px;
 	        color: #000;
             font-size:12px;
@@ -227,7 +227,7 @@ class MyWindow(QMainWindow):
         QMessageBox QPushButton::hover{
             background-color: rgba(5,92,142,0.5); /* dark-blue */
 	        color: #fff;
-	        border-radius: 15px;
+	        border-radius: 12px;
             font-size:12px;
             }
         """
