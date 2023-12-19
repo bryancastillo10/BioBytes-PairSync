@@ -7,3 +7,8 @@
 /ui/tabs/__pycache__
 /tabs_functions/__pycache__
 static/resources_rc_rc.py
+
+#PyInstaller Directories
+/build
+/dist
+/app.spec
