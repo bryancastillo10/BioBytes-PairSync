@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\basic_info.ui'
+# Form implementation generated from reading ui file 'ui/tabs/basic_info.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -296,7 +296,7 @@ class Ui_Form(object):
                 '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
                 "p, li { white-space: pre-wrap; }\n"
                 "</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';"><br />    This graphical user interface (GUI)  app simplifies the process of gathering key details from your DNA sequence. It offers a user-friendly interface where you can input your genetic information, and with a click, obtain crucial insights. The app is designed to provide specific information such as the frequency of each nucleotide in your sequence, the GC content indicating the ratio of guanine and cytosine, identification of open reading frames (potential protein-coding regions), and the reverse complement of your DNA string. It\'s a handy tool for anyone looking to quickly understand and extract essential details from their genetic data without the need for complex bioinformatics knowledge.</span></p></body></html>',
+                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Enter your DNA/RNA or Protein sequence, choose the sequence type, and click &quot;Start&quot; to analyze. For DNA/RNA, you can expect outputs such as GC content, nucleotide frequency and transcription; for Protein, you can expect to get amino acid frequency,molecular weight, or reading frames. Use &quot;Load File&quot; to import sequences, &quot;Save Output&quot; to save results, and &quot;Clear&quot; to start a new. Ensure correct inputs to avoid warnings.</p></body></html>',
             )
         )
         self.label_2.setText(_translate("Form", "Biomolecule Type: "))
@@ -313,3 +313,14 @@ class Ui_Form(object):
         self.label_5.setText(_translate("Form", "Output"))
         self.clear_btn.setText(_translate("Form", "Clear"))
         self.save_btn.setText(_translate("Form", "Save"))
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QtWidgets.QApplication(sys.argv)
+    Form = QtWidgets.QWidget()
+    ui = Ui_Form()
+    ui.setupUi(Form)
+    Form.show()
+    sys.exit(app.exec_())
