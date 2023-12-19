@@ -8,11 +8,15 @@ from PyQt5.QtWidgets import (
     QFrame,
     QSizeGrip,
     QMessageBox,
+    QGraphicsDropShadowEffect,
 )
-from PyQt5.QtCore import Qt, QPoint, QUrl
-from PyQt5.QtGui import QFontDatabase, QIcon, QDesktopServices
+from PyQt5.QtCore import Qt, QPoint, QUrl, QTimer
+from PyQt5.QtGui import QColor, QFontDatabase, QIcon, QDesktopServices
 from ui.main_window import Ui_MainWindow
 from ui import resources_rc
+from ui.ui_splash_screen import Ui_SplashScreen
+from ui.circular_progress import CircularProgress
+
 
 import sys
 import os
@@ -21,6 +25,61 @@ from tabs_functions.appbasic_info import BasicInfo
 from tabs_functions.appdot_plot import DotPlot
 from tabs_functions.applocal_align import LocalAlign
 from tabs_functions.appglobal_align import GlobalAlign
+
+
+# GLOBAL VARIABLE
+counter = 0
+
+
+class SplashScreen(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.ui = Ui_SplashScreen()
+        self.ui.setupUi(self)
+
+        # REMOVE TITLE BAR
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
+        self.progress = CircularProgress()
+        self.progress.width = 270
+        self.progress.height = 270
+        self.progress.value = 10
+        self.progress.move(15, 15)
+        self.progress.font_size = 40
+        self.progress.add_shadow(True)
+        self.progress.progress_width = 10
+        self.progress.bg_color = QColor(80, 250, 123, 140)
+        self.progress.setFixedSize(self.progress.width, self.progress.height)
+        self.progress.setParent(self.ui.centralwidget)
+        self.progress.show()
+
+        # ADD DROP SHADOW
+        self.shadow = QGraphicsDropShadowEffect(self)
+        self.shadow.setBlurRadius(15)
+        self.shadow.setXOffset(0)
+        self.shadow.setYOffset(0)
+        self.shadow.setColor(QColor(0, 0, 0, 80))
+        self.setGraphicsEffect(self.shadow)
+
+        # Q TIMER
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.update)
+        self.timer.start(30)
+
+        self.show()
+
+    # UPDATE PROGRESS BAR
+    def update(self):
+        global counter
+        # SET VALUE TO PROGRESS BAR
+        self.progress.set_value(counter)
+        if counter >= 100:
+            self.timer.stop()
+            self.main = MyWindow()
+            self.main.show()
+            self.close()
+        counter += 1
 
 
 class MyWindow(QMainWindow):
@@ -282,7 +341,7 @@ class MyWindow(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setWindowIcon(QIcon("static/icons/app_icon_dna_32.png"))
-    window = MyWindow()
+    window = SplashScreen()
     window.show()
 
     sys.exit(app.exec())
