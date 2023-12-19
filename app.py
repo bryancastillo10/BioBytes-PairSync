@@ -46,7 +46,7 @@ class SplashScreen(QMainWindow):
         self.progress.height = 270
         self.progress.value = 10
         self.progress.move(15, 15)
-        self.progress.font_size = 40
+        self.progress.font_size = 35
         self.progress.add_shadow(True)
         self.progress.progress_width = 10
         self.progress.bg_color = QColor(80, 250, 123, 140)
