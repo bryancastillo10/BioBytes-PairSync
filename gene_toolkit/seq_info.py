@@ -80,15 +80,12 @@ class BioSeq:
     def translate_seq(self, init_pos=0):
         """Translates a DNA sequence into an amino acid sequence"""
         if self.seq_type == "DNA":
-            return [
-                DNA_Codons[self.seq[pos : pos + 3]]
-                for pos in range(init_pos, len(self.seq) - 2, 3)
-            ]
+            nuc_list = [DNA_Codons[self.seq[pos : pos + 3]] for pos in range(init_pos, len(self.seq) - 2, 3)]
+            return ''.join(nuc_list)
+
         elif self.seq_type == "RNA":
-            return [
-                RNA_Codons[self.seq[pos : pos + 3]]
-                for pos in range(init_pos, len(self.seq) - 2, 3)
-            ]
+            nuc_list = [RNA_Codons[self.seq[pos : pos + 3]] for pos in range(init_pos, len(self.seq) - 2, 3)]
+            return ''.join(nuc_list)
 
     def gen_reading_frames(self):
         """Generate the six reading frames of a DNA sequence, including the reverse complement"""
