@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'c:\Users\User\Desktop\pairwise_gui\ui\tabs\dot_plot.ui'
+# Form implementation generated from reading ui file 'c:\Users\user\Documents\Data Science\BioBytes-PairSync\ui\tabs\dot_plot.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -75,8 +75,8 @@ class Ui_Form(object):
         self.textBrowser.setSizePolicy(sizePolicy)
         self.textBrowser.setMaximumSize(QtCore.QSize(16777215, 100))
         font = QtGui.QFont()
-        font.setFamily("Noto Sans TC")
-        font.setPointSize(10)
+        font.setFamily("Noto Sans")
+        font.setPointSize(12)
         self.textBrowser.setFont(font)
         self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
         self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
@@ -280,8 +280,8 @@ class Ui_Form(object):
                 '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">\n'
                 '<html><head><meta name="qrichtext" content="1" /><style type="text/css">\n'
                 "p, li { white-space: pre-wrap; }\n"
-                "</style></head><body style=\" font-family:'Noto Sans TC'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-                '<p align="justify" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:\'PMingLiU\';">   Dot plot sequencing is a valuable tool for pairwise sequence alignment in DNA and protein analysis. This method visually represents sequence similarities by placing dots on a graph, where each dot signifies a matching residue or identical subsequence. This straightforward approach aids in the identification of insertions, deletions, and substitutions, providing insights into evolutionary relationships and conserved regions. </span></p></body></html>',
+                "</style></head><body style=\" font-family:'Noto Sans'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+                '<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Dot plot sequence alignment visually compares DNA, RNA, or Protein sequences. Users input two two sequences, and the plot highlights matching regions with dots. This quick visual analysis helps identify similarities and variations between those sequences that can provide insights their relationships.</p></body></html>',
             )
         )
         self.label_2.setText(_translate("Form", "Sequence 1"))
