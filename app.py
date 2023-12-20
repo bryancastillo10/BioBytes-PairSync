@@ -175,7 +175,7 @@ class MyWindow(QMainWindow):
     def open_GitHub_repo(self):
         """Link to the GitHub Repository of this Project"""
         QDesktopServices.openUrl(
-            QUrl("https://github.com/bryancastillo10/pairwise_gui")
+            QUrl("https://github.com/bryancastillo10/BioBytes-PairSync")
         )
 
     def open_paypal_donate(self):
