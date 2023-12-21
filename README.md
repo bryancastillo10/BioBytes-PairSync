@@ -7,6 +7,8 @@
 
 <img src="documentations/Tab1_BasicInfo.png">
 
+<img src="documentations/Tab2_DotPlot.png">
+
 This GUI app allows users to input biological sequences, either manually or by loading from a file. It supports DNA, RNA, and Protein sequences. Users can retrieve various information about the input sequence, such as **nucleotide or amino acid frequency**, **GC content**, **reverse complement**, **transcription**, **translation**, **amino acid molecular weight**, **isoelectric point**, and **open reading frames**.
 
 Users can save the output information to a text file and clear the output section for a clean slate. Additionally, loading sequences from <mark style= "background-color: rgba(0,128,128,0.5); color: #fff">FASTA or text files</mark> is supported, making it convenient for users to work with existing sequence data.
