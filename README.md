@@ -1,5 +1,11 @@
 ### BioBytes PairSync: A Bioinformatics Tool for Basic Information Retrieval and Pairwise Sequence Alignment
 
+[Download Installer! ](https://github.com/bryancastillo10/BioBytes-PairSync/releases)
+
+Click on <mark style= "background-color: rgba(0,128,128,0.5); color: #fff">"biobytes_pairsync_setup.exe"</mark> at the releases page.
+
+![Static Badge](https://img.shields.io/badge/BioBytes_PairSync-v1.0.1-%23009E73?style=plastic&labelColor=%23363636%20)
+
 ![Static Badge](https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=%23F0E442&labelColor=%230072B2&color=%2356B4E9)
 ![Static Badge](https://img.shields.io/badge/PyQt-%2341CD52?style=for-the-badge&logo=Qt&logoColor=%235EFB75&labelColor=%23000000&color=%23009E73)
 
