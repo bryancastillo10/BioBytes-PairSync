@@ -5,7 +5,7 @@ class SmithWatermanAlgorithm:
     def __init__(self, scoring_sys, seqA, seqB) -> None:
         self.seqA = seqA
         self.seqB = seqB
-        self.scoring_sys = scoring_sys
+        self.scoring_sys = SWScoringSystem()
         self.score_mat = None
         self.traceback_mat = None
 
